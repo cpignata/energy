@@ -13,7 +13,7 @@
 
 <?rfc comments="yes"?>
 
-<rfc ipr="trust200902" docName="draft-eckert-ietf-and-energy-overview" category="info" submissionType="independent" tocDepth="5" tocInclude="true" sortRefs="true" symRefs="true">
+<rfc ipr="trust200902" docName="draft-eckert-ietf-and-energy-overview-00" category="info" submissionType="independent" tocDepth="5" tocInclude="true" sortRefs="true" symRefs="true">
   <front>
     <title abbrev="energy-overview">IETF and Energy - an overview</title>
 
@@ -30,7 +30,7 @@
       </address>
     </author>
 
-    <date year="2022" month="July" day="07"/>
+    <date year="2022" month="July" day="09"/>
 
     
     
