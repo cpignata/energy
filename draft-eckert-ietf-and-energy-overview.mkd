@@ -319,6 +319,7 @@ I* technologies will have newer RFC that updates such initial work.
 
 This document captures work until 12/2022, when the “IAB workshop on Environmental Impact of Internet Applications and Systems” {{?I-D.iab-ws-environmental-impacts-report}}  renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.
 
+In addition to this compilation, the authors also share their own observations on what has worked well and what lessons may be drawn from the past.
 
 # Energy Saving: An Introduction
 
@@ -1229,6 +1230,50 @@ It also identified three areas of gaps: “Load-adaptive Resource Management”,
 
 Some aspects for those areas of gaps where partially tackled by later work in the IETF,
 but broadly speaking, most of those areas remain open to a wide range of possible further IETF/IRTF work.
+
+# Authors’ Observations and Lessons Learned
+
+   Beyond compiling existing work, the authors consider it valuable to
+   briefly reflect on where energy-related activities within the
+   IETF/IRTF/IAB have gone well and what can be learned from them.
+
+   In particular:
+
+   * Successful integration into existing work: Several cases show
+     that energy-awareness was most effective when integrated into
+     ongoing protocol development (e.g., extensions in transport and
+     management protocols) rather than isolated as a stand-alone
+     activity.
+
+   * Clear problem framing: Efforts that were framed around a well-
+     defined operational or architectural need (for example,
+     constrained-device networking in the IETF) tended to achieve
+     broader traction than more generic appeals to "green networking."
+
+   * Collaboration across communities: Effective work often involved
+     coordination between the related research and
+     standardization bodies (e.g., IETF, IRTF, IAB, ITU), showing that
+     energy and environmental 
+     sustainability topics benefit from cross-community dialogue.
+
+   * Appreciating multidisciplinarity: It has proven important to
+     bring in the right subject-matter experts (e.g., from energy
+     systems, environmental science, or other disciplines) rather than
+     making assumptions within the networking community alone.
+
+   * Limited continuity: Some prior activities were time-bound or
+     lacked continuity. A lesson is that sustained progress often
+     requires ongoing integration into mainstream
+     workstreams.
+
+   * Constrained and actionable scope: Experience shows that
+     activities with a well-defined and bounded scope are more likely
+     to deliver actionable results and running code, which is core to
+     the IETF ethos.
+
+   These observations are the personal views of the authors and are
+   included here to provide additional context. They do not represent
+   IETF consensus or recommendations for future work.
 
 # Security Considerations
 
