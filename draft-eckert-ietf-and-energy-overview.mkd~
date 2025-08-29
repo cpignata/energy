@@ -258,7 +258,7 @@ informative:
 
   OECD2020:
     title: "Keeping the Internet up and running in times of crisis"
-    author:
+    author: 
       -
         org: "OECD"
     date: 2020
@@ -269,7 +269,7 @@ informative:
 
   ITU2020:
     title: "Measuring digital development: Facts and Figures 2020"
-    author:
+    author: 
       -
         org: "International Telecommunication Union (ITU)"
     date: 2020
@@ -286,14 +286,14 @@ This memo provides a compilation of existing work performed by or proposed withi
 The principal goal is to help IETF, IRTF, and IAB participants, especially newcomers and future contributors, become familiar with the body of work already published.
 This document serves as the first catalog of such efforts, providing a consolidated internal reference.
 
-An additional goal is to raise awareness and interest in energy-related
+An additional goal is to raise awareness and interest in energy-related 
 activities within the IETF, IRTF, and IAB, to continue identifying gaps and investigating solutions as appropriate.
 
 The scope of this document
 includes selected work from the IETF, IRTF, and IAB where relevant.
 This document is descriptive in nature and does not propose new work items.
 
-This document captures work until 12/2022, when the “IAB workshop on Environmental Impact of Internet Applications and Systems” contextualized renewed community interest and discussion of the topic.
+This document captures work until 12/2022, when the “IAB workshop on Environmental Impact of Internet Applications and Systems” contextualized renewed community interest and discussion of the topic. 
 This memo itself does not recommend or direct future work.
 
 
@@ -301,9 +301,9 @@ This memo itself does not recommend or direct future work.
 
 # Introduction
 
-This document summarizes work that has been proposed to or performed within the IETF, IRTF, and IAB.
+This document summarizes work that has been proposed to or performed within the IETF, IRTF, and IAB. 
 Its goal is to summarize, not to propose or direct new work.
-It is intended as a compilation of prior work, not a proposal of new activities.
+It is intended as a compilation of prior work, not a proposal of new activities. 
 The main purpose is to provide a consolidated reference for participants, by cataloging and contextualizing what has already been published and done in IETF, IRTF, and IAB.
 
 Considering the target audience, this document is primarily intended as an internal reference for the IETF, IRTF, and IAB communities. By cataloging prior work in a single place, it aims to lower the entry barrier for participants who may not be aware of earlier efforts and to provide future contributors with a historical foundation.
@@ -580,8 +580,8 @@ not based on simple comparison of energy, but nowadays by comparing their impact
 a key factor to sustainability.
 
 Telecollaboration was primarily developed because of the utility for the participants - to avoid travel
-for originally predominantly business communications/collaborations.
-It saw an extreme increase in use during the COVID-19 pandemic {{OECD2020}} {{ITU2020}}.
+for originally predominantly business communications/collaborations. 
+It saw an extreme increase in use during the COVID-19 pandemic {{OECD2020}} {{ITU2020}}. 
 This forced millions of people to work from home and utilizing commercial
 telecollaboration tools. It equally caused most in-person events that were not cancelled to
 be moved to a telecollaboration platform over the Internet - most of them likely relying on RTCWEB
@@ -1228,7 +1228,7 @@ on the same linecard as the interfaces to which the packets would need to be rou
 
 The 2013 "Towards an Energy-Efficient Internet" {{I-D.winter-energy-efficient-internet}}
 summarizes some of the same work items as this document (as written back in 2013) and
-lists additional more non-adopted drafts.
+lists additional more non-adopted drafts. 
 It also identified three areas of gaps: “Load-adaptive Resource Management”, “Energy-efficient Protocol Design”, and “Energy-efficiency Metrics and Standard Benchmarking Methodologies”. While these areas remain open, this document records them for reference rather than recommending specific next steps.
 
 Some aspects for those areas of gaps were partially tackled by later work in the IETF,
@@ -1245,7 +1245,7 @@ but broadly speaking, most of those areas remain open to a wide range of possibl
    * Successful integration into existing work: Several cases show
      that energy-awareness was most effective when integrated into
      ongoing protocol development (e.g., extensions in transport and
-     management protocols) rather than as an isolated stand-alone
+     management protocols) rather than as an isolated stand-alone 
      activity.
 
    * Clear problem framing: Efforts that were framed around a well-
@@ -1256,7 +1256,7 @@ but broadly speaking, most of those areas remain open to a wide range of possibl
    * Collaboration across communities: Effective work often involved
      coordination between the related research and
      standardization bodies (e.g., IETF, IRTF, IAB, ITU), showing that
-     energy and environmental
+     energy and environmental 
      sustainability topics benefit from cross-community dialogue.
 
    * Appreciating multidisciplinarity: It has proven important to
