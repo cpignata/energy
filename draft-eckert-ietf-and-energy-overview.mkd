@@ -345,7 +345,7 @@ evolution in mostly device as well as physical-layer and link-layer networking t
 
 Nevertheless, it is at the heart of the packet multiplexing model employed by the IETF networking protocols
 IP ({{RFC791}}) and IPv6 ({{RFC1883}} superseded by {{RFC2460}} and {{RFC8200}}) to successfully support this
-scaling that brough down the cost per bit through ever faster links and network nodes, especially for networks larger than building
+scaling that brought down the cost per bit through ever faster links and network nodes, especially for networks larger than building
 scale networks. While the IETF protocols have not been the first or over their early decades necessarily the
 most widely deployed packet networking protocols, they were the ones who at least during the 1990s started
 to break away from other protocols both in scale of deployment, as well as in development of further technologies
@@ -445,7 +445,7 @@ typically because of their higher utility or lower overall cost.
 For example, each instance of (simple text) email consumes less energy than sending a letter or postcard.
 Even streaming a movie or TV series consumes less energy than renting a DVD
 {{DVDvsStreaming}}.
-Nevertheless, the total amount of instances and in result energy consumption for email and
+Nevertheless, the total amount of instances and as a result energy consumption for email and
 streaming easily outranks their predecessor technologies.
 
 While these instances look beneficial from a simple energy consumption
@@ -588,7 +588,7 @@ in air travel.
 
 At the beginning of much of the following IETF efforts was an
      understanding and analysis that prior protocols for routing and
-     subnet management where not able to ideally support evolving network
+     subnet management were not able to ideally support evolving network
      and device models: - lower compute performance due to low energy
      (batteries, energy recovery), bitrates especially on radio links, and
      lower memory footprint.
@@ -607,14 +607,14 @@ as long as possible from battery and/or energy harvesting such as (today most co
 associated with the node or ambient energy such as energy harvesting from movement for wearable nodes
 or piezo cells to generate energy for mechanically operated nodes such as switches.
 
-Several IETF WGs have or are producing work is primarily intended wo support LLN through multiple
+Several IETF WGs have or are producing work is primarily intended to support LLN through multiple
 layers of the protocol stack. {{RFC8352}} gives a good overview of the energy consumption related
 communication challenges and solutions produced by the IETF for this space.
 
 To minimize the energy needs for such nodes, their network data-processing mechanisms have to
 be optimized. This includes packet header compression, fragmentation (to avoid latency through
 large packets at low bitrates, packet bundling to only consume radio energy at short time
-periods, radio energy tuning to just reach the destination(s), minimization of multicasting
+periods, radio energy tuning to reach only the destination(s), minimization of multicasting
 to eliminate need of radio receivers to consume energy and so on. {{RFC8352}} gives a more detailed
 overview, especially because different L2 technologies such as IEEE 802.15.4 type (low power)
 wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DEC ULE.
@@ -661,7 +661,7 @@ specifications, information models, cross-adaptation layer specification (such a
 specifications) and maintenance and informational documents for other pre-existing IETF
 work in this space.
 
-Notably, a key specification produced is {{RFC7668}}, "IPv6 over BLUETOOTH(R) Low Energy", using IPv6 over Low-power Wireless Personal Area Network (6LoWPAN) techniques, as well as the related {{RFC9159}} for the formation of extended topologies, an IPv6 mesh over Bluetooth LE links.
+Notably, a key specification produced is {{RFC7668}}, "IPv6 over BLUETOOTH(R) Low Energy", using IPv6 over Low-power Wireless Personal Area Network (6LoWPAN) techniques, as well as the related {{RFC9159}} for the formation of extended topologies, a mesh IPv6 network over Bluetooth LE links.
 
 From a management perspective, produced {{RFC7388}}, LOWPAN MIB, as well as several specific improvements around power such as {{RFC7973}}, {{RFC8025}}, {{RFC8928}}, {{RFC8931}}, and {{RFC9034}}.
 
@@ -701,7 +701,7 @@ participate in it, RPL also supports even more lightweight leave nodes {{RFC9010
 
 The 2013 {{I-D.ajunior-energy-awareness-00}} proposes the introducing of energy related parameters
 into RPL to support calculation/selection of most energy efficient paths. The 2017
- "An energy optimization routing scheme for LLSs", {{I-D.wang-roll-energy-optimization-scheme}}
+ "An energy optimization routing scheme for LLNs", {{I-D.wang-roll-energy-optimization-scheme}}
 observed that DODAGs in RPL tend to require more energy in nodes closer to the root and
 proposed specific optimizations to reduce this problem. Neither of these drafts proceeded in the IETF.
 
@@ -748,7 +748,7 @@ functions with more compact on-the-wire/radio encoding than its unconstrained al
 product of the CoRE WG providing a more message layer based, more lightweight security
 alternative to DTLS.
 
-While originally designed for LLN, CoAP is transcending LLN and equally becoming ubicuitous
+While originally designed for LLN, CoAP is transcending LLN and equally becoming ubiquitous
 in unconstrained environments such as wired/ethernet industrial Machine 2 Machine (M2M) communications,
 because of simplicity, flexibility and relying on the single set of protocols supporting the widest
 range of deployment scenarios.
@@ -1059,7 +1059,7 @@ to introduce globally unique UUIDs for physical entities that allows to better
 link across different entities, such as a PoE port on an ethernet switch and
 the device connected to that switch port.
 
-The "Monitoring and Control MIB for Power and Energy" [RFC7460] specifies
+The "Monitoring and Control MIB for Power and Energy" {{RFC7460}} specifies
 a MIB for monitoring for Power State and energy consumption of networked.
 The document discusses the link with other MIBs such as
 the ENTITY-MIB, the ENTITY-SENSOR-MIB {{RFC3433}} for which it is
@@ -1169,7 +1169,7 @@ if a node is in an "idle" state (such nodes may be removed from
 adjacency tables if they don't participate in routing
 advertisements).
 
-## Miscelaneous
+## Miscellaneous
 
 The non-adopted, expired 2013 draft {{I-D.okamoto-ccamp-midori-gmpls-extension-reqs}}
 discusses power awareness in routing in conjunction with Traffic
