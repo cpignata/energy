@@ -603,7 +603,7 @@ Internet-Draft            IETF Energy Overview               August 2025
    telecollaboration taking various factors into account and using CO2
    emission equivalents as its core metric.  That paper concludes that
    carbon/ energy cost of telecollaboration could be as little as 7% of
-   an in-person meeting.  in-person meeting.  Those numbers have various
+   an in-person meeting. in-person meeting.  Those numbers have various
    assumptions and change when time-effort of participants is converted
    to carbon/energy costs.  These numbers should even be better today in
    favor of telecollaboration: cost of Internet traffic/bit goes down
@@ -1649,7 +1649,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
    07: Added security considerations, updated pointers.
 
-   08:
+   08: Refresh of the I-D, focusing on editorial fixes and improvements.
 
 14.  Informative References
 
