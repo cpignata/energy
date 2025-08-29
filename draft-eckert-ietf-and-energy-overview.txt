@@ -10,7 +10,7 @@ Expires: 2 March 2026                                             Orange
                                                      Cisco Systems, Inc.
                                                              J. Tentsura
                                                                   NVIDIA
-                                                            C. Pignataro
+                                                       C. Pignataro, Ed.
                                                      NC State University
                                                           29 August 2025
 
@@ -134,9 +134,11 @@ Internet-Draft            IETF Energy Overview               August 2025
      8.2.  SDN-based Semantic Forwarding . . . . . . . . . . . . . .  27
      8.3.  Miscelaneous  . . . . . . . . . . . . . . . . . . . . . .  28
    9.  Gap Analysis  . . . . . . . . . . . . . . . . . . . . . . . .  29
-   10. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  29
-   11. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  29
-   12. Informative References  . . . . . . . . . . . . . . . . . . .  30
+   10. Security Considerations . . . . . . . . . . . . . . . . . . .  29
+   11. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  29
+   12. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  29
+   13. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  29
+   14. Informative References  . . . . . . . . . . . . . . . . . . .  30
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  47
 
 1.  Introduction
@@ -159,8 +161,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    understand the historic timeline in which a specific technology was
    proposed or introduced.  Especially successful IETF technologies will
    have newer RFC that updates such initial work.
-
-
 
 
 
@@ -1488,10 +1488,10 @@ Internet-Draft            IETF Energy Overview               August 2025
    exhibit little power savings upon shutdown of components such as
    line-cards or interfaces.
 
-   In addition, an SDN / controller-based solution where relatively in
-   their infancy back in 2013/2014, and technologies that would allow
-   for SDN controller to have resilient (self-healing) connectivity such
-   as described in [RFC8368]/[RFC8994] was also not available, making
+   In addition, an SDN / controller-based solution was relatively in its
+   infancy back in 2013/2014, and technologies that would allow for SDN
+   controller to have resilient (self-healing) connectivity, such as
+   described in [RFC8368] and [RFC8994], were also not available, making
    the risk of severely impacting network reliability one of the key
    factors for this PANET work to not proceed so far.
 
@@ -1584,11 +1584,30 @@ Internet-Draft            IETF Energy Overview               August 2025
    work in the IETF, but broadly speaking, most of those areas remain
    open to a wide range of possible further IETF/IRTF work.
 
-10.  Acknowledgments
+10.  Security Considerations
+
+   This document provides an overview of IETF work related to energy,
+   and as such does not contain security considerations of its own.
+   Each one of the cited documents contains security considerations
+   within its own context.
+
+   As the aim of this document is to help those unfamiliar with but
+   interested in IETF energy work, raising awareness of an important
+   broad topic, indirectly also raises awareness of the security
+   considerations overall.  And if this document inspires energy-related
+   activities within the IETF, such as identifying gaps and
+   investigating solutions, those would bring their security
+   considerations.
+
+11.  IANA Considerations
+
+   This document has no IANA actions.
+
+12.  Acknowledgments
 
    Thanks for Fred Baker for his review and suggestions.
 
-11.  Changelog
+13.  Changelog
 
    [RFC-Editor: this section to be removed in final document.]
 
@@ -1597,6 +1616,15 @@ Internet-Draft            IETF Energy Overview               August 2025
    changes or join the team of authors and edit yourself.
 
    00: Initial version
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 29]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
 
    01: Added Co-author (Mohamed Boucadair) - long list of typo fixes,
    editorial improvements in abstract, introduction and other chapters.
@@ -1619,14 +1647,9 @@ Internet-Draft            IETF Energy Overview               August 2025
    energy and power-related IETF work, full editorial pass.  New co-
    author.
 
+   07: Added security considerations, updated pointers.
 
-
-Eckert, et al.            Expires 2 March 2026                 [Page 29]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
-
-12.  Informative References
+14.  Informative References
 
    [BOUNDED_LATENCY]
               Cruz, R.L., "A calculus for network delay. I. Network
@@ -1651,6 +1674,14 @@ Internet-Draft            IETF Energy Overview               August 2025
    [I-D.bormann-core-roadmap-05]
               Bormann, C., "CoRE Roadmap and Implementation Guide", Work
               in Progress, Internet-Draft, draft-bormann-core-roadmap-
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 30]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
               05, 21 October 2013,
               <https://datatracker.ietf.org/doc/html/draft-bormann-core-
               roadmap-05>.
@@ -1674,14 +1705,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               Chakrabarti, S., Nordmark, E., and M. Cullen, "Energy
               Aware IPv6 Neighbor Discovery Optimizations", Work in
               Progress, Internet-Draft, draft-chakrabarti-nordmark-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 30]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
-
               energy-aware-nd-02, 12 March 2012,
               <https://datatracker.ietf.org/doc/html/draft-chakrabarti-
               nordmark-energy-aware-nd-02>.
@@ -1707,6 +1730,14 @@ Internet-Draft            IETF Energy Overview               August 2025
               <https://datatracker.ietf.org/doc/html/draft-fossati-core-
               monitor-option-00>.
 
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 31]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [I-D.fossati-core-publish-option]
               Fossati, T., Giacomin, P., and S. Loreto, "Publish Option
               for CoAP", Work in Progress, Internet-Draft, draft-
@@ -1729,14 +1760,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               03, 23 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-iab-ws-
               environmental-impacts-report-03>.
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 31]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [I-D.ietf-core-coap-pubsub]
               Jimenez, J., Koster, M., and A. Keränen, "A publish-
@@ -1761,11 +1784,15 @@ Internet-Draft            IETF Energy Overview               August 2025
               <https://datatracker.ietf.org/doc/html/draft-ietf-roll-
               protocols-survey-07>.
 
-   [I-D.ietf-tcpm-rfc793bis]
-              Eddy, W., "Transmission Control Protocol (TCP)", Work in
-              Progress, Internet-Draft, draft-ietf-tcpm-rfc793bis-28, 7
-              March 2022, <https://datatracker.ietf.org/doc/html/draft-
-              ietf-tcpm-rfc793bis-28>.
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 32]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
 
    [I-D.jennings-energy-pricing]
               Jennings, C. F. and B. Nordman, "Communication of Energy
@@ -1780,19 +1807,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               Draft, draft-levis-roll-overview-protocols-00, 12 February
               2008, <https://datatracker.ietf.org/doc/html/draft-levis-
               roll-overview-protocols-00>.
-
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 32]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [I-D.lhan-problems-requirements-satellite-net]
               Han, L., Li, R. R., Retana, A., Chen, M., Su, L., and T.
@@ -1828,6 +1842,14 @@ Internet-Draft            IETF Energy Overview               August 2025
               Okamoto, S., "Requirements of GMPLS Extensions for Energy
               Efficient Traffic Engineering", Work in Progress,
               Internet-Draft, draft-okamoto-ccamp-midori-gmpls-
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 33]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
               extension-reqs-02, 14 March 2013,
               <https://datatracker.ietf.org/doc/html/draft-okamoto-
               ccamp-midori-gmpls-extension-reqs-02>.
@@ -1839,16 +1861,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               petrescu-v6ops-ipv6-power-ipv4-00, 13 March 2017,
               <https://datatracker.ietf.org/doc/html/draft-petrescu-
               v6ops-ipv6-power-ipv4-00>.
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 33]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [I-D.rahman-core-sleepy]
               Rahman, A., "Enhanced Sleepy Node Support for CoAP", Work
@@ -1885,6 +1897,15 @@ Internet-Draft            IETF Energy Overview               August 2025
               <https://datatracker.ietf.org/doc/html/draft-suzuki-eens-
               requirements-00>.
 
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 34]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [I-D.thubert-6man-ipv6-over-wireless]
               Thubert, P. and M. Richardson, "Architecture and Framework
               for IPv6 over Non-Broadcast Access", Work in Progress,
@@ -1897,14 +1918,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               Internet-Draft, draft-vial-core-mirror-proxy-01, 13 July
               2012, <https://datatracker.ietf.org/doc/html/draft-vial-
               core-mirror-proxy-01>.
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 34]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [I-D.vial-core-mirror-server]
               Vial, M., "CoRE Mirror Server", Work in Progress,
@@ -1935,6 +1948,20 @@ Internet-Draft            IETF Energy Overview               August 2025
               <https://datatracker.ietf.org/doc/html/draft-zhang-
               greennet-01>.
 
+
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 35]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [I-D.zhang-panet-problem-statement]
               Zhang, B., Shi, J., Dong, J., Zhang, M., and M. Boucadair,
               "Power-Aware Networks (PANET): Problem Statement", Work in
@@ -1954,14 +1981,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    [NASPICLOCK]
               Force, N. T. S. T., "Time Synchronization in the Electric
               Power System", March 2017,
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 35]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
-
               <https://www.naspi.org/sites/default/files/
               reference_documents/tstf_electric_power_system_report_pnnl
               _26331_march_2017_0.pdf>.
@@ -1990,6 +2009,15 @@ Internet-Draft            IETF Energy Overview               August 2025
               DOI 10.17487/RFC2086, January 1997,
               <https://www.rfc-editor.org/rfc/rfc2086>.
 
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 36]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC2212]  Shenker, S., Partridge, C., and R. Guerin, "Specification
               of Guaranteed Quality of Service", RFC 2212,
               DOI 10.17487/RFC2212, September 1997,
@@ -2006,17 +2034,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    [RFC2460]  Deering, S. and R. Hinden, "Internet Protocol, Version 6
               (IPv6) Specification", RFC 2460, DOI 10.17487/RFC2460,
               December 1998, <https://www.rfc-editor.org/rfc/rfc2460>.
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 36]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [RFC2475]  Blake, S., Black, D., Carlson, M., Davies, E., Wang, Z.,
               and W. Weiss, "An Architecture for Differentiated
@@ -2047,6 +2064,16 @@ Internet-Draft            IETF Energy Overview               August 2025
               DOI 10.17487/RFC3433, December 2002,
               <https://www.rfc-editor.org/rfc/rfc3433>.
 
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 37]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC3550]  Schulzrinne, H., Casner, S., Frederick, R., and V.
               Jacobson, "RTP: A Transport Protocol for Real-Time
               Applications", STD 64, RFC 3550, DOI 10.17487/RFC3550,
@@ -2064,15 +2091,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    [RFC3977]  Feather, C., "Network News Transfer Protocol (NNTP)",
               RFC 3977, DOI 10.17487/RFC3977, October 2006,
               <https://www.rfc-editor.org/rfc/rfc3977>.
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 37]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [RFC4268]  Chisholm, S. and D. Perkins, "Entity State MIB", RFC 4268,
               DOI 10.17487/RFC4268, November 2005,
@@ -2103,6 +2121,15 @@ Internet-Draft            IETF Energy Overview               August 2025
               RFC 4919, DOI 10.17487/RFC4919, August 2007,
               <https://www.rfc-editor.org/rfc/rfc4919>.
 
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 38]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC4944]  Montenegro, G., Kushalnagar, N., Hui, J., and D. Culler,
               "Transmission of IPv6 Packets over IEEE 802.15.4
               Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
@@ -2120,15 +2147,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    [RFC5322]  Resnick, P., Ed., "Internet Message Format", RFC 5322,
               DOI 10.17487/RFC5322, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5322>.
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 38]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [RFC5548]  Dohler, M., Ed., Watteyne, T., Ed., Winter, T., Ed., and
               D. Barthel, Ed., "Routing Requirements for Urban Low-Power
@@ -2159,6 +2177,15 @@ Internet-Draft            IETF Energy Overview               August 2025
               "The Trickle Algorithm", RFC 6206, DOI 10.17487/RFC6206,
               March 2011, <https://www.rfc-editor.org/rfc/rfc6206>.
 
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 39]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC6272]  Baker, F. and D. Meyer, "Internet Protocols for the Smart
               Grid", RFC 6272, DOI 10.17487/RFC6272, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6272>.
@@ -2174,17 +2201,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               Low-Power and Lossy Networks", RFC 6550,
               DOI 10.17487/RFC6550, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6550>.
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 39]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
               and D. Barthel, "Routing Metrics Used for Path Calculation
@@ -2219,6 +2235,13 @@ Internet-Draft            IETF Energy Overview               August 2025
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
               <https://www.rfc-editor.org/rfc/rfc6690>.
 
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 40]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC6763]  Cheshire, S. and M. Krochmal, "DNS-Based Service
               Discovery", RFC 6763, DOI 10.17487/RFC6763, February 2013,
               <https://www.rfc-editor.org/rfc/rfc6763>.
@@ -2233,14 +2256,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               P. Selkirk, "Port Control Protocol (PCP)", RFC 6887,
               DOI 10.17487/RFC6887, April 2013,
               <https://www.rfc-editor.org/rfc/rfc6887>.
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 40]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [RFC6933]  Bierman, A., Romascanu, D., Quittek, J., and M.
               Chandramouli, "Entity MIB (Version 4)", RFC 6933,
@@ -2271,6 +2286,18 @@ Internet-Draft            IETF Energy Overview               August 2025
               DOI 10.17487/RFC7326, September 2014,
               <https://www.rfc-editor.org/rfc/rfc7326>.
 
+
+
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 41]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC7388]  Schoenwaelder, J., Sehgal, A., Tsou, T., and C. Zhou,
               "Definition of Managed Objects for IPv6 over Low-Power
               Wireless Personal Area Networks (6LoWPANs)", RFC 7388,
@@ -2287,16 +2314,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               and T. Dietz, "Monitoring and Control MIB for Power and
               Energy", RFC 7460, DOI 10.17487/RFC7460, March 2015,
               <https://www.rfc-editor.org/rfc/rfc7460>.
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 41]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [RFC7461]  Parello, J., Claise, B., and M. Chandramouli, "Energy
               Object Context MIB", RFC 7461, DOI 10.17487/RFC7461, March
@@ -2330,6 +2347,13 @@ Internet-Draft            IETF Energy Overview               August 2025
               and Lossy Networks (MPL)", RFC 7731, DOI 10.17487/RFC7731,
               February 2016, <https://www.rfc-editor.org/rfc/rfc7731>.
 
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 42]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
    [RFC7733]  Brandt, A., Baccelli, E., Cragie, R., and P. van der Stok,
               "Applicability Statement: The Use of the Routing Protocol
               for Low-Power and Lossy Networks (RPL) Protocol Suite in
@@ -2342,18 +2366,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               DOI 10.17487/RFC7772, February 2016,
               <https://www.rfc-editor.org/rfc/rfc7772>.
 
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 42]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
-
    [RFC7849]  Binet, D., Boucadair, M., Vizdal, A., Chen, G., Heatley,
               N., Chandler, R., Michaud, D., Lopez, D., and W. Haeffner,
               "An IPv6 Profile for 3GPP Mobile Devices", RFC 7849,
@@ -2363,10 +2375,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    [RFC791]   Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
               <https://www.rfc-editor.org/rfc/rfc791>.
-
-   [RFC793]   Postel, J., "Transmission Control Protocol", RFC 793,
-              DOI 10.17487/RFC0793, September 1981,
-              <https://www.rfc-editor.org/rfc/rfc793>.
 
    [RFC7973]  Droms, R. and P. Duffy, "Assignment of an Ethertype for
               IPv6 with Low-Power Wireless Personal Area Network
@@ -2395,20 +2403,17 @@ Internet-Draft            IETF Energy Overview               August 2025
               (6LoWPAN) Routing Header", RFC 8138, DOI 10.17487/RFC8138,
               April 2017, <https://www.rfc-editor.org/rfc/rfc8138>.
 
-   [RFC8200]  Deering, S. and R. Hinden, "Internet Protocol, Version 6
-              (IPv6) Specification", STD 86, RFC 8200,
-              DOI 10.17487/RFC8200, July 2017,
-              <https://www.rfc-editor.org/rfc/rfc8200>.
-
-
-
-
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 43]
 
 Internet-Draft            IETF Energy Overview               August 2025
 
+
+   [RFC8200]  Deering, S. and R. Hinden, "Internet Protocol, Version 6
+              (IPv6) Specification", STD 86, RFC 8200,
+              DOI 10.17487/RFC8200, July 2017,
+              <https://www.rfc-editor.org/rfc/rfc8200>.
 
    [RFC822]   Crocker, D., "STANDARD FOR THE FORMAT OF ARPA INTERNET
               TEXT MESSAGES", STD 11, RFC 822, DOI 10.17487/RFC0822,
@@ -2450,11 +2455,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               (OSCORE)", RFC 8613, DOI 10.17487/RFC8613, July 2019,
               <https://www.rfc-editor.org/rfc/rfc8613>.
 
-   [RFC8724]  Minaburo, A., Toutain, L., Gomez, C., Barthel, D., and JC.
-              Zuniga, "SCHC: Generic Framework for Static Context Header
-              Compression and Fragmentation", RFC 8724,
-              DOI 10.17487/RFC8724, April 2020,
-              <https://www.rfc-editor.org/rfc/rfc8724>.
 
 
 
@@ -2465,6 +2465,12 @@ Eckert, et al.            Expires 2 March 2026                 [Page 44]
 
 Internet-Draft            IETF Energy Overview               August 2025
 
+
+   [RFC8724]  Minaburo, A., Toutain, L., Gomez, C., Barthel, D., and JC.
+              Zuniga, "SCHC: Generic Framework for Static Context Header
+              Compression and Fragmentation", RFC 8724,
+              DOI 10.17487/RFC8724, April 2020,
+              <https://www.rfc-editor.org/rfc/rfc8724>.
 
    [RFC8815]  Abrahamsson, M., Chown, T., Giuliano, L., and T. Eckert,
               "Deprecating Any-Source Multicast (ASM) for Interdomain
@@ -2508,12 +2514,6 @@ Internet-Draft            IETF Energy Overview               August 2025
               Leaves", RFC 9010, DOI 10.17487/RFC9010, April 2021,
               <https://www.rfc-editor.org/rfc/rfc9010>.
 
-   [RFC9011]  Gimenez, O., Ed. and I. Petrov, Ed., "Static Context
-              Header Compression and Fragmentation (SCHC) over LoRaWAN",
-              RFC 9011, DOI 10.17487/RFC9011, April 2021,
-              <https://www.rfc-editor.org/rfc/rfc9011>.
-
-
 
 
 
@@ -2521,6 +2521,11 @@ Eckert, et al.            Expires 2 March 2026                 [Page 45]
 
 Internet-Draft            IETF Energy Overview               August 2025
 
+
+   [RFC9011]  Gimenez, O., Ed. and I. Petrov, Ed., "Static Context
+              Header Compression and Fragmentation (SCHC) over LoRaWAN",
+              RFC 9011, DOI 10.17487/RFC9011, April 2021,
+              <https://www.rfc-editor.org/rfc/rfc9011>.
 
    [RFC9034]  Thomas, L., Anamalamudi, S., Anand, S.V.R., Hegde, M., and
               C. Perkins, "Packet Delivery Deadline Time in the Routing
@@ -2566,17 +2571,16 @@ Internet-Draft            IETF Energy Overview               August 2025
               DOI 10.17487/RFC9271, August 2022,
               <https://www.rfc-editor.org/rfc/rfc9271>.
 
-   [RFC9293]  Eddy, W., Ed., "Transmission Control Protocol (TCP)",
-              STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
-              <https://www.rfc-editor.org/rfc/rfc9293>.
-
-
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 46]
 
 Internet-Draft            IETF Energy Overview               August 2025
 
+
+   [RFC9293]  Eddy, W., Ed., "Transmission Control Protocol (TCP)",
+              STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
+              <https://www.rfc-editor.org/rfc/rfc9293>.
 
    [RFC9354]  Hou, J., Liu, B., Hong, Y., Tang, X., and C. Perkins,
               "Transmission of IPv6 Packets over Power Line
@@ -2622,11 +2626,63 @@ Authors' Addresses
    Email: jefftant.ietf@gmail.com
 
 
-   Carlos Pignataro
-   NC State University
-   United States of America
-   Email: cpignata@gmail.com
 
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 47]
+
+Internet-Draft            IETF Energy Overview               August 2025
+
+
+   Carlos Pignataro (editor)
+   NC State University
+   United States of America
+   Email: cmpignat@ncsu.edu, cpignata@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 48]
