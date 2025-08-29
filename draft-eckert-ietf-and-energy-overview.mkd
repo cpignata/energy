@@ -1251,4 +1251,4 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 07: Added security considerations, updated pointers.
 
-08: 
+08: Refresh of the I-D, focusing on editorial fixes and improvements.
