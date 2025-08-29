@@ -15,25 +15,31 @@ Expires: 2 March 2026                                             Orange
                                                           29 August 2025
 
 
-          An Overview of Energy-related Effort within the IETF
+  An Overview of Energy-related Effort within the IETF, IRTF, and IAB
                 draft-eckert-ietf-and-energy-overview-08
 
 Abstract
 
-   This memo provides an overview of work performed by or proposed
-   within the IETF related to energy and/or green: awareness,
-   management, control or reduction of consumption of energy, and
-   sustainability as it related to the IETF.
+   This memo provides a compilation of existing work performed by or
+   proposed within the IETF, the IRTF, and the IAB that relates to
+   energy and sustainability: awareness, management, control, or
+   reduction of energy consumption.
 
-   This document is written to help those unfamiliar with that work, but
-   interested in it, in the hope to raise more interest in energy-
-   related activities within the IETF, such as identifying gaps and
-   investigating solutions as appropriate.
+   The goal is to help participants unfamiliar with this body of work
+   better understand what has already been published, by providing a
+   consolidated reference.  A secondary goal is to raise awareness and
+   interest in energy-related activities within the IETF, IRTF, and IAB,
+   to continue identifying gaps and investigating solutions as
+   appropriate.
 
-   This document captures work until 12/2022, at which time the "IAB
-   workshop on Environmental Impact of Internet Applications and
-   Systems" revived interest and triggered new work in the topic within
-   the IETF/IRTF.
+   The scope of this document includes selected work from the IETF,
+   IRTF, and IAB where relevant.  This document is descriptive and does
+   not propose new work items.
+
+   This document captures work until 12/2022, when the “IAB workshop on
+   Environmental Impact of Internet Applications and Systems”
+   contextualized renewed community interest and discussion of the
+   topic.  This memo itself does not recommend or direct future work.
 
 Status of This Memo
 
@@ -45,18 +51,17 @@ Status of This Memo
    working documents as Internet-Drafts.  The list of current Internet-
    Drafts is at https://datatracker.ietf.org/drafts/current/.
 
-   Internet-Drafts are draft documents valid for a maximum of six months
-   and may be updated, replaced, or obsoleted by other documents at any
-   time.  It is inappropriate to use Internet-Drafts as reference
-   material or to cite them other than as "work in progress."
-
-
 
 
 Eckert, et al.            Expires 2 March 2026                  [Page 1]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
 
    This Internet-Draft will expire on 2 March 2026.
 
@@ -79,21 +84,21 @@ Table of Contents
      2.2.  Energy Saving Through Scale . . . . . . . . . . . . . . .   5
        2.2.1.  An Iconic Example: Telephony  . . . . . . . . . . . .   5
        2.2.2.  The Packet Multiplexing Principle . . . . . . . . . .   5
-       2.2.3.  End-to-End Transport  . . . . . . . . . . . . . . . .   5
+       2.2.3.  End-to-End Transport  . . . . . . . . . . . . . . . .   6
        2.2.4.  Global vs Restricted Connectivity: The Internet Routing
                Architectures . . . . . . . . . . . . . . . . . . . .   6
        2.2.5.  Freedom to Innovate . . . . . . . . . . . . . . . . .   6
        2.2.6.  End-to-End Encryption . . . . . . . . . . . . . . . .   6
-       2.2.7.  Converged Networks  . . . . . . . . . . . . . . . . .   6
+       2.2.7.  Converged Networks  . . . . . . . . . . . . . . . . .   7
          2.2.7.1.  IntServ and DetNet  . . . . . . . . . . . . . . .   7
-         2.2.7.2.  DiffServ  . . . . . . . . . . . . . . . . . . . .   7
+         2.2.7.2.  DiffServ  . . . . . . . . . . . . . . . . . . . .   8
          2.2.7.3.  SIP . . . . . . . . . . . . . . . . . . . . . . .   8
    3.  Higher or New Energy Consumption  . . . . . . . . . . . . . .   8
    4.  Some Notes on Sustainability  . . . . . . . . . . . . . . . .   9
-     4.1.  Follow the Energy Cloud Scheduling  . . . . . . . . . . .   9
+     4.1.  Follow the Energy Cloud Scheduling  . . . . . . . . . . .  10
      4.2.  Optimize Generated Heat . . . . . . . . . . . . . . . . .  10
      4.3.  Heat Recovery . . . . . . . . . . . . . . . . . . . . . .  10
-     4.4.  Telecollaboration . . . . . . . . . . . . . . . . . . . .  10
+     4.4.  Telecollaboration . . . . . . . . . . . . . . . . . . . .  11
    5.  Energy Optimization in Specific Networks  . . . . . . . . . .  12
      5.1.  Analysis of Routing Protocol (In)Efficiencies . . . . . .  12
      5.2.  Low Power and Lossy Networks (LLN)  . . . . . . . . . . .  13
@@ -101,19 +106,19 @@ Table of Contents
        5.2.2.  LPWAN WG  . . . . . . . . . . . . . . . . . . . . . .  14
        5.2.3.  6TISCH WG . . . . . . . . . . . . . . . . . . . . . .  14
        5.2.4.  6LO WG  . . . . . . . . . . . . . . . . . . . . . . .  14
-       5.2.5.  ROLL WG . . . . . . . . . . . . . . . . . . . . . . .  15
-     5.3.  Constrained Nodes and Networks  . . . . . . . . . . . . .  16
-       5.3.1.  LWIG WG . . . . . . . . . . . . . . . . . . . . . . .  16
-       5.3.2.  CoRE and CoAP . . . . . . . . . . . . . . . . . . . .  16
-       5.3.3.  Satellite Constellations  . . . . . . . . . . . . . .  17
 
 
 
 Eckert, et al.            Expires 2 March 2026                  [Page 2]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
+       5.2.5.  ROLL WG . . . . . . . . . . . . . . . . . . . . . . .  15
+     5.3.  Constrained Nodes and Networks  . . . . . . . . . . . . .  16
+       5.3.1.  LWIG WG . . . . . . . . . . . . . . . . . . . . . . .  16
+       5.3.2.  CoRE and CoAP . . . . . . . . . . . . . . . . . . . .  16
+       5.3.3.  Satellite Constellations  . . . . . . . . . . . . . .  17
        5.3.4.  Devices with Batteries  . . . . . . . . . . . . . . .  17
      5.4.  Sample Technical Enablers . . . . . . . . . . . . . . . .  18
        5.4.1.  (IP) Multicast  . . . . . . . . . . . . . . . . . . .  18
@@ -144,9 +149,12 @@ Internet-Draft            IETF Energy Overview               August 2025
 1.  Introduction
 
    This document summarizes work that has been proposed to or performed
-   within the IETF/IRTF.  Particularly, it covers IETF/IRTF RFCs as well
-   as ISE RFCs and IETF/IRTF or individual submission drafts that where
-   abandoned for various reasons (e.g., lack of momentum, broad scope).
+   within the IETF, IRTF, and IAB.  Its goal is to summarize, not to
+   propose or direct new work.  It is intended as a compilation of prior
+   work, not a proposal of new activities.  The main purpose is to
+   provide a consolidated reference for participants, by cataloging and
+   contextualizing what has already been published and done in IETF,
+   IRTF, and IAB.
 
    There are various aspects how a given work relates to energy that are
    classified into categories.  Such a classification does not attempt
@@ -154,27 +162,29 @@ Internet-Draft            IETF Energy Overview               August 2025
    readability.  Technologies are listed under a category that is
    specifically significant, for example, by being most narrow.
 
-   This memo usually refers to the technologies by significant early RFC
-   or specific draft version, as opposed to the newest.  This is
-   contrary to the common practice in IETF documents to refer to the
-   newest version.  This approach is meant to allow readers to better
-   understand the historic timeline in which a specific technology was
-   proposed or introduced.  Especially successful IETF technologies will
-   have newer RFC that updates such initial work.
-
 
 
 
 Eckert, et al.            Expires 2 March 2026                  [Page 3]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
-   This document captures work until 12/2022, at which time the "IAB
-   workshop on Environmental Impact of Internet Applications and
-   Systems" [I-D.iab-ws-environmental-impacts-report] revived interest
-   and highlighted the need for some structured activity within the
-   IETF/IRTF.
+   This memo usually refers to the technologies by significant early RFC
+   or specific draft version, as opposed to the newest.  This is
+   contrary to the common practice in IETF documents to refer to the
+   newest version.  This approach is meant to allow readers to better
+   understand the historic timeline in which a specific technology was
+   proposed or introduced.  Especially successful I* technologies will
+   have newer RFC that updates such initial work.
+
+   This document captures work until 12/2022, when the “IAB workshop on
+   Environmental Impact of Internet Applications and Systems”
+   [I-D.iab-ws-environmental-impacts-report] renewed community
+   discussion of the topic.  The workshop emphasized that existing and
+   emerging work could benefit from increased visibility and
+   understanding, but this memo itself does not recommend or direct
+   future work.
 
 2.  Energy Saving: An Introduction
 
@@ -209,6 +219,13 @@ Internet-Draft            IETF Energy Overview               August 2025
    speed, functionality/flexibility, accessibility, usability,
    scalability, and reduced cost.
 
+
+
+Eckert, et al.            Expires 2 March 2026                  [Page 4]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
    In hindsight though, digitization through IETF technologies and
    specifically the Internet will likely have the largest contribution
    to energy saving amongst all the possible categories, but it is also
@@ -217,14 +234,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    operational practices that contributes to energy saving through
    digitization.  It is likely also the biggest overall energy saving
    impact of all possible categories that relate IETF work to energy:
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                  [Page 4]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    The Internet as well as all other IP/MPLS networks are likely the
    biggest energy saving development of the past few decades if only the
@@ -264,6 +273,15 @@ Internet-Draft            IETF Energy Overview               August 2025
    scale of deployment, as well as in development of further
    technologies to support this scaling.
 
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                  [Page 5]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
 2.2.3.  End-to-End Transport
 
    At the core of scalability, even up to now, is the lightweight per-
@@ -273,14 +291,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    expensive per-hop, per-packet processing, such as would be required
    for reliable hop-by-hop forwarding through per-hop ARQ, which was key
    to scaling routers cost effectively.
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                  [Page 5]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
 2.2.4.  Global vs Restricted Connectivity: The Internet Routing
         Architectures
@@ -318,9 +328,19 @@ Internet-Draft            IETF Energy Overview               August 2025
    innovation into ever faster networking technology and likely lower
    cost per bit.
 
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                  [Page 6]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
 2.2.7.  Converged Networks
 
-   Another key factor to support scaling where IETF technologies that
+   Another key factor to support scaling were IETF technologies that
    allowed to multiplex different types of traffic (e.g., real-time vs.
    non-real-time) which previously used separate networks with typically
    incompatible networking technologies.
@@ -330,14 +350,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    savings even at the same generation of speed and hence energy/bit
    simply by avoiding the N-fold production and operations of equipment
    and links.  Of course, originally the CAPEX and OPEX of multiple,
-
-
-
-Eckert, et al.            Expires 2 March 2026                  [Page 6]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
-
    technology-diverse networks and host-stacks was the core reason for
    unified networks, and energy saving is in hindsight just incidental
    (as for all other cases mentioned here).
@@ -368,6 +380,20 @@ Internet-Draft            IETF Energy Overview               August 2025
    should enable even further network infrastructure convergence for IoT
    and industrial markets.
 
+
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                  [Page 7]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
 2.2.7.2.  DiffServ
 
    Due to the much higher per-packet processing overhead of INTSERV
@@ -380,19 +406,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    the Internet onto a common TCP/IP network infrastructure,
    specifically for voice and video over UDP ([RFC768]) including RTP
    [RFC3550] and SIP.
-
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                  [Page 7]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
 2.2.7.3.  SIP
 
@@ -423,6 +436,20 @@ Internet-Draft            IETF Energy Overview               August 2025
    consumption for email and streaming easily outranks their predecessor
    technologies.
 
+
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                  [Page 8]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
    While these instances look beneficial from a simple energy
    consumption metric, its overall scale and the resulting energy
    consumption may in itself become an issue, especially when the energy
@@ -441,14 +468,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    fluctuating price of the crypto currency).  Nevertheless, its overall
    utility compared to such prior currencies or valuables makes it
    highly successful in the market.
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                  [Page 8]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    In general, the digital economy tends to be more energy intensive on
    a per utility/value unit, for example by replacing a lot of manual
@@ -479,6 +498,14 @@ Internet-Draft            IETF Energy Overview               August 2025
    While there seems to be no IETF work specifically intending to target
    sustainability, the Internet itself can similarly to how it does for
    digitization play a key role in building sustainable networked IT
+
+
+
+Eckert, et al.            Expires 2 March 2026                  [Page 9]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
    infrastructures.  The following subsections list three exemplary
    areas where global high performance, low-cost Internet networking is
    a key requirement.
@@ -498,13 +525,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    location with sufficient renewable energy and the Internet (or large
    TCP/IP OTT backbone networks) will serve as the fabric to access the
    remote DC and to coordinate the instantiation/migration.
-
-
-
-Eckert, et al.            Expires 2 March 2026                  [Page 9]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
 4.2.  Optimize Generated Heat
 
@@ -531,6 +551,17 @@ Internet-Draft            IETF Energy Overview               August 2025
    and services https://www.cloudandheat.com/wp-content/
    uploads/2020/02/2020_CloudHeat-Whitepaper-Cost-saving-Potential.pdf.
 
+
+
+
+
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 10]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
 4.4.  Telecollaboration
 
    Telecollaboration has a long history in the IETF resulting in
@@ -547,20 +578,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    MBone https://en.wikipedia.org/wiki/Mbone which was also used by the
    IETF for more than a decade to provide remote collaboration for its
    own (in-person + remote participation) meetings.
-
-
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 10]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    With the advent of SIP in the early 2000s, commercial
    telecollaboration started to be built most often on SIP based session
@@ -594,6 +611,13 @@ Internet-Draft            IETF Energy Overview               August 2025
    that were not cancelled to be moved to a telecollaboration platform
    over the Internet - most of them likely relying on RTCWEB protocols.
 
+
+
+Eckert, et al.            Expires 2 March 2026                 [Page 11]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
+
+
    Actual energy consumption related comparison between teleconferencing
    and in-person travel is complex but since the last decades is
    commonly based on calculating some form of CO2 emission equivalent of
@@ -601,22 +625,6 @@ Internet-Draft            IETF Energy Overview               August 2025
    consumption, but weighing it by the impact the energy consumption has
    on one of the key factors (CO2 emission) known to impact sustainable
    living conditions.
-
-
-
-
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 2 March 2026                 [Page 11]
-
-Internet-Draft            IETF Energy Overview               August 2025
-
 
    [VC2014] is a good example of a comparison between travel and
    telecollaboration taking various factors into account and using CO2
@@ -657,22 +665,20 @@ Internet-Draft            IETF Energy Overview               August 2025
    (batteries, energy recovery), bitrates especially on radio links, and
    lower memory footprint.
 
-   The two documents from 2008/2009 that capture this analysis/
-   understanding are [I-D.levis-roll-overview-protocols] and
-   [I-D.ietf-roll-protocols-survey].  The overall challenges also very
-   much related to energy of IPv6 over wireless are captured in
-   [I-D.thubert-6man-ipv6-over-wireless], which is ongoing work.
-
-
-
 
 
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 12]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
+
+   The two documents from 2008/2009 that capture this analysis/
+   understanding are [I-D.levis-roll-overview-protocols] and
+   [I-D.ietf-roll-protocols-survey].  The overall challenges also very
+   much related to energy of IPv6 over wireless are captured in
+   [I-D.thubert-6man-ipv6-over-wireless], which is ongoing work.
 
 5.2.  Low Power and Lossy Networks (LLN)
 
@@ -715,20 +721,20 @@ Internet-Draft            IETF Energy Overview               August 2025
    Requirements [RFC6606] gives details about the power and energy
    approaches and goals.
 
-   "Transmission of IPv6 Packets over IEEE 802.15.4 Networks" [RFC4944],
-   "Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based
-   Networks" [RFC6282], "Neighbor Discovery Optimization for IPv6 over
-   Low-Power Wireless Personal Area Networks (6LoWPANs)" [RFC6775]
-   (6LOWPAN-ND).
-
 
 
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 13]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
+
+   "Transmission of IPv6 Packets over IEEE 802.15.4 Networks" [RFC4944],
+   "Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based
+   Networks" [RFC6282], "Neighbor Discovery Optimization for IPv6 over
+   Low-Power Wireless Personal Area Networks (6LoWPANs)" [RFC6775]
+   (6LOWPAN-ND).
 
    It is important to understand the 6LOWPAN Overview, Assumptions,
    Problem Statement, and Goals [RFC4919], including "conserve energy".
@@ -773,18 +779,15 @@ Internet-Draft            IETF Energy Overview               August 2025
    well as several specific improvements around power such as [RFC7973],
    [RFC8025], [RFC8928], [RFC8931], and [RFC9034].
 
-   Finally, the 6LO WG also produced [RFC8105], IPv6 over DECT Ultra-Low
-   Energy, and [RFC9354], IPv6 over Power Line Communication (PLC).
-
-
-
-
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 14]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
+
+   Finally, the 6LO WG also produced [RFC8105], IPv6 over DECT Ultra-Low
+   Energy, and [RFC9354], IPv6 over Power Line Communication (PLC).
 
 5.2.5.  ROLL WG
 
@@ -834,12 +837,9 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 
 
-
-
-
 Eckert, et al.            Expires 2 March 2026                 [Page 15]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    While original use-cases for RPL where energy and size limited
@@ -895,7 +895,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 16]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    discovery and directory services, therefore providing a more
@@ -951,7 +951,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 17]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    The recommendation labeled "A_REC#2" of [RFC7849] further insist on
@@ -1007,7 +1007,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 18]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    As an additional pointer, [RFC7731] defined the Multicast Protocol
@@ -1063,7 +1063,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 19]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
 5.4.1.3.  Multicast Problems in Wireless Networks
@@ -1119,7 +1119,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 20]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.giacomin-core-sleepy-option], [I-D.castellani-core-alive],
@@ -1175,7 +1175,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 21]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
 5.5.  (Lack of) Power Benchmarking Proposals
@@ -1231,7 +1231,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 22]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    Most of the overview in this document is not specific to networks
@@ -1287,7 +1287,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 23]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    protocols.  The IETF "Network Time Protocol version 4" (NTPv4),
@@ -1343,7 +1343,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 24]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.claise-power-management-arch] describes the initial EMAN
@@ -1399,7 +1399,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 25]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    The pre-existing IETF "Entity State MIB" (ENTITY-STATE-MIB) [RFC4268]
@@ -1455,7 +1455,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 26]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    The 2013 "Power-Aware Networks (PANET): Problem Statement"
@@ -1511,7 +1511,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 27]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    Energy-efficient Forwarding: An important effort was made in the past
@@ -1567,7 +1567,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 28]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
 9.  Gap Analysis
@@ -1575,10 +1575,12 @@ Internet-Draft            IETF Energy Overview               August 2025
    The 2013 "Towards an Energy-Efficient Internet"
    [I-D.winter-energy-efficient-internet] summarizes some of the same
    work items as this document (as written back in 2013) and lists
-   additional more non-adopted drafts.  It also identifies three areas
-   of gaps, that it suggests the IETF to work on: "Load-adaptive
-   Resource Management", "Energy-efficient Protocol Design" and "Energy-
-   efficiency Metrics and Standard Benchmarking Methodologies".
+   additional more non-adopted drafts.  It also identified three areas
+   of gaps: “Load-adaptive Resource Management”, “Energy-efficient
+   Protocol Design”, and “Energy-efficiency Metrics and Standard
+   Benchmarking Methodologies”. While these areas remain open, this
+   document records them for reference rather than recommending specific
+   next steps.
 
    Some aspects for those areas of gaps where partially tackled by later
    work in the IETF, but broadly speaking, most of those areas remain
@@ -1616,15 +1618,15 @@ Internet-Draft            IETF Energy Overview               August 2025
    energy.  Please submit Issues and/or Pull-requests for proposed
    changes or join the team of authors and edit yourself.
 
-   00: Initial version
-
 
 
 
 Eckert, et al.            Expires 2 March 2026                 [Page 29]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
+
+   00: Initial version
 
    01: Added Co-author (Mohamed Boucadair) - long list of typo fixes,
    editorial improvements in abstract, introduction and other chapters.
@@ -1675,11 +1677,9 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 
 
-
-
 Eckert, et al.            Expires 2 March 2026                 [Page 30]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.bormann-core-roadmap-05]
@@ -1735,7 +1735,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 31]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.fossati-core-monitor-option]
@@ -1791,7 +1791,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 32]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
               in Progress, Internet-Draft, draft-ietf-roll-protocols-
@@ -1847,7 +1847,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 33]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.okamoto-ccamp-midori-gmpls-extension-reqs]
@@ -1903,7 +1903,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 34]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.suzuki-eens-requirements]
@@ -1959,7 +1959,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 35]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [I-D.zhang-panet-problem-statement]
@@ -2015,7 +2015,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 36]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC1866]  Berners-Lee, T. and D. Connolly, "Hypertext Markup
@@ -2071,7 +2071,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 37]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC3261]  Rosenberg, J., Schulzrinne, H., Camarillo, G., Johnston,
@@ -2127,7 +2127,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 38]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC4861]  Narten, T., Nordmark, E., Simpson, W., and H. Soliman,
@@ -2183,7 +2183,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 39]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC5826]  Brandt, A., Buron, J., and G. Porcu, "Home Automation
@@ -2239,7 +2239,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 40]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC6552]  Thubert, P., Ed., "Objective Function Zero for the Routing
@@ -2295,7 +2295,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 41]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC6988]  Quittek, J., Ed., Chandramouli, M., Winter, R., Dietz, T.,
@@ -2351,7 +2351,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 42]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC7577]  Quittek, J., Winter, R., and T. Dietz, "Definition of
@@ -2407,7 +2407,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 43]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC791]   Postel, J., "Internet Protocol", STD 5, RFC 791,
@@ -2463,7 +2463,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 44]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC8368]  Eckert, T., Ed. and M. Behringer, "Using an Autonomic
@@ -2519,7 +2519,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 45]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC8928]  Thubert, P., Ed., Sarikaya, B., Sethi, M., and R. Struik,
@@ -2575,7 +2575,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 46]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
    [RFC9139]  Gündoğan, C., Schmidt, T., Wählisch, M., Scherb, C.,
@@ -2631,7 +2631,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 
 Eckert, et al.            Expires 2 March 2026                 [Page 47]
 
-Internet-Draft            IETF Energy Overview               August 2025
+Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
 
 Authors' Addresses

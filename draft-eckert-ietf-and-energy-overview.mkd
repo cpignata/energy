@@ -1,8 +1,8 @@
 ---
 coding: utf-8
 
-title: An Overview of Energy-related Effort within the IETF
-abbrev: IETF Energy Overview
+title: An Overview of Energy-related Effort within the IETF, IRTF, and IAB
+abbrev: IETF/IRTF/IAB Energy Overview
 docname: draft-eckert-ietf-and-energy-overview-08
 stream: independent
 category: info
@@ -281,25 +281,29 @@ informative:
 
 --- abstract
 
-This memo provides an overview of work performed by or proposed within
-the IETF related to energy and/or green: awareness, management, control or
-reduction of consumption of energy, and sustainability as it related to the IETF.
+This memo provides a compilation of existing work performed by or proposed within the IETF, the IRTF, and the IAB that relates to energy and sustainability: awareness, management, control, or reduction of energy consumption.
 
-This document is written to help those unfamiliar with that work, but
-interested in it, in the hope to raise more interest in energy-related
-activities within the IETF, such as identifying gaps and investigating
-solutions as appropriate.
+The goal is to help participants unfamiliar with this body of work better understand what has already been published, by providing a consolidated reference. 
+A secondary goal is to raise awareness and interest in energy-related 
+activities within the IETF, IRTF, and IAB, to continue identifying gaps and investigating solutions as appropriate.
 
-This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" revived interest and triggered new work in the topic within the IETF/IRTF.
+The scope of this document
+includes selected work from the IETF, IRTF, and IAB where relevant.
+This document is descriptive and does not propose new work items.
+
+This document captures work until 12/2022, when the “IAB workshop on Environmental Impact of Internet Applications and Systems” contextualized renewed community interest and discussion of the topic. 
+This memo itself does not recommend or direct future work.
+
 
 --- middle
 
 # Introduction
 
-This document summarizes work that has been proposed to or performed
-within the IETF/IRTF. Particularly, it covers IETF/IRTF RFCs as well as
-ISE RFCs and IETF/IRTF or individual submission drafts
-that where abandoned for various reasons (e.g., lack of momentum, broad scope).
+This document summarizes work that has been proposed to or performed within the IETF, IRTF, and IAB. 
+Its goal is to summarize, not to propose or direct new work.
+It is intended as a compilation of prior work, not a proposal of new activities. 
+The main purpose is to provide a consolidated reference for participants, by cataloging and contextualizing what has already been published and done in IETF, IRTF, and IAB.
+
 
 There are various aspects how a given work relates to energy that are
 classified into categories.  Such a classification does not attempt to propose
@@ -311,10 +315,9 @@ This memo usually refers to the technologies by significant early RFC or specifi
 as opposed to the newest. This is contrary to the common practice in IETF documents to
 refer to the newest version. This approach is meant to allow readers to better understand
 the historic timeline in which a specific technology was proposed or introduced. Especially successful
-IETF technologies will have newer RFC that updates such initial work.
+I* technologies will have newer RFC that updates such initial work.
 
-
-This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" {{?I-D.iab-ws-environmental-impacts-report}} revived interest and highlighted the need for some structured activity within the IETF/IRTF.
+This document captures work until 12/2022, when the “IAB workshop on Environmental Impact of Internet Applications and Systems” {{?I-D.iab-ws-environmental-impacts-report}}  renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.
 
 
 # Energy Saving: An Introduction
@@ -411,7 +414,7 @@ and likely lower cost per bit.
 
 ### Converged Networks
 
-Another key factor to support scaling where IETF technologies that allowed to multiplex different types of traffic
+Another key factor to support scaling were IETF technologies that allowed to multiplex different types of traffic
 (e.g., real-time vs. non-real-time) which previously used separate networks with typically incompatible networking
 technologies.
 
@@ -1221,9 +1224,8 @@ on the same linecard as the interfaces to which the packets would need to be rou
 
 The 2013 "Towards an Energy-Efficient Internet" {{I-D.winter-energy-efficient-internet}}
 summarizes some of the same work items as this document (as written back in 2013) and
-lists additional more non-adopted drafts. It also identifies three areas of gaps, that
-it suggests the IETF to work on: "Load-adaptive Resource Management",
-"Energy-efficient Protocol Design" and "Energy-efficiency Metrics and Standard Benchmarking Methodologies".
+lists additional more non-adopted drafts. 
+It also identified three areas of gaps: “Load-adaptive Resource Management”, “Energy-efficient Protocol Design”, and “Energy-efficiency Metrics and Standard Benchmarking Methodologies”. While these areas remain open, this document records them for reference rather than recommending specific next steps.
 
 Some aspects for those areas of gaps where partially tackled by later work in the IETF,
 but broadly speaking, most of those areas remain open to a wide range of possible further IETF/IRTF work.
