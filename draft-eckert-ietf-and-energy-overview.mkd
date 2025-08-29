@@ -411,7 +411,7 @@ bounded latency. This led to the IETF "Integrated Services WG" (INTSERV) to supp
 throughput and bounded latency traffic via {{RFC2212}} - and to the demise of ATM.
 
 IntServ has so far seen little traction because it too got superseded as explained in the following
-section - for its original use-cases (voice and video). However, this type of services is being revisited for a
+section - for its original use-cases (voice and video). However, this type of service is being revisited for a
 broader set of use-cases {{RFC8575}} in the DetNet WG, which should enable even further network infrastructure
 convergence for IoT and industrial markets.
 
@@ -429,7 +429,7 @@ specifically for voice and video over UDP ({{RFC768}}) including RTP {{RFC3550}}
 SIP has most notably in the past two decades eliminated additional network infrastructures previously required
 for (voice) telephony services starting in the early 2000 with commercial/enterprise deployments and
 today by removing even the option for any (non-IP/SIP) analog or digital (ISDN) telephone service connection,
-instead delivering those purely as services over adaptation interfaces on home routers (TBD: Any
+instead delivering those purely as services over adaptation interfaces on home routers ([TBD: resolve]: Any
 RFC to cite for those tunneling/adaptation services ?).
 
 # Higher or New Energy Consumption
@@ -445,7 +445,7 @@ typically because of their higher utility or lower overall cost.
 For example, each instance of (simple text) email consumes less energy than sending a letter or postcard.
 Even streaming a movie or TV series consumes less energy than renting a DVD
 {{DVDvsStreaming}}.
-Nevertheless, the total amount of instances and as a result energy consumption for email and
+Nevertheless, the total number of instances and as a result energy consumption for email and
 streaming easily outranks their predecessor technologies.
 
 While these instances look beneficial from a simple energy consumption
@@ -534,7 +534,7 @@ provide remote collaboration for its own (in-person + remote participation) meet
 
 With the advent of SIP in the early 2000s, commercial telecollaboration started to be built most often on SIP based
 session and application protocols with multiple IETF working groups contributing to that protocol suite
-(TBD: how much more example/details should we have here). Using this technology and the Internet, the
+([TBD: resolve]: how much more example/details should we have here). Using this technology and the Internet, the
 immersive nature of telecollaboration was brought to life-size video, was/is called Telepresence
 {{https://en.wikipedia.org/wiki/Telepresence}} and later to even more immersive forms such as AR/VR telecollaboration.
 
@@ -550,7 +550,7 @@ a key factor to sustainability.
 
 Telecollaboration was primarily developed because of the utility for the participants - to avoid travel
 for originally predominantly business communications/collaborations. It saw an extreme increase in use
-(TBD: references) in the Corona Crisis of 2019, when especially international travel was often prohibited,
+([TBD: resolve]: references) in the Corona Crisis of 2019, when especially international travel was often prohibited,
 and often even working from an office. This forced millions of people to work from home and utilizing commercial
 telecollaboration tools. It equally caused most in-person events that where not cancelled to
 be moved to a telecollaboration platform over the Internet - most of them likely relying on RTCWEB
@@ -710,7 +710,7 @@ extend not scale limited.  Because of this, and due to its reduced compute/memor
 the same size networks compared to other routing protocols, especially the so-called link-state
 "Interior Gateway routing Protocols" (IGP), such as most commonly used protocols ISIS
 ({{RFC1142}} superseded by {{ISO10589-Second-Edition}})
-and OSPF {{RFC2328}}, RPL has also proliferated into use-cases for non-constrained networks, for example to support
+and OSPF {{RFC2328}}, RPL has also expanded into use cases for non-constrained networks, for example to support
 the largest possible networks automatically, such as in {{RFC8994}}.
 
 ## Constrained Nodes and Networks
