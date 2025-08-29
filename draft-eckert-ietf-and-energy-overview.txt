@@ -191,7 +191,7 @@ Internet-Draft            IETF Energy Overview               August 2025
    networking.  For comparable process results, the digitized option is
    often, but not always, less energy consuming.  Consider, for example,
    the energy consumption in the evolution of messaging starting from
-   postal mail and overs telegrams and various other historic form to
+   postal mail and over telegrams and various other historic forms to
    solutions including e-mail utilizing, for example, the IETF "Simple
    Mail Transport Protocol" (SMTP, [RFC822] obsoleted by [RFC2822],
    [RFC5322]), group communications utilizing the IETF "Network News
@@ -591,7 +591,7 @@ Internet-Draft            IETF Energy Overview               August 2025
    in use during the COVID-19 pandemic [OECD2020] [ITU2020].  This
    forced millions of people to work from home and utilizing commercial
    telecollaboration tools.  It equally caused most in-person events
-   that where not cancelled to be moved to a telecollaboration platform
+   that were not cancelled to be moved to a telecollaboration platform
    over the Internet - most of them likely relying on RTCWEB protocols.
 
    Actual energy consumption related comparison between teleconferencing
@@ -622,11 +622,11 @@ Internet-Draft            IETF Energy Overview               August 2025
    telecollaboration taking various factors into account and using CO2
    emission equivalents as its core metric.  That paper concludes that
    carbon/ energy cost of telecollaboration could be as little as 7% of
-   an in-person meeting. in-person meeting.  Those numbers have various
-   assumptions and change when time-effort of participants is converted
-   to carbon/energy costs.  These numbers should even be better today in
-   favor of telecollaboration: cost of Internet traffic/bit goes down
-   while cost of fossil fuel for travel goes up.
+   an in-person meeting.  Those numbers have various assumptions and
+   change when time-effort of participants is converted to carbon/energy
+   costs.  These numbers should even be better today in favor of
+   telecollaboration: cost of Internet traffic/bit goes down while cost
+   of fossil fuel for travel goes up.
 
    Recently, air travel has also come under more scrutiny because the
    greenhouse gas emissions of air travel at the altitudes used by
@@ -858,9 +858,9 @@ Internet-Draft            IETF Energy Overview               August 2025
    variety than coupled with low-power and lossy networks.  For example,
    Wi-Fi and cellular mobile network connections are not considered to
    be lossy networks, and personal mobile nodes with both connections
-   are order of magnitude less constrained than nodes typically attached
-   to LLN network.  Therefore, broader work in the IETF than focused
-   primarily on LLN typically uses just the term lightweight or
+   are an order of magnitude less constrained than nodes typically
+   attached to LLN network.  Therefore, broader work in the IETF than
+   focused primarily on LLN typically uses just the term lightweight or
    constrained (nodes and networks).
 
 5.3.1.  LWIG WG
@@ -1255,7 +1255,7 @@ Internet-Draft            IETF Energy Overview               August 2025
    power lines or create permanent damage in power generators.  When
    generators go out-of-sync, they have to be emergency switched off,
    resulting in (rolling-)blackouts, worsening the conditions beyond its
-   likely root-cause such as a single overloaded limited region.
+   likely root-cause such as a single overloaded region.
 
    Synchro Phasor Networks are networks whose goal it is to support
    synchronization of power generators across a power grid, ultimately
@@ -1606,7 +1606,7 @@ Internet-Draft            IETF Energy Overview               August 2025
 12.  Acknowledgments
 
    The authors are very grateful to Fred Baker and Eliot Lear, for their
-   thourough review and useful suggestions.
+   thorough review and useful suggestions.
 
 13.  Changelog
 

@@ -329,7 +329,7 @@ aspects of energy optimization into account.  See {{sustainability}} for more de
 Digitization describes the transformation of processes from non- or less digital with networking
 to more digital with computer-networking. For comparable process results, the digitized option is often,
 but not always, less energy consuming. Consider, for example, the energy consumption in the evolution of
-messaging starting from postal mail and overs telegrams and various other historic form to
+messaging starting from postal mail and over telegrams and various other historic forms to
 solutions including e-mail utilizing, for example, the IETF "Simple Mail Transport Protocol" (SMTP, {{RFC822}}
 obsoleted by {{RFC2822}}, {{RFC5322}}),
 group communications utilizing the IETF "Network News Transport Protocol" (NNTP, {{RFC3977}}) or the almost
@@ -576,7 +576,7 @@ Telecollaboration was primarily developed because of the utility for the partici
 for originally predominantly business communications/collaborations. 
 It saw an extreme increase in use during the COVID-19 pandemic {{OECD2020}} {{ITU2020}}. 
 This forced millions of people to work from home and utilizing commercial
-telecollaboration tools. It equally caused most in-person events that where not cancelled to
+telecollaboration tools. It equally caused most in-person events that were not cancelled to
 be moved to a telecollaboration platform over the Internet - most of them likely relying on RTCWEB
 protocols.
 
@@ -589,7 +589,7 @@ living conditions.
 {{VC2014}} is a good example of a comparison between travel and telecollaboration taking various factors
 into account and using CO2 emission equivalents as its core metric. That paper concludes that carbon/
 energy cost of telecollaboration could be as little as 7% of an in-person meeting.
-in-person meeting. Those numbers have various assumptions and change when time-effort of
+Those numbers have various assumptions and change when time-effort of
 participants is converted to carbon/energy costs. These numbers should even be better today
 in favor of telecollaboration: cost of Internet traffic/bit goes down while cost of fossil fuel
 for travel goes up.
@@ -742,7 +742,7 @@ the largest possible networks automatically, such as in {{RFC8994}}.
 (Power) constrained nodes and/or networks exist in a much broader variety than coupled
 with low-power and lossy networks. For example, Wi-Fi and cellular mobile network connections are
 not considered to be lossy networks, and personal mobile nodes with both connections
-are order of magnitude less constrained than nodes typically attached to LLN network.
+are an order of magnitude less constrained than nodes typically attached to LLN network.
 Therefore, broader work in the IETF than focused primarily on LLN typically uses
 just the term lightweight or constrained (nodes and networks).
 
@@ -996,8 +996,7 @@ by power levels based on consumption and power phase (50/60Hz depending on
 continent) to avoid that energy created out-of-phase is not only wasted, but would
 actually burn out power lines or create permanent damage in power generators. When generators
 go out-of-sync, they have to be emergency switched off, resulting in (rolling-)blackouts,
-worsening the conditions beyond its likely root-cause such as a single overloaded
-limited region.
+worsening the conditions beyond its likely root-cause such as a single overloaded region.
 
 Synchro Phasor Networks are networks whose goal it is to support synchronization of
 power generators across a power grid, ultimately also permitting to build larger
@@ -1251,7 +1250,7 @@ This document has no IANA actions.
 # Acknowledgments
 
 The authors are very grateful to Fred Baker and Eliot Lear,
-for their thourough review and useful suggestions.
+for their thorough review and useful suggestions.
 
 # Changelog
 
