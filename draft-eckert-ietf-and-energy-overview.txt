@@ -5,14 +5,14 @@
 Network Working Group                                     T. Eckert, Ed.
 Internet-Draft                                Futurewei Technologies USA
 Intended status: Informational                         M. Boucadair, Ed.
-Expires: 9 July 2024                                              Orange
+Expires: 2 March 2026                                             Orange
                                                               P. Thubert
                                                      Cisco Systems, Inc.
                                                              J. Tentsura
                                                                   NVIDIA
                                                             C. Pignataro
                                                      NC State University
-                                                          6 January 2024
+                                                          29 August 2025
 
 
           An Overview of Energy-related Effort within the IETF
@@ -53,16 +53,16 @@ Status of This Memo
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 1]
+Eckert, et al.            Expires 2 March 2026                  [Page 1]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
-   This Internet-Draft will expire on 9 July 2024.
+   This Internet-Draft will expire on 2 March 2026.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 2]
+Eckert, et al.            Expires 2 March 2026                  [Page 2]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
        5.3.4.  Devices with Batteries  . . . . . . . . . . . . . . .  17
@@ -165,9 +165,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 3]
+Eckert, et al.            Expires 2 March 2026                  [Page 3]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    This document captures work until 12/2022, at which time the "IAB
@@ -221,9 +221,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 4]
+Eckert, et al.            Expires 2 March 2026                  [Page 4]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    The Internet as well as all other IP/MPLS networks are likely the
@@ -277,9 +277,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 5]
+Eckert, et al.            Expires 2 March 2026                  [Page 5]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 2.2.4.  Global vs Restricted Connectivity: The Internet Routing
@@ -333,9 +333,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 6]
+Eckert, et al.            Expires 2 March 2026                  [Page 6]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    technology-diverse networks and host-stacks was the core reason for
@@ -389,9 +389,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 7]
+Eckert, et al.            Expires 2 March 2026                  [Page 7]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 2.2.7.3.  SIP
@@ -445,9 +445,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 8]
+Eckert, et al.            Expires 2 March 2026                  [Page 8]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    In general, the digital economy tends to be more energy intensive on
@@ -501,9 +501,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                  [Page 9]
+Eckert, et al.            Expires 2 March 2026                  [Page 9]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 4.2.  Optimize Generated Heat
@@ -557,9 +557,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 10]
+Eckert, et al.            Expires 2 March 2026                 [Page 10]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    life-size video, was/is called Telepresence
@@ -613,9 +613,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 11]
+Eckert, et al.            Expires 2 March 2026                 [Page 11]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    Recently, air travel has also come under more scrutiny because the
@@ -669,9 +669,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 12]
+Eckert, et al.            Expires 2 March 2026                 [Page 12]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    Several IETF WGs have or are producing work is primarily intended wo
@@ -725,9 +725,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 13]
+Eckert, et al.            Expires 2 March 2026                 [Page 13]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 5.2.2.  LPWAN WG
@@ -781,9 +781,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 14]
+Eckert, et al.            Expires 2 March 2026                 [Page 14]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    Since then, its work is mostly focused on the "IPv6 Routing Protocol
@@ -837,9 +837,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 15]
+Eckert, et al.            Expires 2 March 2026                 [Page 15]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 5.3.  Constrained Nodes and Networks
@@ -893,9 +893,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 16]
+Eckert, et al.            Expires 2 March 2026                 [Page 16]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    While originally designed for LLN, CoAP is transcending LLN and
@@ -949,9 +949,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 17]
+Eckert, et al.            Expires 2 March 2026                 [Page 17]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 5.4.1.1.  Power Saving with Multicast
@@ -1005,9 +1005,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 18]
+Eckert, et al.            Expires 2 March 2026                 [Page 18]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 5.4.1.2.  Power Waste Through Multicast-based Service Coordination
@@ -1061,9 +1061,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 19]
+Eckert, et al.            Expires 2 March 2026                 [Page 19]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    (a) Unnecessary wake-up of power constrained Wi-Fi Stations (STA)
@@ -1117,9 +1117,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 20]
+Eckert, et al.            Expires 2 March 2026                 [Page 20]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    One partial solution to some sleepy node issues related to their
@@ -1173,9 +1173,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 21]
+Eckert, et al.            Expires 2 March 2026                 [Page 21]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 5.5.  (Lack of) Power Benchmarking Proposals
@@ -1229,9 +1229,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 22]
+Eckert, et al.            Expires 2 March 2026                 [Page 22]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    Most of the overview in this document is not specific to networks
@@ -1285,9 +1285,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 23]
+Eckert, et al.            Expires 2 March 2026                 [Page 23]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    protocols.  The IETF "Network Time Protocol version 4" (NTPv4),
@@ -1341,9 +1341,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 24]
+Eckert, et al.            Expires 2 March 2026                 [Page 24]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [I-D.claise-power-management-arch] describes the initial EMAN
@@ -1397,9 +1397,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 25]
+Eckert, et al.            Expires 2 March 2026                 [Page 25]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    The pre-existing IETF "Entity State MIB" (ENTITY-STATE-MIB) [RFC4268]
@@ -1453,9 +1453,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 26]
+Eckert, et al.            Expires 2 March 2026                 [Page 26]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    The 2013 "Power-Aware Networks (PANET): Problem Statement"
@@ -1509,9 +1509,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 27]
+Eckert, et al.            Expires 2 March 2026                 [Page 27]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    Energy-efficient Forwarding: An important effort was made in the past
@@ -1565,9 +1565,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 28]
+Eckert, et al.            Expires 2 March 2026                 [Page 28]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 9.  Gap Analysis
@@ -1621,9 +1621,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 29]
+Eckert, et al.            Expires 2 March 2026                 [Page 29]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
 12.  Informative References
@@ -1677,9 +1677,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 30]
+Eckert, et al.            Expires 2 March 2026                 [Page 30]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
               energy-aware-nd-02, 12 March 2012,
@@ -1733,25 +1733,25 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 31]
+Eckert, et al.            Expires 2 March 2026                 [Page 31]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [I-D.ietf-core-coap-pubsub]
               Jimenez, J., Koster, M., and A. Keränen, "A publish-
               subscribe architecture for the Constrained Application
               Protocol (CoAP)", Work in Progress, Internet-Draft, draft-
-              ietf-core-coap-pubsub-13, 20 October 2023,
+              ietf-core-coap-pubsub-18, 28 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
-              coap-pubsub-13>.
+              coap-pubsub-18>.
 
    [I-D.ietf-dnssd-srp]
               Lemon, T. and S. Cheshire, "Service Registration Protocol
               for DNS-Based Service Discovery", Work in Progress,
-              Internet-Draft, draft-ietf-dnssd-srp-23, 4 August 2023,
+              Internet-Draft, draft-ietf-dnssd-srp-27, 18 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-dnssd-
-              srp-23>.
+              srp-27>.
 
    [I-D.ietf-roll-protocols-survey]
               Tavakoli, A. and S. Dawson-Haggerty, "Overview of Existing
@@ -1775,8 +1775,8 @@ Internet-Draft            IETF Energy Overview              January 2024
               energy-pricing-01>.
 
    [I-D.levis-roll-overview-protocols]
-              Jp, V., "Overview of Existing Routing Protocols for Low
-              Power and Lossy Networks", Work in Progress, Internet-
+              Vasseur, J., "Overview of Existing Routing Protocols for
+              Low Power and Lossy Networks", Work in Progress, Internet-
               Draft, draft-levis-roll-overview-protocols-00, 12 February
               2008, <https://datatracker.ietf.org/doc/html/draft-levis-
               roll-overview-protocols-00>.
@@ -1789,13 +1789,13 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 32]
+Eckert, et al.            Expires 2 March 2026                 [Page 32]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [I-D.lhan-problems-requirements-satellite-net]
-              Han, L., Li, R., Retana, A., Chen, M., Su, L., and T.
+              Han, L., Li, R. R., Retana, A., Chen, M., Su, L., and T.
               Jiang, "Problems and Requirements of Satellite
               Constellation for Internet", Work in Progress, Internet-
               Draft, draft-lhan-problems-requirements-satellite-net-06,
@@ -1845,9 +1845,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 33]
+Eckert, et al.            Expires 2 March 2026                 [Page 33]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [I-D.rahman-core-sleepy]
@@ -1901,9 +1901,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 34]
+Eckert, et al.            Expires 2 March 2026                 [Page 34]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [I-D.vial-core-mirror-server]
@@ -1957,9 +1957,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 35]
+Eckert, et al.            Expires 2 March 2026                 [Page 35]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
               <https://www.naspi.org/sites/default/files/
@@ -2013,9 +2013,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 36]
+Eckert, et al.            Expires 2 March 2026                 [Page 36]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC2475]  Blake, S., Black, D., Carlson, M., Davies, E., Wang, Z.,
@@ -2069,9 +2069,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 37]
+Eckert, et al.            Expires 2 March 2026                 [Page 37]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC4268]  Chisholm, S. and D. Perkins, "Entity State MIB", RFC 4268,
@@ -2125,9 +2125,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 38]
+Eckert, et al.            Expires 2 March 2026                 [Page 38]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC5548]  Dohler, M., Ed., Watteyne, T., Ed., Winter, T., Ed., and
@@ -2181,9 +2181,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 39]
+Eckert, et al.            Expires 2 March 2026                 [Page 39]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
@@ -2237,9 +2237,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 40]
+Eckert, et al.            Expires 2 March 2026                 [Page 40]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC6933]  Bierman, A., Romascanu, D., Quittek, J., and M.
@@ -2293,9 +2293,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 41]
+Eckert, et al.            Expires 2 March 2026                 [Page 41]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC7461]  Parello, J., Claise, B., and M. Chandramouli, "Energy
@@ -2349,9 +2349,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 42]
+Eckert, et al.            Expires 2 March 2026                 [Page 42]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC7849]  Binet, D., Boucadair, M., Vizdal, A., Chen, G., Heatley,
@@ -2405,9 +2405,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 43]
+Eckert, et al.            Expires 2 March 2026                 [Page 43]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC822]   Crocker, D., "STANDARD FOR THE FORMAT OF ARPA INTERNET
@@ -2461,9 +2461,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 44]
+Eckert, et al.            Expires 2 March 2026                 [Page 44]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC8815]  Abrahamsson, M., Chown, T., Giuliano, L., and T. Eckert,
@@ -2517,9 +2517,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 45]
+Eckert, et al.            Expires 2 March 2026                 [Page 45]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC9034]  Thomas, L., Anamalamudi, S., Anand, S.V.R., Hegde, M., and
@@ -2573,9 +2573,9 @@ Internet-Draft            IETF Energy Overview              January 2024
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 46]
+Eckert, et al.            Expires 2 March 2026                 [Page 46]
 
-Internet-Draft            IETF Energy Overview              January 2024
+Internet-Draft            IETF Energy Overview               August 2025
 
 
    [RFC9354]  Hou, J., Liu, B., Hong, Y., Tang, X., and C. Perkins,
@@ -2629,4 +2629,4 @@ Authors' Addresses
 
 
 
-Eckert, et al.             Expires 9 July 2024                 [Page 47]
+Eckert, et al.            Expires 2 March 2026                 [Page 47]
