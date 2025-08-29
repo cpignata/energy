@@ -164,6 +164,8 @@ informative:
   RFC7731:
   RFC8138:
   RFC7416:
+  RFC5626:
+  RFC6314:
 
 
   # some error in kramdown when not using -00 here:
@@ -207,7 +209,7 @@ informative:
     title: "Intermediate system to Intermediate system intra-domain routeing information exchange protocol for use in conjunction with the protocol for providing the connectionless-mode Network Service (ISO 8473)"
     author:
      -
-        name: International Organization for Standardization
+        org: "International Organization for Standardization (ISO)"
     seriesinfo:
       "ISO" : ISO/IEC 10589:2002, Second Edition, Nov. 2002.
 
@@ -239,7 +241,7 @@ informative:
     title: Time Synchronization in the Electric Power System
     author:
       -
-         name: NASPI Time Synchronization Task Force
+         org: NASPI Time Synchronization Task Force
     date: March 2017
     target: https://www.naspi.org/sites/default/files/reference_documents/tstf_electric_power_system_report_pnnl_26331_march_2017_0.pdf
 
@@ -253,6 +255,29 @@ informative:
       DOI:  10.1109/18.61109
       "IEEE": "Transactions on Information Theory ( Volume: 37, Issue: 1)"
     target: https://ieeexplore.ieee.org/document/61109
+
+  OECD2020:
+    title: "Keeping the Internet up and running in times of crisis"
+    author: 
+      -
+        org: "OECD"
+    date: 2020
+    seriesinfo:
+      source: "OECD Policy Responses to Coronavirus (COVID-19), OECD Publishing, Paris"
+      doi: "10.1787/4017c4c9-en"
+    target: "https://doi.org/10.1787/4017c4c9-en"
+
+  ITU2020:
+    title: "Measuring digital development: Facts and Figures 2020"
+    author: 
+      -
+        org: "International Telecommunication Union (ITU)"
+    date: 2020
+    seriesinfo:
+      source: "Geneva: ITU"
+      isbn: "978-92-61-32511-4"
+    target: "https://www.itu.int/en/ITU-D/Statistics/Documents/facts/FactsFigures2020.pdf"
+
 
 --- abstract
 
@@ -429,8 +454,7 @@ specifically for voice and video over UDP ({{RFC768}}) including RTP {{RFC3550}}
 SIP has most notably in the past two decades eliminated additional network infrastructures previously required
 for (voice) telephony services starting in the early 2000 with commercial/enterprise deployments and
 today by removing even the option for any (non-IP/SIP) analog or digital (ISDN) telephone service connection,
-instead delivering those purely as services over adaptation interfaces on home routers ([TBD: resolve]: Any
-RFC to cite for those tunneling/adaptation services ?).
+instead delivering those purely as services over adaptation interfaces on home routers (see for example {{RFC5626}}, {{RFC6314}}.)
 
 # Higher or New Energy Consumption
 
@@ -533,8 +557,8 @@ of audio/video group collaboration through an overlay network over the Internet 
 provide remote collaboration for its own (in-person + remote participation) meetings.
 
 With the advent of SIP in the early 2000s, commercial telecollaboration started to be built most often on SIP based
-session and application protocols with multiple IETF working groups contributing to that protocol suite
-([TBD: resolve]: how much more example/details should we have here). Using this technology and the Internet, the
+session and application protocols with multiple IETF working groups contributing to that protocol suite, such as SIPCORE, MMUSIC, and XCON.
+Using these technologies and the Internet, the
 immersive nature of telecollaboration was brought to life-size video, was/is called Telepresence
 {{https://en.wikipedia.org/wiki/Telepresence}} and later to even more immersive forms such as AR/VR telecollaboration.
 
@@ -549,9 +573,9 @@ not based on simple comparison of energy, but nowadays by comparing their impact
 a key factor to sustainability.
 
 Telecollaboration was primarily developed because of the utility for the participants - to avoid travel
-for originally predominantly business communications/collaborations. It saw an extreme increase in use
-([TBD: resolve]: references) in the Corona Crisis of 2019, when especially international travel was often prohibited,
-and often even working from an office. This forced millions of people to work from home and utilizing commercial
+for originally predominantly business communications/collaborations. 
+It saw an extreme increase in use during the COVID-19 pandemic {{OECD2020}} {{ITU2020}}. 
+This forced millions of people to work from home and utilizing commercial
 telecollaboration tools. It equally caused most in-person events that where not cancelled to
 be moved to a telecollaboration platform over the Internet - most of them likely relying on RTCWEB
 protocols.
@@ -779,7 +803,8 @@ optimize battery consumption for such devices, {{RFC6887}} specifies a determini
 method so that client can control state in the network, including their lifetime.
 Keepalive alive messages may this be optimized as a function of the network policies.
 
-A_REC\#2 of {{RFC7849}} further insist on the importance of saving battery exacerbated
+The recommendation labeled "A_REC#2"
+of {{RFC7849}} further insist on the importance of saving battery exacerbated
 by keep-alive messages and recommends the support of collaborative means to control
 state in the network rather than relying on heuristics.
 
