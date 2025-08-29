@@ -3,7 +3,7 @@ coding: utf-8
 
 title: An Overview of Energy-related Effort within the IETF 
 abbrev: IETF Energy Overview
-docname: draft-eckert-ietf-and-energy-overview-06
+docname: draft-eckert-ietf-and-energy-overview-08
 stream: independent
 category: info
 ipr: trust200902
@@ -1225,7 +1225,8 @@ This document has no IANA actions.
 
 # Acknowledgments
 
-Thanks for Fred Baker for his review and suggestions.
+The authors are very grateful to Fred Baker and Eliot Lear, 
+for their thourough review and useful suggestions.
 
 # Changelog
 
@@ -1249,3 +1250,5 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 06: Full review and throughout addition of references and context on energy and power-related IETF work, full editorial pass. New co-author.
 
 07: Added security considerations, updated pointers.
+
+08: 

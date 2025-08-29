@@ -13,7 +13,7 @@
 
 <?rfc comments="yes"?>
 
-<rfc ipr="trust200902" docName="draft-eckert-ietf-and-energy-overview-06" category="info" submissionType="independent" tocDepth="5" tocInclude="true" sortRefs="true" symRefs="true">
+<rfc ipr="trust200902" docName="draft-eckert-ietf-and-energy-overview-08" category="info" submissionType="independent" tocDepth="5" tocInclude="true" sortRefs="true" symRefs="true">
   <front>
     <title abbrev="IETF Energy Overview">An Overview of Energy-related Effort within the IETF</title>
 
@@ -1106,7 +1106,8 @@ considerations.</t>
 </section>
 <section anchor="acknowledgments"><name>Acknowledgments</name>
 
-<t>Thanks for Fred Baker for his review and suggestions.</t>
+<t>The authors are very grateful to Fred Baker and Eliot Lear, 
+for their thourough review and useful suggestions.</t>
 
 </section>
 <section anchor="changelog"><name>Changelog</name>
@@ -1131,6 +1132,8 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 <t>06: Full review and throughout addition of references and context on energy and power-related IETF work, full editorial pass. New co-author.</t>
 
 <t>07: Added security considerations, updated pointers.</t>
+
+<t>08:</t>
 
 </section>
 
@@ -3834,7 +3837,7 @@ H4sIAAAAAAAAA8296XLjyJYm+B9PAWNaz5DWBLWv86NKISkiVaVtQoqMrp5u
 CwNJiEQGCbAAUApmWL77nO8s7g6SunG7zcZsym7dqyBBhy/Hz36+kyRJNCrH
 eTE5j5fNS3IaRU3ezLLz+KKIH16z6jXP3uLyJb4usmqySqpsljbZOL5+eSmr
 Jn7Lm2lexM00i2+unz/GUTocVtnrufxLfuOGicblqEjnNPa4Sl+aJBt9z6om
-yTN6b1qMk0xeUerjye5xVDdVls7P47wYZ4uM/qtoohFNYFJWK3z6Ukb5ojqP
+yTN6b1qMk0xeUerjye5pVDdVls7P47wYZ4uM/qtoohFNYFJWK3z6Ukb5ojqP
 m2pZN/u7u2e7+xH9iEb7ls7Kgl61yupokZ9HcRw35Uj+LX/TiM30PD7CP2ta
 TJW91O77ejVv/XtUzuf0cv0gSpfNtKwwaoJv8X+ysucyq2ZZXcfXvDj7siqx
 pdk4b8rKPisr2vOPy2ZZZW9ZHj9no2lRzspJntXxl6cLewxbkDXn8f7+/m58
@@ -4384,18 +4387,19 @@ zDpMXArezP5AJAG+FYM44nS+wAgdcamaTau2wep3R4sEotOGDPL6opj+D5j2
 GJc0CefhDat4aTVc/SG7vixe0jmZj2mlDXzppCJz1ATlmcoqpabZ/Ettz3do
 GcbSBFL6v/bDPrQSk0Oaat3+Pd9kW3IcrW+hGDXIHEQu3sa6inrBZTTKPuzo
 YlRFwvuQZwZtGtCli4PLfeboE9M4TjlCZTbpXBPBKnT4k33dORUYQcXNu7PH
-0RBhImT9C6Kcsu9KnpRSMobRjC9GgHigazZhIsHPUnTpwCX9CN36AyqIxQrj
-SANTM/vzhQe5kS65cyfd+Sj6H0i+4r7cZXUuG1qrZanSQ+0F2rQXbq5u8xz8
-T+Hyc2l14nwnIZ1Ny1pLY8RJfL6zM6EDWA4Ho3K+05RZxQ0c5MCAbvfIqejE
-5Idz4p0SM7AQ0ONyNku0dYHmw5nvVlqRssfsz1KPt8lSJn4L70jpOI26IhYL
-DxVtxe7uuRa1uDIj+nDvHKmpGVLXEvl1HHfvyil3NPpgXpweKWwt1MRmtSBR
-mv9g/CXeUAwb4siyiTasuUCs7zL+fL4JczNaywJeyIFOwo4DRqrr4uZrs8dh
-67ahtW7rq97RgnthKeB8VoHnx1xQoI7d/XOy5QqugSTzBwtBH1ZS5fqQj9Yc
-gxmzF5di0eljMu+R27xFCgcLGVxNRjZTtHtg+/tvJKriZ+zMsuJyRvcbeurw
-PP5DDSvXjDb/sYRsTfnXyLo3tCbGr9KulQFYjQQLyiFy/UGI9AjyItSdIkki
-2shUckVTLjTknkc2ChIado9syrr8WvIlRdvRNFNQbD0qBTPc3QLaJ8bz3N9H
-hG/3+Dz+uGSwZXc7NSAD14HtqITCPeaOz9zmusO1btGO0zmxRQYNXuKpkI6A
-COqew6S6xVjWybknsm1ypu9gnmzdg+j/BXARiyhPCgEA
+0RBhImT9C6Kcsu9KnpRSMobRjC9GgHigazZhIhEea8EL6H8c0eVEacCm0Rl/
+hMb9AXXFkm81y4lQb7OUJJlCq0gDFuI57BJWHEEFdsYgyr3cHC655ydxiyj6
+H0jb4o7eZXUuR1GrTapyRy0N2u4XbstuKxz8T5n7XJqkOK9LSKHTstaiGnEv
+n+/sTOjolsPBqJzvNGVWcesHOWrg4j1yEjuJh+GcuK5EGyx49LiczRJteqCZ
+dOb1lSam7Gv7s1TCaLKUr43bWy46p1FXtFHwbdFW7O6eazmMK1CiD/fOkdSa
+IektkV/HcfeunHIvpA/m/+mRqtfCW2xWCxLC+Q9GbuINxbAhAi0bd8OaS8v6
+LlfQZ6owH6S1LOC/HOgk7Dhg3rr+b76qexw2fRta07e+aiwtoBiWH87bFfiM
+zHkF6tjdPycrsODqSTKcsBB0cCUlsA/Jam01mKV7QSu2oD4m8x65zVukcM2Q
+qdZkZG1Fuwe2v/9GQi5+xs4sKy6EdL+hpw7P4z/UJHNtbPMfS0jllH+NfH3D
+eWLkK+13GcDcSJihHKJKAIRIjyCjQh0xkl6iLVAlyzTlEkXulmSjIBVi98im
+rMuvJdNS9CRNUAXF1qNS0MbdLaB9YiTQ/X3EBnePz+OPS4ZpdpdUQzlwOtiO
+ShDdo/X4nG+uWFzrM+14pBN4ZArhJZ4K6QiIoO45wKpbjGWdnHsi2yah+g4g
+ytaNX52ex9H/CxH2zyKPCgEA
 
 -->
 
