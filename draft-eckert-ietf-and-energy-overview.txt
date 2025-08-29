@@ -39,7 +39,7 @@ Abstract
    IRTF, and IAB where relevant.  This document is descriptive in nature
    and does not propose new work items.
 
-   This document captures work until 12/2022, when the “IAB workshop on
+   This document captures work until 12/2022, when the "IAB workshop on
    Environmental Impact of Internet Applications and Systems”
    contextualized renewed community interest and discussion of the
    topic.  This memo itself does not recommend or direct future work.
@@ -144,7 +144,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
      8.2.  SDN-based Semantic Forwarding . . . . . . . . . . . . . .  27
      8.3.  Miscellaneous . . . . . . . . . . . . . . . . . . . . . .  28
    9.  Gap Analysis  . . . . . . . . . . . . . . . . . . . . . . . .  29
-   10. Authors’ Observations and Lessons Learned . . . . . . . . . .  29
+   10. Authors' Observations and Lessons Learned . . . . . . . . . .  29
    11. Security Considerations . . . . . . . . . . . . . . . . . . .  30
    12. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  30
    13. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  30
@@ -190,7 +190,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
    proposed or introduced.  Especially successful I* technologies will
    have newer RFC that updates such initial work.
 
-   This document captures work until 12/2022, when the “IAB workshop on
+   This document captures work until 12/2022, when the "IAB workshop on
    Environmental Impact of Internet Applications and Systems”
    [I-D.iab-ws-environmental-impacts-report] renewed community
    discussion of the topic.  The workshop emphasized that existing and
@@ -1576,8 +1576,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
    [I-D.winter-energy-efficient-internet] summarizes some of the same
    work items as this document (as written back in 2013) and lists
    additional more non-adopted drafts.  It also identified three areas
-   of gaps: “Load-adaptive Resource Management”, “Energy-efficient
-   Protocol Design”, and “Energy-efficiency Metrics and Standard
+   of gaps: "Load-adaptive Resource Management”, "Energy-efficient
+   Protocol Design”, and "Energy-efficiency Metrics and Standard
    Benchmarking Methodologies”. While these areas remain open, this
    document records them for reference rather than recommending specific
    next steps.
@@ -1586,7 +1586,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
    work in the IETF, but broadly speaking, most of those areas remain
    open to a wide range of possible further IETF/IRTF work.
 
-10.  Authors’ Observations and Lessons Learned
+10.  Authors' Observations and Lessons Learned
 
    Beyond compiling existing work, the authors consider it valuable to
    briefly reflect on where energy-related activities within the
@@ -1707,7 +1707,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview          August 2025
 
    08: Refresh of the I-D, starting with a thorough editorial pass of
    fixes and improvements.  Clarified motivation and scope (IETF/IRTF/
-   IAB), added authors’ observations and lessons learned, emphasized
+   IAB), added authors' observations and lessons learned, emphasized
    internal audience as first catalog, and applied readibility cleanups.
 
 15.  Informative References
