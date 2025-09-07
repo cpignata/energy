@@ -63,37 +63,28 @@ author:
 
 
 informative:
-  RFC768:
   RFC791:
   RFC822:
   RFC1112:
   RFC1142:
   RFC1628:
   RFC1866:
-  RFC1883:
   RFC2086:
-  RFC2212:
-  RFC2246:
   RFC2328:
-  RFC2460:
   RFC2475:
-  RFC2543:
   RFC2822:
   RFC2854:
   RFC3261:
   RFC3433:
-  RFC3550:
   RFC3621:
   RFC3948:
   RFC3977:
   RFC4268:
   RFC4271:
-  RFC4346:
   RFC4607:
   RFC4861:
   RFC4944:
   RFC4949:
-  RFC5246:
   RFC5322:
   RFC5548:
   RFC5673:
@@ -126,7 +117,6 @@ informative:
   RFC8352:
   RFC8368:
   RFC8428:
-  RFC8446:
   RFC8575:
   RFC8613:
   RFC8724:
@@ -164,8 +154,6 @@ informative:
   RFC7731:
   RFC8138:
   RFC7416:
-  RFC5626:
-  RFC6314:
 
 
   # some error in kramdown when not using -00 here:
@@ -244,17 +232,6 @@ informative:
          org: NASPI Time Synchronization Task Force
     date: March 2017
     target: https://www.naspi.org/sites/default/files/reference_documents/tstf_electric_power_system_report_pnnl_26331_march_2017_0.pdf
-
-  BOUNDED_LATENCY:
-    title: "A calculus for network delay. I. Network elements in isolation"
-    author:
-       -
-         name:  R.L. Cruz
-    date: 1991
-    seriesinfo:
-      DOI:  10.1109/18.61109
-      "IEEE": "Transactions on Information Theory ( Volume: 37, Issue: 1)"
-    target: https://ieeexplore.ieee.org/document/61109
 
   OECD2020:
     title: "Keeping the Internet up and running in times of crisis"
@@ -362,106 +339,41 @@ of the past few decades if only the energy consumption of equivalent services is
 they are also the cause of the largest new category of energy consumption because of all the new services
 introduced in the past decades with the Internet and the hyper-scaling that the Internet affords them.
 
-## Energy Saving Through Scale
+## Energy Savings Enabled by Scaling the Internet
+
+Energy savings often arise indirectly from architectural choices that improved scalability. These mechanisms reduce the average energy cost per bit by minimizing per-packet work, consolidating infrastructures, and leveraging economies of scale.
 
 ### An Iconic Example: Telephony
 
-In most cases, energy saving through the use of IETF protocols compared to earlier (digitized or non-digitized)
-solutions is purely a result of the reduction in the energy cost per bit over the decades in networking.
-For example, the energy consumption of digital voice telephony through the IETF "Session Initiation Protocol"
-(SIP, {{RFC2543}} superseded by {{RFC3261}} and successors) can easily be assumed to be more energy efficient on a per voice-minute basis than
- prior voice technologies such as analog or digital "Time Division Multiplex" (TDM) telephony solely because of this
-evolution in mostly device as well as physical-layer and link-layer networking technologies.
+Digitized voice over IP (e.g., "Session Initiation Protocol", SIP {{RFC3261}}) illustrates how packetized transport reduced per-minute energy costs compared to analog or "Time Division Multiplex" TDM voice. The saving comes not from SIP itself but from the lower joules/bit achieved in IP (including physical-layer and link-layer) networks at scale.
 
 ### The Packet Multiplexing Principle
 
-Nevertheless, it is at the heart of the packet multiplexing model employed by the IETF networking protocols
-IP ({{RFC791}}) and IPv6 ({{RFC1883}} superseded by {{RFC2460}} and {{RFC8200}}) to successfully support this
-scaling that brought down the cost per bit through ever faster links and network nodes, especially for networks larger than building
-scale networks. While the IETF protocols have not been the first or over their early decades necessarily the
-most widely deployed packet networking protocols, they were the ones who at least during the 1990s started
-to break away from other protocols both in scale of deployment, as well as in development of further technologies
-to support this scaling.
+Statistical multiplexing in IP and IPv6 (({{RFC791}}, {{RFC8200}}) increases utilization efficiency, distributing largely fixed equipment power across many flows. This, along with development of further technologies
+to improve scaling, has been a principal driver in declining energy per bit over decades.
+
+### Dynamic Power Negotiation {#dynpower}
+
+Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via LLDP/CDP), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes.
+
+Problems arise if devices misreport or later exceed their declared needs. A device requesting 30 W but consuming 60 W forces over-provisioning and complicates capacity planning. Accurate and dynamic signaling is therefore key: truthful reporting avoids systematic waste, while real-time updates allow closer matching of supply and demand.
+
+IETF’s EMAN framework {{RFC7326}} provides models for monitoring and control in support of these dynamics, though broader architectural adoption remains limited.
+
 
 ### End-to-End Transport
 
-At the core of scalability, even up to now, is the lightweight per-packet-processing enabled through
-end-to-end congestion loss management architecture as embodied through the IETF "Transmission Control Protocol"
-(TCP, {{?RFC9293}}). This model eliminated more expensive per-hop, per-packet processing, such as
-would be required for reliable hop-by-hop forwarding through per-hop ARQ, which was key to scaling routers cost
-effectively.
+The TCP end-to-end reliability model {{?RFC9293}} avoids per-hop retransmission and state. This minimized per-packet processing in routers, enabling simpler, more energy-efficient forwarding at scale.
 
 ### Global vs Restricted Connectivity: The Internet Routing Architectures
 
-The meshed peer-to-peer and transitive routing of the Internet enabled through the IETF Border Gateway (Routing)
-Protocol (BGP, {{RFC4271}} as well as predecessors) is another key factor to successful scalability, because it
+Open interconnection and competitive expansion (e.g., via Border Gateway (Routing) Protocol, BGP {{RFC4271}}) accelerated scale, allowing energy efficiency gains from new hardware generations to spread globally, because it
 enabled competitive market forces to explore markets quickly.
-
-Prior to the Internet, the public often only
-had access to highly regulated international networking connections through often per-country monopoly regulated data networks.
-
-### Freedom to Innovate
-
-(non-IP) networks often also did not allow as much "freedom-to-innovate" (as it is often called in the IETF)
-for applications running over it. Instead, those networks were exploring the coupling of packet transport with
-higher layer services to allow the network operator some degree of revenue sharing with the services running
-on top of it. Such approaches resulted not only in higher cost of those services but also (likely) preferential and (often)
-exclusionary treatment of network traffic not fitting the perceived highest revenue service options.
-
-### End-to-End Encryption
-
-When the same business practices were applied to IP network, it was one of the key factors leading to
-the development of IETF end-to-end encryption though protocols such as "Transport Layer Security" (TLS, {{RFC2246}}
-{{RFC4346}}, {{RFC5246}}, {{RFC8446}}). This further strengthened the ability to scale service/applications at minimum additional
-cost for the underlying packet transport, arguably driving innovation into ever faster networking technology
-and likely lower cost per bit.
 
 ### Converged Networks
 
-Another key factor to support scaling were IETF technologies that allowed to multiplex different types of traffic
-(e.g., real-time vs. non-real-time) which previously used separate networks with typically incompatible networking
-technologies.
+Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric avoids duplicative powered equipment. DiffServ {{RFC2475}} and later DetNet {{RFC8575}} illustrate how lighter-weight QoS models supported convergence without high per-flow energy overhead.
 
-Eliminating multiple physical networks with separate routing/forwarding nodes and separate links affords significant
-energy savings even at the same generation of speed and hence energy/bit simply by avoiding the N-fold
-production and operations of equipment and links. Of course, originally the CAPEX and OPEX of multiple,
-technology-diverse networks and host-stacks was the core reason for unified networks, and energy saving
-is in hindsight just incidental (as for all other cases mentioned here).
-
-#### IntServ and DetNet
-
-The first (non-IETF) widely adopted technology promising converged networks was  "Asynchronous Transfer Mode" (ATM),
-which was designed and deployed at the end of the 1980s to support specifically multiplexing of "Data Voice and Video",
-where both Voice and Video (at that time) required loss-free deterministic bounded latency and low-jitter and had
-therefore their own Time-Division-Multiplex (TDM) networks, both separate from so-called Data networks using
-packet multiplexing. This technology was very expensive on a per-bit basis due to its cell-forwarding nature
-though.
-
-At the end of the 1980s, it was proven in {{BOUNDED_LATENCY}}
-that variable length packet multiplexing in network can also support non-NP-hard calculations for
-bounded latency. This led to the IETF "Integrated Services WG" (INTSERV) to support such guaranteed
-throughput and bounded latency traffic via {{RFC2212}} - and to the demise of ATM.
-
-IntServ has so far seen little traction because it too got superseded as explained in the following
-section - for its original use-cases (voice and video). However, this type of service is being revisited for a
-broader set of use-cases {{RFC8575}} in the DetNet WG, which should enable even further network infrastructure
-convergence for IoT and industrial markets.
-
-#### DiffServ
-
-Due to the much higher per-packet processing overhead of INTSERV versus regular (so-called Best-Effort)
-Internet traffic, the INTSERV model was already recognized in the 1990s to not support highest-scale at lowest
-cost, leading to the parallel development of the IETF "Differentiated Services WG" (DIFFSERV) model
-defined in {{RFC2475}}. This has since then become the dominant technology to support multiplexing of
-applications and services originally not designed for the Internet onto a common TCP/IP network infrastructure,
-specifically for voice and video over UDP ({{RFC768}}) including RTP {{RFC3550}} and SIP.
-
-#### SIP
-
-SIP has most notably in the past two decades eliminated additional network infrastructures previously required
-for (voice) telephony services starting in the early 2000 with commercial/enterprise deployments and
-today by removing even the option for any (non-IP/SIP) analog or digital (ISDN) telephone service connection,
-instead delivering those purely as services over adaptation interfaces on home routers (see for example {{RFC5626}}, {{RFC6314}}.)
 
 # Higher or New Energy Consumption
 
@@ -1051,13 +963,7 @@ managed equipment consumption of power.
 
 ## EMAN WG {#EMAN}
 
-While the IETF did specify a few MIBs with aspects related to of power management,
-it was only with the formation of the "Energy Management" (EMAN) WG
-which ran from 2010 to 2015 and released 7 RFC,
-that the IETF produced a comprehensive set of MIB based publications for
-managing energy/power for network equipment and associated devices
-and integrated prior scattered power management related work
-in the IETF.
+While the IETF did specify a few MIBs with aspects related to power management, it was only with the formation of the “Energy Management” (EMAN) WG (2010–2015) that a comprehensive set of MIB-based models for managing energy in network equipment was developed. This work also provides standardized support for issues noted earlier in {{dynpower}}, such as negotiation and monitoring of device-level power needs.
 
 EMAN produced (solely) a set of data/information models
 (MIBs). It does not introduce any new protocol/stacks nor does it
