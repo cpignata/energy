@@ -270,7 +270,7 @@ The scope of this document
 includes selected work from the IETF, IRTF, and IAB where relevant.
 This document is descriptive in nature and does not propose new work items.
 
-This document captures work until 12/2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" contextualized renewed community interest and discussion of the topic.
+This document captures work until 12/2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems” contextualized renewed community interest and discussion of the topic.
 This memo itself does not recommend or direct future work.
 
 
@@ -297,7 +297,7 @@ refer to the newest version. This approach is meant to allow readers to better u
 the historic timeline in which a specific technology was proposed or introduced. Especially successful
 I* technologies will have newer RFC that updates such initial work.
 
-This document captures work until 12/2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" {{?I-D.iab-ws-environmental-impacts-report}} renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.
+This document captures work until 12/2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems” {{?I-D.iab-ws-environmental-impacts-report}}  renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.
 
 In addition to this compilation, the authors also share their own observations on what has worked well and what lessons may be drawn from the past.
 
@@ -358,7 +358,7 @@ Power over Ethernet (PoE) shows how device-level negotiation can affect energy u
 
 Problems arise if devices misreport or later exceed their declared needs. A device requesting 30 W but consuming 60 W forces over-provisioning and complicates capacity planning. Accurate and dynamic signaling is therefore key: truthful reporting avoids systematic waste, while real-time updates allow closer matching of supply and demand.
 
-IETF's EMAN framework {{RFC7326}} provides models for monitoring and control in support of these dynamics, though broader architectural adoption remains limited.
+IETF’s EMAN framework {{RFC7326}} provides models for monitoring and control in support of these dynamics, though broader architectural adoption remains limited.
 
 
 ### End-to-End Transport
@@ -963,7 +963,7 @@ managed equipment consumption of power.
 
 ## EMAN WG {#EMAN}
 
-While the IETF did specify a few MIBs with aspects related to power management, it was only with the formation of the "Energy Management" (EMAN) WG (2010-2015) that a comprehensive set of MIB-based models for managing energy in network equipment was developed. This work also provides standardized support for issues noted earlier in {{dynpower}}, such as negotiation and monitoring of device-level power needs.
+While the IETF did specify a few MIBs with aspects related to power management, it was only with the formation of the “Energy Management” (EMAN) WG (2010–2015) that a comprehensive set of MIB-based models for managing energy in network equipment was developed. This work also provides standardized support for issues noted earlier in {{dynpower}}, such as negotiation and monitoring of device-level power needs.
 
 EMAN produced (solely) a set of data/information models
 (MIBs). It does not introduce any new protocol/stacks nor does it
@@ -1135,7 +1135,7 @@ on the same linecard as the interfaces to which the packets would need to be rou
 The 2013 "Towards an Energy-Efficient Internet" {{I-D.winter-energy-efficient-internet}}
 summarizes some of the same work items as this document (as written back in 2013) and
 lists additional more non-adopted drafts.
-It also identified three areas of gaps: "Load-adaptive Resource Management", "Energy-efficient Protocol Design", and "Energy-efficiency Metrics and Standard Benchmarking Methodologies". While these areas remain open, this document records them for reference rather than recommending specific next steps.
+It also identified three areas of gaps: "Load-adaptive Resource Management”, "Energy-efficient Protocol Design”, and "Energy-efficiency Metrics and Standard Benchmarking Methodologies”. While these areas remain open, this document records them for reference rather than recommending specific next steps.
 
 Some aspects for those areas of gaps were partially tackled by later work in the IETF,
 but broadly speaking, most of those areas remain open to a wide range of possible further IETF/IRTF work.

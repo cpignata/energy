@@ -40,7 +40,7 @@ Abstract
    and does not propose new work items.
 
    This document captures work until 12/2022, when the "IAB workshop on
-   Environmental Impact of Internet Applications and Systems"
+   Environmental Impact of Internet Applications and Systems”
    contextualized renewed community interest and discussion of the
    topic.  This memo itself does not recommend or direct future work.
 
@@ -191,7 +191,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview       September 2025
    have newer RFC that updates such initial work.
 
    This document captures work until 12/2022, when the "IAB workshop on
-   Environmental Impact of Internet Applications and Systems"
+   Environmental Impact of Internet Applications and Systems”
    [I-D.iab-ws-environmental-impacts-report] renewed community
    discussion of the topic.  The workshop emphasized that existing and
    emerging work could benefit from increased visibility and
@@ -313,7 +313,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview       September 2025
    waste, while real-time updates allow closer matching of supply and
    demand.
 
-   IETF's EMAN framework [RFC7326] provides models for monitoring and
+   IETF’s EMAN framework [RFC7326] provides models for monitoring and
    control in support of these dynamics, though broader architectural
    adoption remains limited.
 
@@ -1266,8 +1266,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview       September 2025
 7.2.  EMAN WG
 
    While the IETF did specify a few MIBs with aspects related to power
-   management, it was only with the formation of the "Energy Management"
-   (EMAN) WG (2010-2015) that a comprehensive set of MIB-based models
+   management, it was only with the formation of the “Energy Management”
+   (EMAN) WG (2010–2015) that a comprehensive set of MIB-based models
    for managing energy in network equipment was developed.  This work
    also provides standardized support for issues noted earlier in
    Section 2.2.3, such as negotiation and monitoring of device-level
@@ -1520,9 +1520,9 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview       September 2025
    [I-D.winter-energy-efficient-internet] summarizes some of the same
    work items as this document (as written back in 2013) and lists
    additional more non-adopted drafts.  It also identified three areas
-   of gaps: "Load-adaptive Resource Management", "Energy-efficient
-   Protocol Design", and "Energy-efficiency Metrics and Standard
-   Benchmarking Methodologies".  While these areas remain open, this
+   of gaps: "Load-adaptive Resource Management”, "Energy-efficient
+   Protocol Design”, and "Energy-efficiency Metrics and Standard
+   Benchmarking Methodologies”. While these areas remain open, this
    document records them for reference rather than recommending specific
    next steps.
 
