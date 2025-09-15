@@ -3,7 +3,7 @@ coding: utf-8
 
 title: An Overview of Energy-related Efforts within the IETF, IRTF, and IAB
 abbrev: IETF/IRTF/IAB Energy Overview
-docname: draft-eckert-ietf-and-energy-overview-10
+docname: draft-eckert-ietf-and-energy-overview-11
 stream: independent
 category: info
 ipr: trust200902
@@ -260,11 +260,19 @@ informative:
 
 This memo provides a compilation of existing work performed by or proposed within the IETF, the IRTF, and the IAB that relates to energy and sustainability: awareness, management, control, or reduction of energy consumption.
 
-The principal goal is to help IETF, IRTF, and IAB participants, especially newcomers and future contributors, become familiar with the body of work already published.
-This document serves as the first catalog of such efforts, providing a consolidated internal reference.
+The principal goal of this document is to help IETF, IRTF, and IAB
+participants, especially newcomers and future contributors, become
+familiar with the body of work already published on energy-related
+topics. It provides the first consolidated catalog of such efforts,
+serving as an internal reference and orientation guide.
 
-An additional goal is to raise awareness and interest in energy-related
-activities within the IETF, IRTF, and IAB, to continue identifying gaps and investigating solutions as appropriate.
+In addition, the document raises awareness of the Internet’s role in
+energy efficiency and energy-related activities within the IETF, IRTF,
+and IAB more broadly. This helps continue identifying gaps and
+investigating solutions where further work may be needed, and also 
+offers background for readers outside the IETF community who may be 
+less familiar with how networking technologies contribute to energy 
+savings.
 
 The scope of this document
 includes selected work from the IETF, IRTF, and IAB where relevant.
