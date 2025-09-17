@@ -1205,4 +1205,10 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 07: Added security considerations, updated pointers.
 
-08: Refresh of the I-D, starting with a thorough editorial pass of fixes and improvements. Clarified motivation and scope (IETF/IRTF/IAB), added authors' observations and lessons learned, emphasized internal audience as first catalog, and applied readibility cleanups.
+08: ISE Review: starting with a thorough editorial pass of fixes and improvements. Clarified motivation and scope (IETF/IRTF/IAB), added authors' observations and lessons learned, emphasized internal audience as first catalog, and applied readibility cleanups.
+
+09: ISE Review: Tightened and restructured Section 2 by collapsing subsections and clarifying audience focus; include only technologies with direct energy impact
+
+10: Editorial update, refined language and terminology (e.g., “December 2022” vs. “12/2022”), improving consistency and readability across sections.
+
+11: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)
