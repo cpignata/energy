@@ -3,7 +3,7 @@ coding: utf-8
 
 title: An Overview of Energy-related Efforts within the IETF, IRTF, and IAB
 abbrev: IETF/IRTF/IAB Energy Overview
-docname: draft-eckert-ietf-and-energy-overview-11
+docname: draft-eckert-ietf-and-energy-overview-10
 stream: independent
 category: info
 ipr: trust200902
@@ -24,7 +24,7 @@ author:
        street: 2220 Central Expressway
        city: Santa Clara
        code: CA 95050
-       country: US
+       country: USA
        email: tte@cs.fau.de
   -
        name: Mohamed Boucadair
@@ -32,7 +32,7 @@ author:
        org: Orange
        city: Rennes
        code: 35000
-       country: FR
+       country: France
        email: mohamed.boucadair@orange.com
   -
        name: Pascal Thubert
@@ -40,23 +40,25 @@ author:
        street: 45 Allee des Ormes - BP1200, Building D
        city: Sophia Antipolis
        code: 06254 MOUGINS
-       country: FR
+       country: France
        phone: "+33 497 23 26 34"
        email: pthubert@cisco.com
 
   -
        name: Jeff Tentsura
        org: NVIDIA
-       country: US
+       country: USA
        email: jefftant.ietf@gmail.com
 
   -
        name: Carlos Pignataro
        role: editor
        org: NC State University
-       country: US
-       email: cpignata@gmail.com
-       email: cmpignat@ncsu.edu
+       country: USA
+       email:
+        - cmpignat@ncsu.edu
+        - cpignata@gmail.com
+
 
 
 
@@ -258,19 +260,11 @@ informative:
 
 This memo provides a compilation of existing work performed by or proposed within the IETF, the IRTF, and the IAB that relates to energy and sustainability: awareness, management, control, or reduction of energy consumption.
 
-The principal goal of this document is to help IETF, IRTF, and IAB
-participants, especially newcomers and future contributors, become
-familiar with the body of work already published on energy-related
-topics. It provides the first consolidated catalog of such efforts,
-serving as an internal reference and orientation guide.
+The principal goal is to help IETF, IRTF, and IAB participants, especially newcomers and future contributors, become familiar with the body of work already published.
+This document serves as the first catalog of such efforts, providing a consolidated internal reference.
 
-In addition, the document raises awareness of the Internet’s role in
-energy efficiency and energy-related activities within the IETF, IRTF,
-and IAB more broadly. This helps continue identifying gaps and
-investigating solutions where further work may be needed, and also 
-offers background for readers outside the IETF community who may be 
-less familiar with how networking technologies contribute to energy 
-savings.
+An additional goal is to raise awareness and interest in energy-related
+activities within the IETF, IRTF, and IAB, to continue identifying gaps and investigating solutions as appropriate.
 
 The scope of this document
 includes selected work from the IETF, IRTF, and IAB where relevant.
@@ -1203,10 +1197,4 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 07: Added security considerations, updated pointers.
 
-08: ISE Review: starting with a thorough editorial pass of fixes and improvements. Clarified motivation and scope (IETF/IRTF/IAB), added authors' observations and lessons learned, emphasized internal audience as first catalog, and applied readibility cleanups.
-
-09: ISE Review: Tightened and restructured Section 2 by collapsing subsections and clarifying audience focus; include only technologies with direct energy impact
-
-10: Editorial update, refined language and terminology (e.g., “December 2022” vs. “12/2022”), improving consistency and readability across sections.
-
-11: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)
+08: Refresh of the I-D, starting with a thorough editorial pass of fixes and improvements. Clarified motivation and scope (IETF/IRTF/IAB), added authors' observations and lessons learned, emphasized internal audience as first catalog, and applied readibility cleanups.
