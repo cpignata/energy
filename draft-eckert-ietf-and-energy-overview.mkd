@@ -45,7 +45,7 @@ author:
        email: pthubert@cisco.com
 
   -
-       name: Jeff Tentsura
+       name: Jeff Tantsura
        org: NVIDIA
        country: US
        email: jefftant.ietf@gmail.com
@@ -55,8 +55,9 @@ author:
        role: editor
        org: NC State University
        country: US
-       email: cpignata@gmail.com
-       email: cmpignat@ncsu.edu
+       email:
+         - cpignata@gmail.com
+         - cmpignat@ncsu.edu
 
 
 
@@ -1193,7 +1194,7 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 02: Minor text edits (med), add pointer to additional Internet-Draft (med), Added co-author pascal (tte),
 
-03: Added Jeff Tentsura as co-author
+03: Added Jeff Tantsura as co-author
 
 04: Various textual fixups, added new versions of RFC for references using obsoleted RFCs, so that both original and latest are referenced.
 
