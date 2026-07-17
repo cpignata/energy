@@ -24,7 +24,7 @@ author:
        street: 2220 Central Expressway
        city: Santa Clara
        code: CA 95050
-       country: USA
+       country: US
        email: tte@cs.fau.de
   -
        name: Mohamed Boucadair
@@ -32,7 +32,7 @@ author:
        org: Orange
        city: Rennes
        code: 35000
-       country: France
+       country: FR
        email: mohamed.boucadair@orange.com
   -
        name: Pascal Thubert
@@ -40,25 +40,23 @@ author:
        street: 45 Allee des Ormes - BP1200, Building D
        city: Sophia Antipolis
        code: 06254 MOUGINS
-       country: France
+       country: FR
        phone: "+33 497 23 26 34"
        email: pthubert@cisco.com
 
   -
        name: Jeff Tentsura
        org: NVIDIA
-       country: USA
+       country: US
        email: jefftant.ietf@gmail.com
 
   -
        name: Carlos Pignataro
        role: editor
        org: NC State University
-       country: USA
-       email:
-        - cmpignat@ncsu.edu
-        - cpignata@gmail.com
-
+       country: US
+       email: cpignata@gmail.com
+       email: cmpignat@ncsu.edu
 
 
 
