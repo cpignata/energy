@@ -137,7 +137,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    7.  (Limited) Energy Management for Networks  . . . . . . . . . .  24
      7.1.  Some Metrics  . . . . . . . . . . . . . . . . . . . . . .  24
      7.2.  Energy Management (EMAN)  . . . . . . . . . . . . . . . .  24
-   8.  Power-Awareness in Forwarding and Routing Protocols . . . . .  26
+   8.  Power Awareness in Forwarding and Routing Protocols . . . . .  26
      8.1.  Power-Aware Networks (PANET)  . . . . . . . . . . . . . .  27
      8.2.  SDN-based Semantic Forwarding . . . . . . . . . . . . . .  28
      8.3.  Additional Related Efforts  . . . . . . . . . . . . . . .  28
@@ -1438,7 +1438,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    control dedicated power optimization engines instead of relying upon
    static and frozen vendor-specific optimization.
 
-8.  Power-Awareness in Forwarding and Routing Protocols
+8.  Power Awareness in Forwarding and Routing Protocols
 
    This section covers proposals for making forwarding and routing
    decisions themselves aware of, and responsive to, power consumption,

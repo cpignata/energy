@@ -1064,7 +1064,7 @@ There are currently no YANG equivalent modules. Such modules would not only
 be designed to echo the EMAN MIBs but would also allow to control dedicated
  power optimization engines instead of relying upon static and frozen vendor-specific optimization.
 
-# Power-Awareness in Forwarding and Routing Protocols
+# Power Awareness in Forwarding and Routing Protocols
 
 This section covers proposals for making forwarding and routing decisions themselves aware
 of, and responsive to, power consumption, from the earliest (non-adopted) PANET work through
