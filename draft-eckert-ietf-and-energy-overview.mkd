@@ -334,7 +334,7 @@ The rest of this document is organized as follows:
    * Section 7 covers the (limited) management of network equipment
      energy consumption, including the EMAN working group.
 
-   * Section 8 covers power-awareness in forwarding and routing
+   * Section 8 covers power awareness in forwarding and routing
      protocols.
 
    * Section 9 identifies gaps relative to a prior survey of this
@@ -397,7 +397,7 @@ today.
 
 ### Dynamic Power Negotiation {#dynpower}
 
-Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via the Link Layer Discovery Protocol (LLDP) or the Cisco Discovery Protocol (CDP)), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes.
+Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via the Link Layer Discovery Protocol (LLDP) or the Cisco Discovery Protocol (CDP)), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes. While the negotiation itself happens per device, the savings scale with deployment size: applied consistently across the many endpoints of an enterprise or campus network, the aggregate reduction in over-provisioned power becomes significant, following the same scaling logic as the other mechanisms in this section.
 
 Problems arise if devices misreport or later exceed their declared needs. A device requesting 30 W but consuming 60 W forces over-provisioning and complicates capacity planning. Accurate and dynamic signaling is therefore key: truthful reporting avoids systematic waste, while real-time updates allow closer matching of supply and demand.
 
@@ -411,7 +411,7 @@ avoiding per-hop retransmission and state. This design choice has a direct energ
 minimizes per-packet processing in routers, enabling simpler, more energy-efficient forwarding
 at scale.
 
-### Global vs Restricted Connectivity: The Internet Routing Architectures
+### Global vs. Restricted Connectivity: The Internet Routing Architectures
 
 BGP {{RFC4271}} enabled open interconnection and competitive market expansion, accelerating
 Internet scale. This scale matters for energy: it let energy efficiency gains from newer
@@ -898,7 +898,7 @@ for those applications for to all IPv6 links, but was not further pursued by the
 ## (Lack of) Power Benchmarking Proposals
 
 {{I-D.petrescu-v6ops-ipv6-power-ipv4}} presented some measurement results of the power
-consumption when using IPv6 vs IPv4 with a focus on mobile devices. Such
+consumption when using IPv6 vs. IPv4 with a focus on mobile devices. Such
 measurements are not backed with formal benchmarking methodologies so that solid and
 reliable references are set to compare and interpret data.
 
@@ -967,7 +967,7 @@ The "North American SynchroPhasor Initiative" (NASPI), https://www.naspi.org is 
 organization in support of synchrophasor networking. It is an ongoing project by
 the USA "Department of Energy" (DoE).
 
-# (Limited) Energy Management for Networks
+# (Limited) Energy Management of Network Equipment
 
 This section covers IETF work that manages the energy consumption of network equipment
 itself, starting with early, non-adopted metrics proposals before turning to the one
@@ -1204,9 +1204,15 @@ gaps for reference only; it does not recommend or direct any future work to addr
        energy-specific protocol.
 
    * Clear problem framing: Efforts that were framed around a well-
-     defined operational or architectural need (for example,
-     constrained-device networking in the IETF) tended to achieve
+     defined operational or architectural need tended to achieve
      broader traction than more generic appeals to "green networking."
+
+     * For example, the constrained-device networking work in the
+       IETF (6LoWPAN, 6TiSCH, 6Lo, ROLL, and LWIG) succeeded by
+       addressing concrete constraints of low-power and lossy
+       networks, such as limited energy, memory, and bandwidth,
+       rather than by framing itself around energy savings as a goal
+       in its own right.
 
    * Collaboration across communities: Effective work often involved
      coordination between the related research and

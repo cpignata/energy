@@ -92,13 +92,13 @@ Table of Contents
        2.2.1.  An Iconic Example: Telephony  . . . . . . . . . . . .   7
        2.2.2.  The Packet Multiplexing Principle . . . . . . . . . .   7
        2.2.3.  Dynamic Power Negotiation . . . . . . . . . . . . . .   7
-       2.2.4.  End-to-End Transport  . . . . . . . . . . . . . . . .   7
-       2.2.5.  Global vs Restricted Connectivity: The Internet Routing
-               Architectures . . . . . . . . . . . . . . . . . . . .   8
+       2.2.4.  End-to-End Transport  . . . . . . . . . . . . . . . .   8
+       2.2.5.  Global vs. Restricted Connectivity: The Internet
+               Routing Architectures . . . . . . . . . . . . . . . .   8
        2.2.6.  Converged Networks  . . . . . . . . . . . . . . . . .   8
    3.  Higher or New Energy Consumption  . . . . . . . . . . . . . .   8
    4.  Some Notes on Sustainability  . . . . . . . . . . . . . . . .   9
-     4.1.  Follow-the-Energy Cloud Scheduling  . . . . . . . . . . .   9
+     4.1.  Follow-the-Energy Cloud Scheduling  . . . . . . . . . . .  10
      4.2.  Optimize Generated Heat . . . . . . . . . . . . . . . . .  10
      4.3.  Heat Recovery . . . . . . . . . . . . . . . . . . . . . .  10
      4.4.  Telecollaboration . . . . . . . . . . . . . . . . . . . .  10
@@ -134,7 +134,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    6.  Energy Management Networks  . . . . . . . . . . . . . . . . .  22
      6.1.  Smart Grid  . . . . . . . . . . . . . . . . . . . . . . .  22
      6.2.  Synchrophasor Networks  . . . . . . . . . . . . . . . . .  23
-   7.  (Limited) Energy Management for Networks  . . . . . . . . . .  24
+   7.  (Limited) Energy Management of Network Equipment  . . . . . .  24
      7.1.  Some Metrics  . . . . . . . . . . . . . . . . . . . . . .  24
      7.2.  Energy Management (EMAN)  . . . . . . . . . . . . . . . .  24
    8.  Power Awareness in Forwarding and Routing Protocols . . . . .  26
@@ -249,7 +249,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    *  Section 7 covers the (limited) management of network equipment
       energy consumption, including the EMAN working group.
 
-   *  Section 8 covers power-awareness in forwarding and routing
+   *  Section 8 covers power awareness in forwarding and routing
       protocols.
 
    *  Section 9 identifies gaps relative to a prior survey of this
@@ -362,7 +362,12 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    affect energy use.  Endpoints such as IP phones signal expected draw
    (e.g., via the Link Layer Discovery Protocol (LLDP) or the Cisco
    Discovery Protocol (CDP)), enabling switches to allocate power
-   budgets and reduce waste when devices enter low-power modes.
+   budgets and reduce waste when devices enter low-power modes.  While
+   the negotiation itself happens per device, the savings scale with
+   deployment size: applied consistently across the many endpoints of an
+   enterprise or campus network, the aggregate reduction in over-
+   provisioned power becomes significant, following the same scaling
+   logic as the other mechanisms in this section.
 
    Problems arise if devices misreport or later exceed their declared
    needs.  A device requesting 30 W but consuming 60 W forces over-
@@ -375,13 +380,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    control in support of these dynamics, though broader architectural
    adoption remains limited.
 
-2.2.4.  End-to-End Transport
 
-   The TCP end-to-end reliability model [RFC9293] was designed for
-   reliability, not energy, by avoiding per-hop retransmission and
-   state.  This design choice has a direct energy benefit: it minimizes
-   per-packet processing in routers, enabling simpler, more energy-
-   efficient forwarding at scale.
+
 
 
 
@@ -394,7 +394,15 @@ Eckert, et al.           Expires 18 January 2027                [Page 7]
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
-2.2.5.  Global vs Restricted Connectivity: The Internet Routing
+2.2.4.  End-to-End Transport
+
+   The TCP end-to-end reliability model [RFC9293] was designed for
+   reliability, not energy, by avoiding per-hop retransmission and
+   state.  This design choice has a direct energy benefit: it minimizes
+   per-packet processing in routers, enabling simpler, more energy-
+   efficient forwarding at scale.
+
+2.2.5.  Global vs. Restricted Connectivity: The Internet Routing
         Architectures
 
    BGP [RFC4271] enabled open interconnection and competitive market
@@ -432,14 +440,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    consumption for email and streaming easily outranks their predecessor
    technologies.
 
-   While these instances look beneficial from a simple energy
-   consumption metric, its overall scale and the resulting energy
-   consumption may in itself become an issue, especially when the energy
-   demand it creates risks to outstrip the possible energy production,
-   short term or long term.  This concern is nowadays often raised
-   against the "digital economy", where the network energy consumption
-   is typically cited as a small contributor relative to its
-   applications, such as what is running in Data Centers (DC).
 
 
 
@@ -449,6 +449,15 @@ Eckert, et al.           Expires 18 January 2027                [Page 8]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   While these instances look beneficial from a simple energy
+   consumption metric, its overall scale and the resulting energy
+   consumption may in itself become an issue, especially when the energy
+   demand it creates risks to outstrip the possible energy production,
+   short term or long term.  This concern is nowadays often raised
+   against the "digital economy", where the network energy consumption
+   is typically cited as a small contributor relative to its
+   applications, such as what is running in Data Centers (DC).
 
    In other cases, the energy consumption of digitization is often
    significantly higher than that of its pre-digitization alternatives.
@@ -488,6 +497,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    areas where global high performance, low-cost Internet networking is
    a key requirement.
 
+
+
+
+
+Eckert, et al.           Expires 18 January 2027                [Page 9]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
 4.1.  Follow-the-Energy Cloud Scheduling
 
    Renewable energy resources (except for water) do commonly have
@@ -498,14 +516,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    of available renewable energy at the time, not requiring the network.
    Significant workloads are not elastic in time, such as interactive
    cloud DC work (cloud based applications) or entertainment (gaming,
-
-
-
-Eckert, et al.           Expires 18 January 2027                [Page 9]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
    etc.).  These workloads may be instantiated or even dynamically (over
    time) migrate to a DC location with sufficient renewable energy and
    the Internet (or large TCP/IP Over-The-Top (OTT) backbone networks)
@@ -542,6 +552,16 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    Telecollaboration has a long history in the IETF resulting in
    multiple core technologies over the decades.
 
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 10]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    If one considers textual communications via email and netnews (using
    e.g., NNTP) as early forms of Telecollaboration, then
    telecollaboration history through IETF technology reaches back into
@@ -553,14 +573,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    MBone https://en.wikipedia.org/wiki/Mbone which was also used by the
    IETF for more than a decade to provide remote collaboration for its
    own (in-person + remote participation) meetings.
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 10]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    With the advent of SIP in the early 2000s, commercial
    telecollaboration started to be built most often on SIP based session
@@ -598,18 +610,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    Actual energy consumption related comparison between teleconferencing
    and in-person travel is complex but since the last decades is
    commonly based on calculating some form of CO2 emission equivalent of
-   the energy consumed, hence comparing not simply the energy
-   consumption, but weighing it by the impact the energy consumption has
-   on one of the key factors (CO2 emission) known to impact sustainable
-   living conditions.
-
-
-
-
-
-
-
-
 
 
 
@@ -617,6 +617,11 @@ Eckert, et al.           Expires 18 January 2027               [Page 11]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   the energy consumed, hence comparing not simply the energy
+   consumption, but weighing it by the impact the energy consumption has
+   on one of the key factors (CO2 emission) known to impact sustainable
+   living conditions.
 
    [VC2014] is a good example of a comparison between travel and
    telecollaboration taking various factors into account and using CO2
@@ -661,11 +666,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    (batteries, energy recovery), bitrates especially on radio links, and
    lower memory footprint.
 
-   The two documents from 2008-2009 that capture this analysis/
-   understanding are [I-D.levis-roll-overview-protocols] and
-   [I-D.ietf-roll-protocols-survey].  The overall challenges also very
-   much related to energy of IPv6 over wireless are captured in
-   [I-D.thubert-6man-ipv6-over-wireless], which is ongoing work.
 
 
 
@@ -673,6 +673,12 @@ Eckert, et al.           Expires 18 January 2027               [Page 12]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   The two documents from 2008-2009 that capture this analysis/
+   understanding are [I-D.levis-roll-overview-protocols] and
+   [I-D.ietf-roll-protocols-survey].  The overall challenges also very
+   much related to energy of IPv6 over wireless are captured in
+   [I-D.thubert-6man-ipv6-over-wireless], which is ongoing work.
 
 5.2.  Low-Power and Lossy Networks (LLN)
 
@@ -716,12 +722,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    known as 6LOWPAN-ND), as well as 3 informational RFCs about the WPAN
    space and applying IPv6 to it.  Among these, the Problem Statement
    and Requirements [RFC6606] gives details about the power and energy
-   approaches and goals.
-
-   It is important to understand the 6LOWPAN Overview, Assumptions,
-   Problem Statement, and Goals [RFC4919], including "conserve energy".
-
-
 
 
 
@@ -729,6 +729,11 @@ Eckert, et al.           Expires 18 January 2027               [Page 13]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   approaches and goals.
+
+   It is important to understand the 6LOWPAN Overview, Assumptions,
+   Problem Statement, and Goals [RFC4919], including "conserve energy".
 
    Outside the 6LOWPAN WG, [RFC9139] connects Information-Centric
    Networking (ICN) to Low-Power Wireless Personal Area Networks
@@ -772,11 +777,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
    Finally, the 6LO WG also produced [RFC8105], IPv6 over DECT Ultra-Low
    Energy, and [RFC9354], IPv6 over Power Line Communication (PLC).
-
-
-
-
-
 
 
 
@@ -1185,10 +1185,10 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 5.6.  (Lack of) Power Benchmarking Proposals
 
    [I-D.petrescu-v6ops-ipv6-power-ipv4] presented some measurement
-   results of the power consumption when using IPv6 vs IPv4 with a focus
-   on mobile devices.  Such measurements are not backed with formal
-   benchmarking methodologies so that solid and reliable references are
-   set to compare and interpret data.
+   results of the power consumption when using IPv6 vs. IPv4 with a
+   focus on mobile devices.  Such measurements are not backed with
+   formal benchmarking methodologies so that solid and reliable
+   references are set to compare and interpret data.
 
    https://www.ietf.org/proceedings/103/slides/slides-103-saag-iot-
    benchmarking-00.pdf presented a benchmark example but with a focus on
@@ -1307,7 +1307,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    synchrophasor networking.  It is an ongoing project by the USA
    "Department of Energy" (DoE).
 
-7.  (Limited) Energy Management for Networks
+7.  (Limited) Energy Management of Network Equipment
 
    This section covers IETF work that manages the energy consumption of
    network equipment itself, starting with early, non-adopted metrics
@@ -1649,9 +1649,14 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
          energy-specific protocol.
 
    *  Clear problem framing: Efforts that were framed around a well-
-      defined operational or architectural need (for example,
-      constrained-device networking in the IETF) tended to achieve
+      defined operational or architectural need tended to achieve
       broader traction than more generic appeals to "green networking."
+
+      -  For example, the constrained-device networking work in the IETF
+         (6LoWPAN, 6TiSCH, 6Lo, ROLL, and LWIG) succeeded by addressing
+         concrete constraints of low-power and lossy networks, such as
+         limited energy, memory, and bandwidth, rather than by framing
+         itself around energy savings as a goal in its own right.
 
    *  Collaboration across communities: Effective work often involved
       coordination between the related research and standardization
@@ -1668,11 +1673,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
       lacked continuity.  A lesson is that sustained progress often
       requires ongoing integration into mainstream workstreams.
 
-      -  For example, after the EMAN WG concluded in 2015, dedicated
-         IETF/IRTF energy-management activity did not resume until the
-         Sustainability and the Internet (SUSTAIN) Research Group (RG)
-         and the Getting Ready for Energy-Efficient Networking (GREEN)
-         WG efforts nearly a decade later.
 
 
 
@@ -1681,6 +1681,12 @@ Eckert, et al.           Expires 18 January 2027               [Page 30]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+      -  For example, after the EMAN WG concluded in 2015, dedicated
+         IETF/IRTF energy-management activity did not resume until the
+         Sustainability and the Internet (SUSTAIN) Research Group (RG)
+         and the Getting Ready for Energy-Efficient Networking (GREEN)
+         WG efforts nearly a decade later.
 
    *  Constrained and actionable scope: Experience shows that activities
       with a well-defined and bounded scope are more likely to deliver
@@ -1723,12 +1729,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    (ISE), for his guidance and shepherding of this document through the
    independent submission process.
 
-   By serving as the first catalog of energy-related work within the
-   IETF, IRTF, and IAB, this document is intended to be a resource for
-   participants rather than a vehicle for setting future directions.
-
-
-
 
 
 
@@ -1737,6 +1737,10 @@ Eckert, et al.           Expires 18 January 2027               [Page 31]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   By serving as the first catalog of energy-related work within the
+   IETF, IRTF, and IAB, this document is intended to be a resource for
+   participants rather than a vehicle for setting future directions.
 
 14.  Changelog
 
@@ -1781,10 +1785,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    subsections and clarifying audience focus; include only technologies
    with direct energy impact
 
-   10: ISE Review: Editorial update, refined language and terminology
-   (e.g., "December 2022" vs. "12/2022"), improving consistency and
-   readability across sections.
-
 
 
 
@@ -1793,6 +1793,10 @@ Eckert, et al.           Expires 18 January 2027               [Page 32]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   10: ISE Review: Editorial update, refined language and terminology
+   (e.g., "December 2022" vs. "12/2022"), improving consistency and
+   readability across sections.
 
    11: ISE Review: Reframed the abstract to highlight and make explicit
    three audiences (insiders, newcomers, and external readers)
@@ -1834,12 +1838,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               <https://datatracker.ietf.org/doc/html/draft-boucadair-
               irtf-sdn-and-semantic-routing-01>.
 
-   [I-D.castellani-core-alive]
-              Castellani, A. P. and S. Loreto, "CoAP Alive Message",
-              Work in Progress, Internet-Draft, draft-castellani-core-
-              alive-00, 29 March 2012,
-              <https://datatracker.ietf.org/doc/html/draft-castellani-
-              core-alive-00>.
+
+
 
 
 
@@ -1849,6 +1849,13 @@ Eckert, et al.           Expires 18 January 2027               [Page 33]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   [I-D.castellani-core-alive]
+              Castellani, A. P. and S. Loreto, "CoAP Alive Message",
+              Work in Progress, Internet-Draft, draft-castellani-core-
+              alive-00, 29 March 2012,
+              <https://datatracker.ietf.org/doc/html/draft-castellani-
+              core-alive-00>.
 
    [I-D.chakrabarti-nordmark-energy-aware-nd]
               Chakrabarti, S., Nordmark, E., and M. Cullen, "Energy
@@ -1886,6 +1893,19 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               <https://datatracker.ietf.org/doc/html/draft-fossati-core-
               publish-option-03>.
 
+
+
+
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 34]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [I-D.giacomin-core-sleepy-option]
               Fossati, T., Giacomin, P., Loreto, S., and M. Rossini,
               "Sleepy Option for CoAP", Work in Progress, Internet-
@@ -1898,14 +1918,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               IAB Workshop on Environmental Impact of Internet
               Applications and Systems, 2022", Work in Progress,
               Internet-Draft, draft-iab-ws-environmental-impacts-report-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 34]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
               03, 23 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-iab-ws-
               environmental-impacts-report-03>.
@@ -1940,6 +1952,16 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               <https://datatracker.ietf.org/doc/html/draft-jennings-
               energy-pricing-01>.
 
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 35]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [I-D.levis-roll-overview-protocols]
               Vasseur, J., "Overview of Existing Routing Protocols for
               Low Power and Lossy Networks", Work in Progress, Internet-
@@ -1954,13 +1976,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Draft, draft-lhan-problems-requirements-satellite-net-06,
               4 January 2024, <https://datatracker.ietf.org/doc/html/
               draft-lhan-problems-requirements-satellite-net-06>.
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 35]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [I-D.manral-bmwg-power-usage]
               Manral, V., Sharma, P., Banerjee, S., and Y. Ping,
@@ -1995,6 +2010,14 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [I-D.petrescu-v6ops-ipv6-power-ipv4]
               Petrescu, A., Saïd, S. B. H., Philippot, O., and T.
               Vincent, "Power Consumption of IPv6 vs IPv4 in
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 36]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
               Smartphone", Work in Progress, Internet-Draft, draft-
               petrescu-v6ops-ipv6-power-ipv4-00, 13 March 2017,
               <https://datatracker.ietf.org/doc/html/draft-petrescu-
@@ -2005,18 +2028,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               in Progress, Internet-Draft, draft-rahman-core-sleepy-05,
               11 February 2014, <https://datatracker.ietf.org/doc/html/
               draft-rahman-core-sleepy-05>.
-
-
-
-
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 36]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [I-D.rahman-core-sleepy-nodes-do-we-need]
               Rahman, A., "Sleepy Devices: Do we need to Support them in
@@ -2054,6 +2065,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               8 March 2023, <https://datatracker.ietf.org/doc/html/
               draft-thubert-6man-ipv6-over-wireless-15>.
 
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 37]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [I-D.vial-core-mirror-proxy]
               Vial, M., "CoRE Mirror Server", Work in Progress,
               Internet-Draft, draft-vial-core-mirror-proxy-01, 13 July
@@ -2065,14 +2085,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Internet-Draft, draft-vial-core-mirror-server-01, 10 April
               2013, <https://datatracker.ietf.org/doc/html/draft-vial-
               core-mirror-server-01>.
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 37]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [I-D.wang-roll-energy-optimization-scheme]
               Wang, H., Wei, M., Li, S., Huang, Q., Wang, P., and C.
@@ -2105,6 +2117,19 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               <https://datatracker.ietf.org/doc/html/draft-zhang-panet-
               problem-statement-03>.
 
+
+
+
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 38]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [ISO10589-Second-Edition]
               International Organization for Standardization (ISO),
               "Intermediate system to Intermediate system intra-domain
@@ -2122,14 +2147,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [NASPICLOCK]
               NASPI Time Synchronization Task Force, "Time
               Synchronization in the Electric Power System", March 2017,
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 38]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
               <https://www.naspi.org/sites/default/files/
               reference_documents/
               tstf_electric_power_system_report_pnnl_26331_march_2017_0.pdf>.
@@ -2160,6 +2177,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               RFC 1628, DOI 10.17487/RFC1628, May 1994,
               <https://www.rfc-editor.org/rfc/rfc1628>.
 
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 39]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [RFC1866]  Berners-Lee, T. and D. Connolly, "Hypertext Markup
               Language - 2.0", RFC 1866, DOI 10.17487/RFC1866, November
               1995, <https://www.rfc-editor.org/rfc/rfc1866>.
@@ -2177,14 +2203,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               and W. Weiss, "An Architecture for Differentiated
               Services", RFC 2475, DOI 10.17487/RFC2475, December 1998,
               <https://www.rfc-editor.org/rfc/rfc2475>.
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 39]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [RFC2822]  Resnick, P., Ed., "Internet Message Format", RFC 2822,
               DOI 10.17487/RFC2822, April 2001,
@@ -2214,6 +2232,16 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               RFC 3948, DOI 10.17487/RFC3948, January 2005,
               <https://www.rfc-editor.org/rfc/rfc3948>.
 
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 40]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [RFC3977]  Feather, C., "Network News Transfer Protocol (NNTP)",
               RFC 3977, DOI 10.17487/RFC3977, October 2006,
               <https://www.rfc-editor.org/rfc/rfc3977>.
@@ -2230,17 +2258,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [RFC4607]  Holbrook, H. and B. Cain, "Source-Specific Multicast for
               IP", RFC 4607, DOI 10.17487/RFC4607, August 2006,
               <https://www.rfc-editor.org/rfc/rfc4607>.
-
-
-
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 40]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [RFC4861]  Narten, T., Nordmark, E., Simpson, W., and H. Soliman,
               "Neighbor Discovery for IP version 6 (IPv6)", RFC 4861,
@@ -2272,6 +2289,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Lossy Networks", RFC 5673, DOI 10.17487/RFC5673, October
               2009, <https://www.rfc-editor.org/rfc/rfc5673>.
 
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 41]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [RFC5826]  Brandt, A., Buron, J., and G. Porcu, "Home Automation
               Routing Requirements in Low-Power and Lossy Networks",
               RFC 5826, DOI 10.17487/RFC5826, April 2010,
@@ -2290,13 +2316,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [RFC6206]  Levis, P., Clausen, T., Hui, J., Gnawali, O., and J. Ko,
               "The Trickle Algorithm", RFC 6206, DOI 10.17487/RFC6206,
               March 2011, <https://www.rfc-editor.org/rfc/rfc6206>.
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 41]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [RFC6272]  Baker, F. and D. Meyer, "Internet Protocols for the Smart
               Grid", RFC 6272, DOI 10.17487/RFC6272, June 2011,
@@ -2325,6 +2344,16 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               RFC 6552, DOI 10.17487/RFC6552, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6552>.
 
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 42]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [RFC6553]  Hui, J. and JP. Vasseur, "The Routing Protocol for Low-
               Power and Lossy Networks (RPL) Option for Carrying RPL
               Information in Data-Plane Datagrams", RFC 6553,
@@ -2346,13 +2375,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
               <https://www.rfc-editor.org/rfc/rfc6690>.
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 42]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
 
    [RFC6763]  Cheshire, S. and M. Krochmal, "DNS-Based Service
               Discovery", RFC 6763, DOI 10.17487/RFC6763, February 2013,
@@ -2379,6 +2401,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               RFC 6988, DOI 10.17487/RFC6988, September 2013,
               <https://www.rfc-editor.org/rfc/rfc6988>.
 
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 43]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
+
    [RFC7030]  Pritikin, M., Ed., Yee, P., Ed., and D. Harkins, Ed.,
               "Enrollment over Secure Transport", RFC 7030,
               DOI 10.17487/RFC7030, October 2013,
@@ -2403,13 +2434,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               DOI 10.17487/RFC7326, September 2014,
               <https://www.rfc-editor.org/rfc/rfc7326>.
 
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 43]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
    [RFC7388]  Schoenwaelder, J., Sehgal, A., Tsou, T., and C. Zhou,
               "Definition of Managed Objects for IPv6 over Low-Power
               Wireless Personal Area Networks (6LoWPANs)", RFC 7388,
@@ -2430,6 +2454,17 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [RFC7461]  Parello, J., Claise, B., and M. Chandramouli, "Energy
               Object Context MIB", RFC 7461, DOI 10.17487/RFC7461, March
               2015, <https://www.rfc-editor.org/rfc/rfc7461>.
+
+
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 44]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
 
    [RFC7577]  Quittek, J., Winter, R., and T. Dietz, "Definition of
               Managed Objects for Battery Monitoring", RFC 7577,
@@ -2458,14 +2493,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [RFC7733]  Brandt, A., Baccelli, E., Cragie, R., and P. van der Stok,
               "Applicability Statement: The Use of the Routing Protocol
               for Low-Power and Lossy Networks (RPL) Protocol Suite in
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 44]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
               Home Automation and Building Control", RFC 7733,
               DOI 10.17487/RFC7733, February 2016,
               <https://www.rfc-editor.org/rfc/rfc7733>.
@@ -2485,6 +2512,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               IPv6 with Low-Power Wireless Personal Area Network
               (LoWPAN) Encapsulation", RFC 7973, DOI 10.17487/RFC7973,
               November 2016, <https://www.rfc-editor.org/rfc/rfc7973>.
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 45]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
 
    [RFC8025]  Thubert, P., Ed. and R. Cragie, "IPv6 over Low-Power
               Wireless Personal Area Network (6LoWPAN) Paging Dispatch",
@@ -2513,15 +2549,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               DOI 10.17487/RFC8200, July 2017,
               <https://www.rfc-editor.org/rfc/rfc8200>.
 
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 45]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
    [RFC8352]  Gomez, C., Kovatsch, M., Tian, H., and Z. Cao, Ed.,
               "Energy-Efficient Features of Internet of Things
               Protocols", RFC 8352, DOI 10.17487/RFC8352, April 2018,
@@ -2543,6 +2570,13 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Wireless Personal Area Network (6LoWPAN) Neighbor
               Discovery", RFC 8505, DOI 10.17487/RFC8505, November 2018,
               <https://www.rfc-editor.org/rfc/rfc8505>.
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 46]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
 
    [RFC8613]  Selander, G., Mattsson, J., Palombini, F., and L. Seitz,
               "Object Security for Constrained RESTful Environments
@@ -2571,13 +2605,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               DOI 10.17487/RFC8824, June 2021,
               <https://www.rfc-editor.org/rfc/rfc8824>.
 
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 46]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
    [RFC8928]  Thubert, P., Ed., Sarikaya, B., Sethi, M., and R. Struik,
               "Address-Protected Neighbor Discovery for Low-Power and
               Lossy Networks", RFC 8928, DOI 10.17487/RFC8928, November
@@ -2597,6 +2624,15 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Guidance in the Internet of Things (IoT)", RFC 9006,
               DOI 10.17487/RFC9006, March 2021,
               <https://www.rfc-editor.org/rfc/rfc9006>.
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 47]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
 
    [RFC9008]  Robles, M.I., Richardson, M., and P. Thubert, "Using RPI
               Option Type, Routing Header for Source Routes, and IPv6-
@@ -2625,15 +2661,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Media", RFC 9119, DOI 10.17487/RFC9119, October 2021,
               <https://www.rfc-editor.org/rfc/rfc9119>.
 
-
-
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 47]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
    [RFC9139]  Gündoğan, C., Schmidt, T., Wählisch, M., Scherb, C.,
               Marxer, C., and C. Tschudin, "Information-Centric
               Networking (ICN) Adaptation to Low-Power Wireless Personal
@@ -2651,6 +2678,17 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               Protocol Support Profile (IPSP)", RFC 9159,
               DOI 10.17487/RFC9159, December 2021,
               <https://www.rfc-editor.org/rfc/rfc9159>.
+
+
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 48]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
+
 
    [RFC9176]  Amsüss, C., Ed., Shelby, Z., Koster, M., Bormann, C., and
               P. van der Stok, "Constrained RESTful Environments (CoRE)
@@ -2683,13 +2721,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               RFC 9845, DOI 10.17487/RFC9845, October 2025,
               <https://www.rfc-editor.org/rfc/rfc9845>.
 
-
-
-Eckert, et al.           Expires 18 January 2027               [Page 48]
-
-Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
-
-
    [VC2014]   Ong, D., Moors, T., and V. Sivaraman, "Comparison of the
               energy, carbon and time costs of videoconferencing and in-
               person meetings", DOI 10.1016/j.comcom.2014.02.009, 2014,
@@ -2704,6 +2735,15 @@ Authors' Addresses
    Santa Clara,  CA 95050
    United States of America
    Email: tte@cs.fau.de
+
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 49]
+
+Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
    Mohamed Boucadair (editor)
@@ -2741,4 +2781,20 @@ Authors' Addresses
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 49]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Eckert, et al.           Expires 18 January 2027               [Page 50]
