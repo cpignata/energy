@@ -267,11 +267,12 @@ serving as an internal reference and orientation guide.
 
 In addition, the document raises awareness of the Internet's role in
 energy efficiency and energy-related activities within the IETF, IRTF,
-and IAB more broadly. This helps continue identifying gaps and
-investigating solutions where further work may be needed, and also 
-offers background for readers outside the IETF community who may be 
-less familiar with how networking technologies contribute to energy 
-savings.
+and IAB more broadly. As a reference rather than a guide, it may help
+readers identify gaps and areas where further work could be pursued,
+without this document itself directing or recommending any such work.
+It also offers background for readers outside the IETF community who
+may be less familiar with how networking technologies contribute to
+energy savings.
 
 The scope of this document
 includes selected work from the IETF, IRTF, and IAB where relevant.
@@ -561,7 +562,7 @@ wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DEC ULE.
 
 In the INT area of the IETF, several LLN specific WGs exist(ed):
 
-### 6LOWPAN WG
+### IPv6 over Low Power WPAN (6LoWPAN)
 
 The "IPv6 over Low power WPAN (Wireless Personal Area Networks)" (6lowpan) WG ran from 2005
 to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low power) wireless networks
@@ -577,13 +578,13 @@ It is important to understand the 6LOWPAN Overview, Assumptions, Problem Stateme
 Outside the 6LOWPAN WG, {{RFC9139}} connects Information-Centric Networking (ICN) to Low-Power Wireless Personal Area Networks (LoWPANs).
 
 
-### LPWAN WG
+### IPv6 over Low Power Wide-Area Networks (LPWAN)
 
 Since 2014 and before 2023, the "IPv6 over Low Power Wide-Area Networks" (LPWAN) WG has produced 4 RFC
 for low-power wide area networks, such as LoRaWAN {{https://en.wikipedia.org/wiki/LoRa}},
 with three Standards-Track RFC documents, {{RFC8724}}, {{RFC8824}}, and {{RFC9011}}.
 
-### 6TISCH WG
+### IPv6 over the TSCH mode of IEEE 802.15.4e (6TiSCH)
 
 Since 2013, the "IPv6 over the TSCH mode of IEEE 802.15.4e" (6tisch) WG has produced 7 RFC
 for a version of 802.15.4 called the "Time-Slotted Channel Hopping Mode" (TSCH), which
@@ -591,7 +592,7 @@ supports deterministic latency and lower energy consumption through the use of
 scheduling traffic into well-defined time slots, thereby also optimizing/minimizing
 energy consumption when compared to 802.15.4 without TSCH.
 
-### 6LO WG
+### IPv6 over Networks of Resource-constrained Nodes (6LO)
 
 Since 2013, the "IPv6 over Networks of Resource-constrained Nodes" (6lo) WG has generalized
 the work of 6lowpan for LLN in general, producing 17 RFC for IPv6-over-l2foo adaptation layer
@@ -606,7 +607,7 @@ From a management perspective, produced {{RFC7388}}, LOWPAN MIB, as well as seve
 Finally, the 6LO WG also produced {{RFC8105}}, IPv6 over DECT Ultra-Low Energy, and {{RFC9354}}, IPv6 over Power Line Communication (PLC).
 
 
-### ROLL WG
+### Routing Over Low power and Lossy networks (ROLL)
 
 In the RouTinG (RTG) area of the IETF, the "Routing Over Low power and Lossy networks" (ROLL) WG
 has produced since 2008 23 RFC. Initially it produced requirement RFCs of different type of
@@ -658,7 +659,7 @@ are an order of magnitude less constrained than nodes typically attached to LLN 
 Therefore, broader work in the IETF than focused primarily on LLN typically uses
 just the term lightweight or constrained (nodes and networks).
 
-### LWIG WG
+### Light-Weight Implementation Guidance (LWIG)
 
 Since 2013, the "Light-Weight Implementation Guidance" (lwig) WG has produced 6 informational
 RFCs on the group's subject, much of which indirectly supports implementing power
@@ -1106,7 +1107,8 @@ lists additional non-adopted Internet-Drafts.
 It also identified three areas of gaps: "Load-adaptive Resource Management", "Energy-efficient Protocol Design", and "Energy-efficiency Metrics and Standard Benchmarking Methodologies". While these areas remain open, this document records them for reference rather than recommending specific next steps.
 
 Some aspects for those areas of gaps were partially tackled by later work in the IETF,
-but broadly speaking, most of those areas remain open to a wide range of possible further IETF/IRTF work.
+but broadly speaking, most of those areas remain open. This document records these
+gaps for reference only; it does not recommend or direct any future work to address them.
 
 # Authors' Observations and Lessons Learned
 
@@ -1162,9 +1164,9 @@ within its own context.
 As this document aims to help those unfamiliar with but
 interested in IETF energy work by raising awareness of an important,
 broad topic, it indirectly also raises awareness of the security
-considerations overall.  And if this document inspires energy-related
-activities within the IETF, such as identifying gaps and
-investigating solutions, those would bring their security
+considerations overall.  This document does not recommend or direct
+future work; any future energy-related activities within the IETF,
+IRTF, or IAB would separately need to address their own security
 considerations.
 
 # IANA Considerations
