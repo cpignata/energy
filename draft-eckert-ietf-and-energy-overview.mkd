@@ -56,8 +56,8 @@ author:
        org: NC State University
        country: US
        email:
-         - cpignata@gmail.com
          - cmpignat@ncsu.edu
+         - cpignata@gmail.com
 
 
 
@@ -83,7 +83,6 @@ informative:
   RFC4607:
   RFC4861:
   RFC4944:
-  RFC4949:
   RFC5322:
   RFC5548:
   RFC5673:
@@ -350,7 +349,7 @@ Digitized voice over IP (e.g., "Session Initiation Protocol", SIP {{RFC3261}}) i
 
 ### The Packet Multiplexing Principle
 
-Statistical multiplexing in IP and IPv6 (({{RFC791}}, {{RFC8200}}) increases utilization efficiency, distributing largely fixed equipment power across many flows. This, along with development of further technologies
+Statistical multiplexing in IP and IPv6 ({{RFC791}}, {{RFC8200}}) increases utilization efficiency, distributing largely fixed equipment power across many flows. This, along with development of further technologies
 to improve scaling, has been a principal driver in declining energy per bit over decades.
 
 ### Dynamic Power Negotiation {#dynpower}
@@ -399,8 +398,8 @@ energy production, short term or long term. This concern is nowadays often raise
 the "digital economy", where the network energy consumption is typically cited as
 a small contributor relative to its applications, such as what is running in Data Centers (DC).
 
-In other cases, the energy consumption of digitization requires often significantly more
-than their pre-digitization alternatives. The most well-known example of this are likely
+In other cases, the energy consumption of digitization is often significantly higher
+than that of its pre-digitization alternatives. The most well-known example of this are likely
 crypto-currencies based on "proof-of-work" computations (mining), which on a per currency
 value unit can cost from ten to thirty times or more of the energy consumed by for example gold mining
 (very much depending on the highly fluctuating price of the crypto currency). Nevertheless,
@@ -408,7 +407,7 @@ its overall utility compared to such prior currencies or valuables makes it high
 successful in the market.
 
 In general, the digital economy tends to be more energy intensive on a per utility/value
-unit, for example by replacing a lot of manual labor with computation), and/or it allows
+unit (for example by replacing a lot of manual labor with computation), and/or it allows
 for faster growth of its workflows.
 
 The lower the cost of network traffic, and the more easily accessible everywhere network
@@ -433,13 +432,13 @@ the Internet itself can similarly to how it does for digitization play a key rol
 networked IT infrastructures. The following subsections list three exemplary areas where global high performance,
 low-cost Internet networking is a key requirement.
 
-## Follow the Energy Cloud Scheduling
+## Follow-the-Energy Cloud Scheduling
 
 Renewable energy resources (except for water) do commonly have fluctuating energy output. For example,
 solar energy output correlates to night/day and strength of sunlight. Cloud Data Centers (DC) consume a significant
-amount of the IT sectors energy. Some workloads may simply be scheduled to consume energy in accordance
+amount of the IT sector's energy. Some workloads may simply be scheduled to consume energy in accordance
 with the amount of available renewable energy at the time, not requiring the network. Significant
-workloads are not elastic in time, such as interactive cloud DC interactive work (cloud based
+workloads are not elastic in time, such as interactive cloud DC work (cloud based
 applications) or entertainment (gaming, etc.). These workloads may be instantiated or even
 dynamically (over time) migrate to a DC location with sufficient renewable energy and the Internet
 (or large TCP/IP OTT backbone networks) will serve as the fabric to access the remote DC and
@@ -452,7 +451,7 @@ for cooling. The warmer the location, the more energy needs to be spent for cool
 reason, DCs in cooler climates, such as {{https://greenmountain.no/power-and-cooling/}}, can help
 to reduce the overall DC energy consumption significantly (independent of the energy being
 consumed in the DC to be renewable itself). The Internet again plays the role of providing access
-to those type of DCs whole location is not optimized for consumption but for sustainable generation
+to those types of DCs whose location is not optimized for consumption but for sustainable generation
 of compute and storage.
 
 ## Heat Recovery
@@ -565,14 +564,9 @@ In the INT area of the IETF, several LLN specific WGs exist(ed):
 
 The "IPv6 over Low power WPAN (Wireless Personal Area Networks)" (6lowpan) WG ran from 2005
 to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low power) wireless networks
-by transmission procedures {{RFC4949}}, compression of IPv6 (and transport) packet headers {{RFC6282}},
+by transmission procedures {{RFC4944}}, compression of IPv6 (and transport) packet headers {{RFC6282}},
 modifications for neighbor discovery (ND) {{RFC6775}}, as well as 3 informational RFCs
 about the WPAN space and applying IPv6 to it. Among these, the Problem Statement and Requirements {{RFC6606}} gives details about the power and energy approaches and goals.
-
-
- "Transmission of IPv6 Packets over IEEE 802.15.4 Networks" {{RFC4944}},
-"Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks" {{RFC6282}},
-"Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)" {{RFC6775}} (6LOWPAN-ND).
 
 It is important to understand the 6LOWPAN Overview, Assumptions, Problem Statement, and Goals {{RFC4919}}, including "conserve energy".
 
@@ -663,7 +657,7 @@ just the term lightweight or constrained (nodes and networks).
 ### LWIG WG
 
 Since 2013, the "Light-Weight Implementation Guidance" (lwig) WG has produced 6 informational
-RFCs on the groups subject, much of which indirectly supports implementing power
+RFCs on the group's subject, much of which indirectly supports implementing power
 efficient network implementations via lightweight nodes/links,  but it also
 addressed the topic explicitly including via the aforementioned {{RFC8352}} and {{RFC9178}},
 "Building Power-Efficient Constrained Application Protocol (CoAP) Devices for Cellular Networks".
@@ -711,13 +705,13 @@ of requirements (including power) for satellite constellations.
 
 Many IETF protocols (e.g., {{RFC3948}}) were designed to accommodate the presence
 of middleboxes mainly by encouraging clients to issue frequent keepalives.
-Such strategy has implication on battery-supplied devices. In order to
+Such a strategy has implications on battery-supplied devices. In order to
 optimize battery consumption for such devices, {{RFC6887}} specifies a deterministic
-method so that client can control state in the network, including their lifetime.
-Keepalive alive messages may this be optimized as a function of the network policies.
+method so that the client can control state in the network, including their lifetime.
+Keepalive messages may thus be optimized as a function of the network policies.
 
 The recommendation labeled "A_REC#2"
-of {{RFC7849}} further insist on the importance of saving battery exacerbated
+of {{RFC7849}} further insists on the importance of saving battery exacerbated
 by keep-alive messages and recommends the support of collaborative means to control
 state in the network rather than relying on heuristics.
 
@@ -806,7 +800,7 @@ IP multicast and describes their specific challenges and possible improvements.
 (d) Existing proprietary conversion of Wi-Fi multicast to Wi-Fi unicast packets.
 
 
-{{I-D.desmouceaux-ipv6-mcast-wifi-power-usage}} focuses on IPv6-related concerns of multicast traffic in large  wireless network. This document provides as set of statistics and the induced device power consumption of such flows.
+{{I-D.desmouceaux-ipv6-mcast-wifi-power-usage}} focuses on IPv6-related concerns of multicast traffic in large wireless networks. This document provides a set of statistics and the induced device power consumption of such flows.
 
 ### Sleepy Nodes {#sleepy}
 
@@ -821,7 +815,7 @@ As noted in {{I-D.bormann-core-roadmap-05}}: CoAP provides basic support for sle
 
 One partial solution to certain sleepy-node energy consumption issues, particularly those caused by the use of multicast {{coordination}}, {{wifi}}, is the Constrained RESTful Environments (CoRE) Resource Directory (CoRE-RD) {{RFC9176}}. It enables sleepy nodes to discover and register resources via unicast, thereby avoiding unnecessary wake-ups when they are not selected by a resource consumer.
 
-A partial alternative to CoRE-RD is the "DNS-Based Service Discovery" {DNS-SD} {{RFC6763}}
+A partial alternative to CoRE-RD is the "DNS-Based Service Discovery" (DNS-SD) {{RFC6763}}
 combined with for example "Service Registration Protocol for DNS-Based Service Discovery" {{I-D.ietf-dnssd-srp}}.
 Services can be seen as a subset of resources, and in networks where DNS has to be supported
 anyhow for other reasons, DNS-SD may be a sufficient alternative to CoRE-RD. It is used
@@ -899,7 +893,7 @@ by fostering the use and capabilities of synchrophasor technology" (https://www.
 With their fast control loop reaction time and measurement requirements, they also
 benefit from reliable, fast propagation of PMU data as well as stricter clock synchronization
 than most Smart Grid applications. For example, transmission lines expand under heat that
-s caused by electrical load and/or environmental temperature by as much as 30% (between coldest
+is caused by electrical load and/or environmental temperature by as much as 30% (between coldest
 and hottest or highest-load times), impacting the necessary phase relationship of power generation
 on either end (speed of light propagation speed based on effective length of contracted/expanded wire).
 
@@ -920,8 +914,8 @@ the USA "Department of Energy" (DoE).
 
 ## Some Metrics
 
-A 2010-2013 Internet-Draft {{I-D.manral-bmwg-power-usage}}, which was not adopted
-discussed and proposed metrics for power consumption that where intended
+A 2010-2013 Internet-Draft {{I-D.manral-bmwg-power-usage}}, which was not adopted,
+discussed and proposed metrics for power consumption that were intended
 to be used for benchmarking.
 
 The later work in {{EMAN}} referred instead to other metrics for
@@ -968,7 +962,7 @@ link across different entities, such as a PoE port on an ethernet switch and
 the device connected to that switch port.
 
 The "Monitoring and Control MIB for Power and Energy" {{RFC7460}} specifies
-a MIB for monitoring for Power State and energy consumption of networked.
+a MIB for monitoring for Power State and energy consumption of networked equipment.
 The document discusses the link with other MIBs such as
 the ENTITY-MIB, the ENTITY-SENSOR-MIB {{RFC3433}} for which it is
 amending missing accuracy information to meet IEC power monitoring
@@ -1088,7 +1082,7 @@ energy conscious policies into PCE for such GMPLS networks.
 The non-adopted 2013 "Requirements for an Energy-Efficient Network System",
 {{I-D.suzuki-eens-requirements}} proposes a signaling of network capacity towards
 DC, for example based on load or network energy management in support of
-appropriate performance control (such as VM migration) the DC - or vice versa
+appropriate performance control (such as VM migration) at the DC - or vice versa
 (DC load-based traffic engineering in the network to support that DC load).
 
 The non-adopted 2013 "Building power optimal Multicast Trees" {{I-D.mjsraman-rtgwg-pim-power}}
@@ -1160,9 +1154,9 @@ and as such does not contain security considerations of its own.
 Each one of the cited documents contains security considerations
 within its own context.
 
-As the aim of this document is to help those unfamiliar with but
-interested in IETF energy work, raising awareness of an important
-broad topic, indirectly also raises awareness of the security
+As this document aims to help those unfamiliar with but
+interested in IETF energy work by raising awareness of an important,
+broad topic, it indirectly also raises awareness of the security
 considerations overall.  And if this document inspires energy-related
 activities within the IETF, such as identifying gaps and
 investigating solutions, those would bring their security
@@ -1174,9 +1168,16 @@ This document has no IANA actions.
 
 # Acknowledgments
 
-The authors are very grateful to Fred Baker and Eliot Lear for their
-thorough review and useful suggestions. The authors further appreciate
-the review comments from Michael Welzl, which helped improve this document.
+The authors are especially grateful to Fred Baker for his thorough
+review, historical insight, and evident care in reading successive
+versions of this document.
+
+The authors also thank the other reviewers and commenters who
+contributed feedback across its revisions, including Michael Welzl.
+
+The authors further thank Eliot Lear, Independent Submissions Editor
+(ISE), for his guidance and shepherding of this document through the
+independent submission process.
 
 By serving as the first catalog of energy-related work within the IETF, IRTF, and IAB, this document is intended to be a resource for participants rather than a vehicle for setting future directions.
 
@@ -1204,10 +1205,10 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 07: Added security considerations, updated pointers.
 
-08: ISE Review: starting with a thorough editorial pass of fixes and improvements. Clarified motivation and scope (IETF/IRTF/IAB), added authors' observations and lessons learned, emphasized internal audience as first catalog, and applied readibility cleanups.
+08: Independent Submissions Editor (ISE) Review: starting with a thorough editorial pass of fixes and improvements. Clarified motivation and scope (IETF/IRTF/IAB), added authors' observations and lessons learned, emphasized internal audience as first catalog, and applied readability cleanups.
 
 09: ISE Review: Tightened and restructured Section 2 by collapsing subsections and clarifying audience focus; include only technologies with direct energy impact
 
-10: Editorial update, refined language and terminology (e.g., “December 2022” vs. “12/2022”), improving consistency and readability across sections.
+10: ISE Review: Editorial update, refined language and terminology (e.g., “December 2022” vs. “12/2022”), improving consistency and readability across sections.
 
-11: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)
+11: ISE Review: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)

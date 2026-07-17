@@ -10,7 +10,7 @@ IDDIFF=iddiff
 %.txt: %.xml
 	$(XML2RFC) $<
 
-all:	draft-eckert-ietf-and-energy-overview.xml draft-eckert-ietf-and-energy-overview.txt
+all:	draft-eckert-ietf-and-energy-overview.xml draft-eckert-ietf-and-energy-overview.txt diff
 
 
 drafts_source := draft-eckert-ietf-and-energy-overview.mkd
@@ -28,7 +28,7 @@ fix-lint-ws::
 diff: $(draft_base).txt
 	@prev=$$(ls $(versions_dir)/$(draft_base)-*.txt 2>/dev/null | sort -V | tail -1); \
 	if [ -z "$$prev" ]; then \
-	  echo "No previous version found in $(versions_dir)/"; exit 1; \
+	  echo "No previous version found in $(versions_dir)/, skipping diff"; exit 0; \
 	fi; \
 	echo "Diffing $$prev -> $(draft_base).txt"; \
 	$(IDDIFF) "$$prev" $(draft_base).txt > $(draft_base)-diff.html; \
