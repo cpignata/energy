@@ -81,28 +81,23 @@
     <abstract>
 
 
-<?line 258?>
+<?line 259?>
 
 <t>This memo provides a compilation of existing work performed by or proposed within the IETF, the IRTF, and the IAB that relates to energy and sustainability: awareness, management, control, or reduction of energy consumption.</t>
 
 <t>The principal goal of this document is to help IETF, IRTF, and IAB
 participants, especially newcomers and future contributors, become
 familiar with the body of work already published on energy-related
-topics. It provides the first consolidated catalog of such efforts,
-serving as an internal reference and orientation guide.</t>
+topics, serving as the first consolidated catalog of such efforts.</t>
 
 <t>In addition, the document raises awareness of the Internet's role in
 energy efficiency and energy-related activities within the IETF, IRTF,
 and IAB more broadly. As a reference rather than a guide, it may help
 readers identify gaps and areas where further work could be pursued,
 without this document itself directing or recommending any such work.
-It also offers background for readers outside the IETF community who
-may be less familiar with how networking technologies contribute to
-energy savings.</t>
-
-<t>The scope of this document
-includes selected work from the IETF, IRTF, and IAB where relevant.
-This document is descriptive in nature and does not propose new work items.</t>
+The scope of this document includes selected work from the IETF, IRTF,
+and IAB where relevant, and it is descriptive in nature, not proposing
+new work items.</t>
 
 <t>This document captures work until December 2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" contextualized renewed community interest and discussion of the topic.
 This memo itself does not recommend or direct future work.</t>
@@ -118,7 +113,7 @@ This memo itself does not recommend or direct future work.</t>
   <middle>
 
 
-<?line 285?>
+<?line 281?>
 
 <section anchor="introduction"><name>Introduction</name>
 
@@ -127,20 +122,58 @@ Its goal is to summarize, not to propose or direct new work.
 It is intended as a compilation of prior work, not a proposal of new activities.
 The main purpose is to provide a consolidated reference for participants, by cataloging and contextualizing what has already been published and done in IETF, IRTF, and IAB.</t>
 
-<t>Considering the target audience, this document is primarily intended as an internal reference for the IETF, IRTF, and IAB communities. By cataloging prior work in a single place, it aims to lower the entry barrier for participants who may not be aware of earlier efforts and to provide future contributors with a historical foundation.</t>
+<t>Considering the target audience, this document is primarily intended as an internal reference and orientation guide for the IETF, IRTF, and IAB communities. By cataloging prior work in a single place, it aims to lower the entry barrier for participants who may not be aware of earlier efforts and to provide future contributors with a historical foundation. It also offers background for readers outside the IETF community who may be less familiar with how networking technologies contribute to energy savings.</t>
 
-<t>There are various aspects how a given work relates to energy that are
-classified into categories.  Such a classification does not attempt to propose
-a formal taxonomy, but is used for the sake of better readability.
-Technologies are listed under a category that is specifically significant,
-for example, by being most narrow.</t>
+<t>In addition to this compilation, the authors also share their own observations on what has worked well and what lessons may be drawn from the past.</t>
+
+<t>Digitization is not a uniform energy saving: as <xref target="higherconsumption"/> discusses, some digitized
+workflows consume significantly more energy than their pre-digitization alternatives, or grow so
+much in volume that their total consumption outranks what they replaced. Given how TCP/IP based
+networks, especially the Internet, have excelled through their design principles in reducing
+network traffic cost and enabling ubiquitous access over the past few decades, IETF technologies
+and especially the Internet are the most important enabler of the digital economy, and of the
+energy consumption it produces.</t>
+
+<section anchor="scope-categorization-and-citation-approach"><name>Scope, Categorization, and Citation Approach</name>
+
+<t>There are various aspects how a given work relates to energy; these are
+grouped into categories for the sake of better readability, not as a formal
+taxonomy. Technologies are listed under a category that is specifically
+significant, for example, by being most narrow.</t>
 
 <t>This memo refers to technologies by their significant early RFCs or Internet-Draft versions, rather than by the latest revision. This differs from the common IETF practice of citing the most current version. The intent is to help readers follow the historical timeline of when a technology was first proposed or introduced. In many cases, especially for successful I* technologies, later RFCs build upon and update that original work.</t>
 
 <t>This document captures work until December 2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" <xref target="I-D.iab-ws-environmental-impacts-report"/> renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.</t>
 
-<t>In addition to this compilation, the authors also share their own observations on what has worked well and what lessons may be drawn from the past.</t>
+</section>
+<section anchor="document-roadmap"><name>Document Roadmap</name>
 
+<t>The rest of this document is organized as follows:</t>
+
+<t><list style="symbols">
+  <t>Section 2 introduces the concept of energy saving through
+digitization and through scaling of the Internet.</t>
+  <t>Section 3 discusses cases where digitization can lead to higher,
+not lower, energy consumption.</t>
+  <t>Section 4 covers sustainability topics such as
+renewable-energy-aware scheduling, heat management, and
+telecollaboration.</t>
+  <t>Section 5 surveys IETF work on energy optimization in specific
+types of networks, particularly constrained and low-power
+networks.</t>
+  <t>Section 6 covers energy management networks such as the Smart
+Grid and synchrophasor networks.</t>
+  <t>Section 7 covers the (limited) management of network equipment
+energy consumption, including the EMAN working group.</t>
+  <t>Section 8 covers power-awareness in forwarding and routing
+protocols.</t>
+  <t>Section 9 identifies gaps relative to a prior survey of this
+space.</t>
+  <t>Section 10 shares the authors' own observations and lessons
+learned.</t>
+</list></t>
+
+</section>
 </section>
 <section anchor="energy-saving-an-introduction"><name>Energy Saving: An Introduction</name>
 
@@ -173,7 +206,7 @@ the whole stack of deployed protocols and operational practices that contributes
 digitization. It is likely also the biggest overall energy saving impact of all possible categories that
 relate IETF work to energy:</t>
 
-<t>The Internet as well as all other IP/MPLS networks are likely the biggest energy saving development
+<t>The Internet as well as all other IP/Multiprotocol Label Switching (MPLS) networks are likely the biggest energy saving development
 of the past few decades if only the energy consumption of equivalent services is compared. On the other hand,
 they are also the cause of the largest new category of energy consumption because of all the new services
 introduced in the past decades with the Internet and the hyper-scaling that the Internet affords them.</t>
@@ -190,13 +223,16 @@ introduced in the past decades with the Internet and the hyper-scaling that the 
 </section>
 <section anchor="the-packet-multiplexing-principle"><name>The Packet Multiplexing Principle</name>
 
-<t>Statistical multiplexing in IP and IPv6 (<xref target="RFC791"/>, <xref target="RFC8200"/>) increases utilization efficiency, distributing largely fixed equipment power across many flows. This, along with development of further technologies
-to improve scaling, has been a principal driver in declining energy per bit over decades.</t>
+<t>Statistical multiplexing in IP and IPv6 (<xref target="RFC791"/>, <xref target="RFC8200"/>) was designed for link
+efficiency, not energy, but the two are related: by raising utilization, it spreads largely
+fixed equipment power across more flows, lowering energy per bit. This is not a realistically
+reversible gain, since returning to dedicated circuit-based links is not a viable alternative
+today.</t>
 
 </section>
 <section anchor="dynpower"><name>Dynamic Power Negotiation</name>
 
-<t>Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via LLDP/CDP), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes.</t>
+<t>Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via the Link Layer Discovery Protocol (LLDP) or the Cisco Discovery Protocol (CDP)), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes.</t>
 
 <t>Problems arise if devices misreport or later exceed their declared needs. A device requesting 30 W but consuming 60 W forces over-provisioning and complicates capacity planning. Accurate and dynamic signaling is therefore key: truthful reporting avoids systematic waste, while real-time updates allow closer matching of supply and demand.</t>
 
@@ -205,23 +241,32 @@ to improve scaling, has been a principal driver in declining energy per bit over
 </section>
 <section anchor="end-to-end-transport"><name>End-to-End Transport</name>
 
-<t>The TCP end-to-end reliability model <xref target="RFC9293"/> avoids per-hop retransmission and state. This minimized per-packet processing in routers, enabling simpler, more energy-efficient forwarding at scale.</t>
+<t>The TCP end-to-end reliability model <xref target="RFC9293"/> was designed for reliability, not energy, by
+avoiding per-hop retransmission and state. This design choice has a direct energy benefit: it
+minimizes per-packet processing in routers, enabling simpler, more energy-efficient forwarding
+at scale.</t>
 
 </section>
 <section anchor="global-vs-restricted-connectivity-the-internet-routing-architectures"><name>Global vs Restricted Connectivity: The Internet Routing Architectures</name>
 
-<t>Open interconnection and competitive expansion (e.g., via Border Gateway (Routing) Protocol, BGP <xref target="RFC4271"/>) accelerated scale, allowing energy efficiency gains from new hardware generations to spread globally, because it
-enabled competitive market forces to explore markets quickly.</t>
+<t>BGP <xref target="RFC4271"/> enabled open interconnection and competitive market expansion, accelerating
+Internet scale. This scale matters for energy: it let energy efficiency gains from newer
+hardware generations spread globally faster than they could have under the regulated,
+per-country monopoly networks that preceded the Internet.</t>
 
 </section>
 <section anchor="converged-networks"><name>Converged Networks</name>
 
-<t>Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric avoids duplicative powered equipment. DiffServ <xref target="RFC2475"/> and later DetNet <xref target="RFC8655"/> illustrate how lighter-weight QoS models supported convergence without high per-flow energy overhead.</t>
+<t>Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric was
+driven by cost and operational simplicity, not energy, but it avoids duplicative powered
+equipment as a direct consequence. DiffServ <xref target="RFC2475"/> and later DetNet <xref target="RFC8655"/> illustrate
+how lighter-weight Quality of Service (QoS) models supported this convergence without reintroducing high per-flow
+energy overhead.</t>
 
 </section>
 </section>
 </section>
-<section anchor="higher-or-new-energy-consumption"><name>Higher or New Energy Consumption</name>
+<section anchor="higherconsumption"><name>Higher or New Energy Consumption</name>
 
 <t>Digitized, network centric workflows may consume more energy than their non-digitized counterpart,
 as may new network centric workflows without easy to compare prior workflows.</t>
@@ -260,12 +305,6 @@ for faster growth of its workflows.</t>
 connectivity is, the more competitive and/or successful most of these new workflows of the digital
 economy can be.</t>
 
-<t>Given how TCP/IP based networks, especially the Internet have excelled
-through their design principles (and success) in this reduction of network traffic cost
-and ubiquitous access over the past few decades, as outlined above, one can say that
-IETF technologies and especially the Internet are the most important enabler of the digital economy,
-and the energy consumption it produces.</t>
-
 </section>
 <section anchor="sustainability"><name>Some Notes on Sustainability</name>
 
@@ -274,21 +313,23 @@ Beyond the above covered energy saving, sustainability relates with respect to t
 renewable sources of energy to minimize exhaustion of fossil resources, and the impact of IETF technologies
 on global warming to avoid worsening living conditions on the planet.</t>
 
-<t>While there seems to be no IETF work specifically intending to target sustainability,
-the Internet itself can similarly to how it does for digitization play a key role in building sustainable
-networked IT infrastructures. The following subsections list three exemplary areas where global high performance,
-low-cost Internet networking is a key requirement.</t>
+<t>While there seems to be no IETF work specifically intending to target sustainability, related
+work is emerging in the IRTF, such as <xref target="RFC9845"/>, which examines management challenges and
+opportunities for green networking. The Internet itself can similarly to how it does for
+digitization play a key role in building sustainable networked IT infrastructures. The
+following subsections list three exemplary areas where global high performance, low-cost
+Internet networking is a key requirement.</t>
 
 <section anchor="follow-the-energy-cloud-scheduling"><name>Follow-the-Energy Cloud Scheduling</name>
 
 <t>Renewable energy resources (except for water) do commonly have fluctuating energy output. For example,
-solar energy output correlates to night/day and strength of sunlight. Cloud Data Centers (DC) consume a significant
+solar energy output correlates to night/day and strength of sunlight. Cloud DCs consume a significant
 amount of the IT sector's energy. Some workloads may simply be scheduled to consume energy in accordance
 with the amount of available renewable energy at the time, not requiring the network. Significant
 workloads are not elastic in time, such as interactive cloud DC work (cloud based
 applications) or entertainment (gaming, etc.). These workloads may be instantiated or even
 dynamically (over time) migrate to a DC location with sufficient renewable energy and the Internet
-(or large TCP/IP OTT backbone networks) will serve as the fabric to access the remote DC and
+(or large TCP/IP Over-The-Top (OTT) backbone networks) will serve as the fabric to access the remote DC and
 to coordinate the instantiation/migration.</t>
 
 </section>
@@ -329,25 +370,24 @@ provide remote collaboration for its own (in-person + remote participation) meet
 session and application protocols with multiple IETF working groups contributing to that protocol suite, such as SIPCORE, MMUSIC, and XCON.
 Using these technologies and the Internet, the
 immersive nature of telecollaboration was brought to life-size video, was/is called Telepresence
-<eref target="https://en.wikipedia.org/wiki/Telepresence"/> and later to even more immersive forms such as AR/VR telecollaboration.</t>
+<eref target="https://en.wikipedia.org/wiki/Telepresence"/> and later to even more immersive forms such as Augmented Reality (AR) / Virtual Reality (VR) telecollaboration.</t>
 
 <t>In 2011, the IETF opened the "Real-Time Communication in Web-browsers" (RTCWEB) WG, that towards the
 end of that decade became the most widely supported cross-platform reference for hundreds of commercial
 and free tele-collaboration solutions, including Cisco Webex, which is also used by the IETF itself, Zoom, and
 the collaboration suite the IETF most recently uses, Meetecho <eref target="https://www.meetecho.com/en/"/>.</t>
 
-<t>While the various forms of Telecollaboration are mostly instances of digitization, they
-are discussed under sustainability because of its comparison to in-person travel that is
-not based on simple comparison of energy, but nowadays by comparing their impact on global warming,
-a key factor to sustainability.</t>
+<t>While the various forms of Telecollaboration are mostly instances of digitization, they are
+discussed under sustainability rather than simply energy, because their relevant comparison
+is not to a "without digitization" baseline, but to an alternative that itself has an energy
+and emissions cost: in-person travel. This substitution effect is why the energy properties of
+the underlying transport and session protocols matter beyond the session itself: a more
+efficient or more reliable telecollaboration protocol stack can directly influence whether
+travel is displaced.</t>
 
-<t>Telecollaboration was primarily developed because of the utility for the participants - to avoid travel
-for originally predominantly business communications/collaborations.
-It saw an extreme increase in use during the COVID-19 pandemic <xref target="OECD2020"/> <xref target="ITU2020"/>.
-This forced millions of people to work from home and utilizing commercial
-telecollaboration tools. It equally caused most in-person events that were not cancelled to
-be moved to a telecollaboration platform over the Internet - most of them likely relying on RTCWEB
-protocols.</t>
+<t>Use of telecollaboration increased sharply during the COVID-19 pandemic <xref target="OECD2020"/> <xref target="ITU2020"/>,
+including for in-person events that were moved to a telecollaboration platform over the
+Internet, most of them likely relying on RTCWEB protocols.</t>
 
 <t>Actual energy consumption related comparison between teleconferencing and in-person travel is complex
 but since the last decades is commonly based on calculating some form of CO2 emission equivalent of
@@ -369,15 +409,19 @@ impact than simply the amount of CO2 used by the airplane if it was exhausted at
 publicly funded organization offering carbon offset services calculates a factor 3 of the CO2 consumption of an
 airplane <eref target="https://www.atmosfair.de/de/fliegen_und_klima/flugverkehr_und_klima/klimawirkung_flugverkehr/"/>.</t>
 
-<t>In summary: Telecollaboration has a higher sustainability benefit compared to travel than just
-the comparison of energy consumption because of the higher challenge to use renewable energy
-in transportation than in networking, and this is most extreme in the case of telecollaboration
-that replaces air travel because of the even higher global warming impact of using fossil fuels
-in air travel.</t>
+<t>The protocol-relevant takeaway is that telecollaboration's sustainability benefit compared to
+travel exceeds what a simple energy-consumption comparison would suggest, because transportation
+is harder to decarbonize than networking is. This gap is largest where telecollaboration
+displaces air travel specifically, given the added global warming impact of burning fossil
+fuels at altitude.</t>
 
 </section>
 </section>
 <section anchor="energy-optimization-in-specific-networks"><name>Energy Optimization in Specific Networks</name>
+
+<t>This section surveys IETF work that optimizes energy use in specific types of networks,
+starting with the routing and subnet-management analysis that motivated much of it, and
+continuing through the working groups and technologies built on top of that analysis.</t>
 
 <section anchor="analysis-of-routing-protocol-inefficiencies"><name>Analysis of Routing Protocol (In)Efficiencies</name>
 
@@ -395,7 +439,7 @@ in air travel.</t>
      <xref target="I-D.thubert-6man-ipv6-over-wireless"/>, which is ongoing work.</t>
 
 </section>
-<section anchor="LLN"><name>Low Power and Lossy Networks (LLN)</name>
+<section anchor="LLN"><name>Low-Power and Lossy Networks (LLN)</name>
 
 <t>Low-Power and Lossy Networks (LLNs) are networks in which nodes and/or radio links operate under significant constraints. Node power limitations often arise from the need to maximize lifetime when powered by batteries or energy-harvesting methods, most commonly solar panels, but also ambient sources such as motion (in wearables) or piezoelectric cells that generate energy for mechanically operated devices like switches.</t>
 
@@ -408,15 +452,15 @@ be optimized. This includes packet header compression, fragmentation (to avoid l
 large packets at low bitrates, packet bundling to only consume radio energy at short time
 periods, radio energy tuning to reach only the destination(s), minimization of multicasting
 to eliminate need of radio receivers to consume energy and so on. <xref target="RFC8352"/> gives a more detailed
-overview, especially because different L2 technologies such as IEEE 802.15.4 type (low power)
-wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DEC ULE.</t>
+overview, especially because different L2 technologies such as IEEE 802.15.4 type (low-power)
+wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DECT ULE.</t>
 
 <t>In the INT area of the IETF, several LLN specific WGs exist(ed):</t>
 
 <section anchor="ipv6-over-low-power-wpan-6lowpan"><name>IPv6 over Low Power WPAN (6LoWPAN)</name>
 
 <t>The "IPv6 over Low power WPAN (Wireless Personal Area Networks)" (6lowpan) WG ran from 2005
-to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low power) wireless networks
+to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low-power) wireless networks
 by transmission procedures ("Transmission of IPv6 Packets over IEEE 802.15.4 Networks", <xref target="RFC4944"/>),
 compression of IPv6 (and transport) packet headers ("Compression Format for IPv6 Datagrams over
 IEEE 802.15.4-Based Networks", <xref target="RFC6282"/>), and modifications for neighbor discovery (ND)
@@ -490,8 +534,8 @@ to minimize routing related packets through automatic lazy updates. While RPL is
 a mesh network routing protocol, where all nodes are usually expected to be able to
 participate in it, RPL also supports even more lightweight leave nodes <xref target="RFC9010"/>.</t>
 
-<t>The 2013 <xref target="I-D.ajunior-energy-awareness-00"/> proposes the introducing of energy related parameters
-into RPL to support calculation/selection of most energy efficient paths. The 2017
+<t>The 2013 <xref target="I-D.ajunior-energy-awareness-00"/> proposes the introducing of energy-related parameters
+into RPL to support calculation/selection of most energy-efficient paths. The 2017
  "An energy optimization routing scheme for LLNs", <xref target="I-D.wang-roll-energy-optimization-scheme"/>
 observed that DODAGs in RPL tend to require more energy in nodes closer to the root and
 proposed specific optimizations to reduce this problem. Neither of these Internet-Drafts proceeded in the IETF.</t>
@@ -546,10 +590,11 @@ range of deployment scenarios.</t>
 
 <t>In the SECurity (SEC) area of the IETF, the "Authentication and Authorization for Constrained Environments" (ace)
 working group has since 2014 produced 4 RFC for security functions in constrained environments,
-for example CoAP based variations of prior HTTPS protocols such as EST-coaps <xref target="RFC9148"/> for
-HTTPS based EST <xref target="RFC7030"/>. Constrained node support in cryptography especially
+for example CoAP based variations of prior HTTP over TLS (HTTPS) protocols such as EST-coaps
+<xref target="RFC9148"/> for HTTPS based Enrollment over Secure Transport (EST) <xref target="RFC7030"/>. Constrained node
+support in cryptography especially
 entails support for Elliptic Curve (EC) public keys due to their shorter key sizes and lower compute
-requirements compared to RSA public keys with same cryptographic strength.
+requirements compared to RSA (Rivest-Shamir-Adleman) public keys with same cryptographic strength.
 While the benefits of Elliptic Curve Cryptography (ECC) over RSA already made them the preferred choice, the additional advantage for constrained nodes accelerated their adoption and proliferation, even beyond constrained networks.</t>
 
 </section>
@@ -578,15 +623,16 @@ state in the network rather than relying on heuristics.</t>
 
 </section>
 </section>
-<section anchor="sample-technical-enablers"><name>Sample Technical Enablers</name>
-
 <section anchor="ip-multicast"><name>(IP) Multicast</name>
 
-<section anchor="power-saving-with-multicast"><name>Power Saving with Multicast</name>
+<t>Multicast has both power-saving and power-wasting properties, and its energy impact differs
+significantly between wired and wireless links, so it is covered here across three subsections.</t>
 
-<t>IP Multicast, introduced in <xref target="RFC1112"/> and now also referred to as Any-Source Multicast (ASM), has seen various supporting protocols standardized in the IETF across multiple working groups. In addition, multicast solutions have also been developed for MPLS and BIER within their respective IETF working groups.</t>
+<section anchor="power-saving-through-multicast"><name>Power Saving through Multicast</name>
 
-<t>These three, network layer multicast technologies can be a power saving technologies when used to
+<t>IP Multicast, introduced in <xref target="RFC1112"/> and now also referred to as Any-Source Multicast (ASM), has seen various supporting protocols standardized in the IETF across multiple working groups. In addition, multicast solutions have also been developed for MPLS and for Bit Index Explicit Replication (BIER) within their respective IETF working groups.</t>
+
+<t>These three, network layer multicast technologies can be power-saving technologies when used to
 distribute data because they reduce the number of packets that need to be sent across
 the network (through in-network-replication where needed). Because most current link and router technologies
 do not allow to actually save significant amounts of energy on lower than maximum utilization, these benefits are often only theoretical though. Software routers are the ones most likely to expose energy consumption somewhat proportional to their throughput for just the forwarding (CPU) chip.</t>
@@ -601,7 +647,7 @@ replicated unicast traffic, but this is rarely significant, because except for
 fully battery powered mesh network, there are typically non-energy-constrained nodes, such as (commonly) the
 wired access-points in Wi-Fi networks.</t>
 
-<t>In result, today multicasting has typically no significant power saving benefits with available
+<t>In result, today multicasting has typically no significant power-saving benefits with available
 network technologies. Instead, it is used (for data distribution) when the amount of traffic that a unicast solution
 alternative (with so-called ingress replication) is not possible due to the total amount of
 traffic generated. This includes wireless/radio networks, where equally airtime is the limiting
@@ -610,7 +656,7 @@ factor.</t>
 <t>As an additional pointer, <xref target="RFC7731"/> defined the Multicast Protocol for Low-Power and Lossy Networks (MPL).</t>
 
 </section>
-<section anchor="coordination"><name>Power Waste Through Multicast-based Service Coordination</name>
+<section anchor="coordination"><name>Power Waste through Multicast-based Service Coordination</name>
 
 <t>(IP) multicast is often not used to distribute data requested by receivers, but also
 coordination type functions such as service or resource announcement, discovery or selection.
@@ -638,18 +684,18 @@ to better alternatives.</t>
 <t>In 2006, the IETF published "Source Specific Multicast" (SSM) <xref target="RFC4607"/>, a variation of IP Multicast
 that does not allow to perform these type of coordination functions but is only meant for
 (and useable for) actual data distribution. SSM was introduced for other reasons than the
-above-described power related issues though, but deprecating the use of ASM is one way to
+above-described power-related issues though, but deprecating the use of ASM is one way to
 avoid/minimize its ill-advised use with these type of coordination functions, when energy
 efficiency is an issue. <xref target="RFC8815"/> is an example for deprecating ASM for other reasons
 in Service Provider networks.</t>
 
 </section>
-<section anchor="wifi"><name>Multicast Problems in Wireless Networks</name>
+<section anchor="wifi"><name>Power Waste through Wireless Multicast</name>
 
 <t><xref target="RFC9119"/> covers multicast challenges and solutions (proposals) for IP Multicast over
 Wi-Fi. With respect to power consumption, it discusses the following aspects:</t>
 
-<t>(a) Unnecessary wake-up of power constrained Wi-Fi Stations (STA) nodes can be minimized by wireless
+<t>(a) Unnecessary wake-up of power-constrained Wi-Fi Stations (STA) nodes can be minimized by wireless
 Access Points (APs) that buffer multicast packets so they are sent only periodically when
 those nodes wake up.</t>
 
@@ -690,20 +736,19 @@ such as the address(es) of DNS-SD server(s).</t>
 
 <t>"Building Power-Efficient Constrained Application Protocol (CoAP) Devices for Cellular Networks"  <xref target="RFC9178"/>
 discusses sleepy devices, especially the use of CoAP PubSub <xref target="I-D.ietf-core-coap-pubsub"/> as a
-mechanism to build proxies for sleepy devices. "Sensor Measurement Lists (SenML)", normalized
-proxy infrastructures are best built with published data models, such as "Sensor Measurement Lists" (SenML)
-<xref target="RFC8428"/> for sensors, likely the largest number of sleepy devices, especially in LLN.</t>
+mechanism to build proxies for sleepy devices. Normalized proxy infrastructures are best built
+with published data models, such as "Sensor Measurement Lists" (SenML) <xref target="RFC8428"/> for sensors,
+likely the largest number of sleepy devices, especially in LLN.</t>
 
 <t>"Reducing Energy Consumption of Router Advertisements", <xref target="RFC7772"/> eliminates/reduces the
-energy impact for sleepy nodes of the ubiquitous IPv6 "Neighbor Discovery" (ND) protocol by
+energy impact for sleepy nodes of the ubiquitous IPv6 ND protocol by
 giving recommends for replacing multicast "Router Advertisement" (RA) messages with so-called
 directed unicast versions, therefore not waking up sleepy nodes (with an IP multicast RA message).
 This was already allowed in ND <xref target="RFC4861"/>, but not recommended as the default. Note that
-<xref target="RFC7772"/> does not provide all the energy related optimizations of ND as developed by
+<xref target="RFC7772"/> does not provide all the energy-related optimizations of ND as developed by
 6LoWPAN through <xref target="RFC6775"/>, later updated by <xref target="RFC8505"/> in 6LO. <xref target="I-D.chakrabarti-nordmark-energy-aware-nd"/> proposes generalizations
 for those applications for to all IPv6 links, but was not further pursued by the IETF so far.</t>
 
-</section>
 </section>
 <section anchor="lack-of-power-benchmarking-proposals"><name>(Lack of) Power Benchmarking Proposals</name>
 
@@ -743,7 +788,7 @@ was already well specified by the IETF.</t>
 <t>Most of the overview in this document is not specific to networks used for Smart Grid applications, but is summarized here for the outreach and education of the community as described above. The aspects most specific to Smart Grids concern the, back in 2011 still somewhat nascent, adaptation of IPv6 network technologies to LLN networks (see <xref target="LLN"/>): smart meters, circuit breakers, load measurement devices, car chargers, and similar devices that would most likely be connected via low-power radio networks ideally utilizing IPv6 directly. Support for LLN networks with IPv6 has significantly improved in IETF specifications over the past decade.</t>
 
 </section>
-<section anchor="synchro-phasor-networks"><name>Synchro Phasor Networks</name>
+<section anchor="synchrophasor-networks"><name>Synchrophasor Networks</name>
 
 <t>Power output of multiple power plants/generators into the same power grid needs to be synchronized
 by power levels based on consumption and power phase (50/60Hz depending on
@@ -752,11 +797,11 @@ actually burn out power lines or create permanent damage in power generators. Wh
 go out-of-sync, they have to be emergency switched off, resulting in (rolling-)blackouts,
 worsening the conditions beyond its likely root-cause such as a single overloaded region.</t>
 
-<t>Synchro Phasor Networks are networks whose goal it is to support synchronization of
+<t>Synchrophasor Networks are networks whose goal it is to support synchronization of
 power generators across a power grid, ultimately also permitting to build larger
-and more resilient power grids. "Power Measurement Units" (PMU) are their core
+and more resilient power grids. "Phasor Measurement Units" (PMU) are their core
 sensing elements. Since about 2012, these networks have started to
-move from traditional SCADA towards more TCP/IP based networking and application technologies
+move from traditional Supervisory Control and Data Acquisition (SCADA) towards more TCP/IP based networking and application technologies
 "to improve power system reliability and visibility through wide area measurement and control,
 by fostering the use and capabilities of synchrophasor technology" (https://www.naspi.org/).</t>
 
@@ -771,9 +816,9 @@ on either end (speed of light propagation speed based on effective length of con
 data sent across the transmission lines and measuring their propagation latency with the help of
 accurate clock synchronization between sender and receiver(s), using for example network-based
 clock synchronization protocols. The IETF "Network Time Protocol version 4" (NTPv4), <xref target="RFC5905"/>
-is one option for this. The IEEE PTP protocol is often preferred though because it specifies
+is one option for this. The IEEE Precision Time Protocol (PTP) is often preferred though because it specifies
 better how measurements can be integrated at the hardware level of Ethernet interfaces, thus
-allowing easier to achieve higher accuracy, such as Maximum Time Interval (MTIE) errors of
+allowing easier to achieve higher accuracy, such as Maximum Time Interval Error (MTIE) of
 less than 1 msec. See for example <xref target="NASPICLOCK"/>.</t>
 
 <t>The "North American SynchroPhasor Initiative" (NASPI), https://www.naspi.org is an example
@@ -784,6 +829,10 @@ the USA "Department of Energy" (DoE).</t>
 </section>
 <section anchor="limited-energy-management-for-networks"><name>(Limited) Energy Management for Networks</name>
 
+<t>This section covers IETF work that manages the energy consumption of network equipment
+itself, starting with early, non-adopted metrics proposals before turning to the one
+working group, EMAN, that produced standardized models in this space.</t>
+
 <section anchor="some-metrics"><name>Some Metrics</name>
 
 <t>A 2010-2013 Internet-Draft <xref target="I-D.manral-bmwg-power-usage"/>, which was not adopted,
@@ -791,7 +840,7 @@ discussed and proposed metrics for power consumption that were intended
 to be used for benchmarking.</t>
 
 <t>The later work in <xref target="EMAN"/> referred instead to other metrics for
-measuring power consumption from other SDOs.</t>
+measuring power consumption from other Standards Developing Organizations (SDOs).</t>
 
 <t>A 2011-2012 Internet-Draft <xref target="I-D.jennings-energy-pricing"/>, which was not adopted,
 discusses and proposes a data model to communicate time-varying cost of
@@ -799,7 +848,7 @@ energy in support of enabling time-shifting of network attached or
 managed equipment consumption of power.</t>
 
 </section>
-<section anchor="EMAN"><name>EMAN WG</name>
+<section anchor="EMAN"><name>Energy Management (EMAN)</name>
 
 <t>While the IETF did specify a few MIBs with aspects related to power management, it was only with the formation of the "Energy Management" (EMAN) WG (2010-2015) that a comprehensive set of MIB-based models for managing energy in network equipment was developed. This work also provides standardized support for issues noted earlier in <xref target="dynpower"/>, such as negotiation and monitoring of device-level power needs.</t>
 
@@ -838,9 +887,10 @@ the device connected to that switch port.</t>
 a MIB for monitoring for Power State and energy consumption of networked equipment.
 The document discusses the link with other MIBs such as
 the ENTITY-MIB, the ENTITY-SENSOR-MIB <xref target="RFC3433"/> for which it is
-amending missing accuracy information to meet IEC power monitoring
+amending missing accuracy information to meet International Electrotechnical Commission (IEC)
+power monitoring
 requirements, the "Power Ethernet MIB" (POWER-ETHERNET-MIB) <xref target="RFC3621"/>
-to manage PoE, and the pre-existing IETF MIB for Uninterruptable Power Supplies (UPS) (UPS-MIB)
+to manage PoE, and the pre-existing IETF MIB for Uninterruptible Power Supplies (UPS) (UPS-MIB)
 <xref target="RFC1628"/>, allowing for example to build control systems that manage shutdowns
 of devices in case of power failure based on UPS battery capacity and device consumptions/priorities.
 Similarly, the EMAN "Definition of Managed Objects for Battery Monitoring" <xref target="RFC7577"/>
@@ -861,8 +911,8 @@ ENERGY-OBJECT-CONTEXT-MIB and IANA-ENERGY-RELATION-MIB, both of which serve to
 between devices" according to <xref target="RFC7461"/>.</t>
 
 <t>To automatically discover and negotiate PoE power consumption
-between switch and client, non-IETF technologies, such as IEEE "Link Layer Discovery Protocol" (LLDP)
- and proprietary MIBs for it, such as LLDP-EXT-MED-MIB can be used.</t>
+between switch and client, non-IETF technologies, such as IEEE LLDP
+and proprietary MIBs for it, such as LLDP-EXT-MED-MIB can be used.</t>
 
 <t>Finally, the "Energy Management (EMAN) Applicability Statement" <xref target="RFC7603"/>
 provides an overview of EMAN with a user/operator
@@ -879,7 +929,11 @@ be designed to echo the EMAN MIBs but would also allow to control dedicated
 </section>
 <section anchor="power-awareness-in-forwarding-and-routing-protocols"><name>Power-Awareness in Forwarding and Routing Protocols</name>
 
-<section anchor="PANET"><name>Power Aware Networks (PANET)</name>
+<t>This section covers proposals for making forwarding and routing decisions themselves aware
+of, and responsive to, power consumption, from the earliest (non-adopted) PANET work through
+more recent Software-Defined Networking (SDN) based and miscellaneous efforts.</t>
+
+<section anchor="PANET"><name>Power-Aware Networks (PANET)</name>
 
 <t>In 2013-2014, some Internet-Drafts proposed how networks themselves,
 specifically those of Internet Service Providers (ISP) could dynamically
@@ -887,7 +941,7 @@ regulate their power consumption based on the required performance, for
 example by switching off or low-powering non-needed components
 (links, nodes, linecards) or changing speeds on links, or reducing clock-rates
 of processing elements, and/or routing traffic to utilize as few components
-as will support the required performance. The authors called this "Power Aware Networks" (PANET),
+as will support the required performance. The authors called this "Power-Aware Networks" (PANET),
  even though no awareness of actual power consumption is required in this approach.</t>
 
 <t>The 2013 "Power-Aware Networks (PANET): Problem Statement" <xref target="I-D.zhang-panet-problem-statement"/>
@@ -901,7 +955,7 @@ as the idea of saving energy through (periodic) microsleeps such as possible wit
 "Energy Efficient Ethernet" <eref target="https://en.wikipedia.org/wiki/Energy-Efficient_Ethernet"/>
 links. The 2013 Internet-Draft "Reducing Power Consumption using BGP with power source data",
 <xref target="I-D.mjsraman-panet-inter-as-power-source"/> proposed BGP attributes to allow calculation
-of power efficient (or for example green) paths.</t>
+of power-efficient (or for example green) paths.</t>
 
 <t>One core market driver for this work was the rolling blackouts that especially affected India at the time of these Internet-Drafts, creating a desire to, for example, reduce the total power consumption of a network during such energy emergencies.</t>
 
@@ -945,7 +999,7 @@ adjacency tables if they don't participate in routing
 advertisements).</t>
 
 </section>
-<section anchor="miscellaneous"><name>Miscellaneous</name>
+<section anchor="additional-related-efforts"><name>Additional Related Efforts</name>
 
 <t>The non-adopted, expired 2013 Internet-Draft <xref target="I-D.okamoto-ccamp-midori-gmpls-extension-reqs"/>
 discusses power awareness in routing in conjunction with Traffic
@@ -953,7 +1007,7 @@ Engineering (tunnels), specifically in the context of Generalized MPLS (GMPLS),
 e.g.: various L2 technologies such as switched optical fiber networks. It primarily
 claims the issue that the existing management objects are not sufficient to
 express energy management related aspects, and thus do not allow to build
-energy conscious policies into PCE for such GMPLS networks.</t>
+energy conscious policies into the Path Computation Element (PCE) for such GMPLS networks.</t>
 
 <t>The non-adopted 2013 "Requirements for an Energy-Efficient Network System",
 <xref target="I-D.suzuki-eens-requirements"/> proposes a signaling of network capacity towards
@@ -962,12 +1016,19 @@ appropriate performance control (such as VM migration) at the DC - or vice versa
 (DC load-based traffic engineering in the network to support that DC load).</t>
 
 <t>The non-adopted 2013 "Building power optimal Multicast Trees" <xref target="I-D.mjsraman-rtgwg-pim-power"/>
-proposes that (PIM based) IP Multicast routing could perform local routing choices
+proposes that (Protocol Independent Multicast (PIM) based) IP Multicast routing could perform local routing choices
 in the case of "Equal Cost MultiPath" (ECMP) "Reverse Path Forwarding" (RPF)
 alternatives based on the energy that would be consumed in the router, such as when
-one ECMP alternative would use a more power efficient linecard or when one ECMP choice was
+one ECMP alternative would use a more power-efficient linecard or when one ECMP choice was
 on the same linecard as the interfaces to which the packets would need to be routed
 (and therefore avoiding to forward the packet across separate ingress and egress linecards).</t>
+
+<t>These three proposals share a common obstacle: each required detailed, standardized
+visibility into a router's or data center's internal energy consumption (per linecard, per
+VM, or per multicast tree) that was not available at the time, and in most cases still is
+not. That missing visibility is a plausible reason none of the three proceeded, distinct
+from the market-interest and SDN-maturity factors behind the PANET experience described
+earlier in this section.</t>
 
 </section>
 </section>
@@ -977,6 +1038,14 @@ on the same linecard as the interfaces to which the packets would need to be rou
 summarizes some of the same work items as this document (as written back in 2013) and
 lists additional non-adopted Internet-Drafts.
 It also identified three areas of gaps: "Load-adaptive Resource Management", "Energy-efficient Protocol Design", and "Energy-efficiency Metrics and Standard Benchmarking Methodologies". While these areas remain open, this document records them for reference rather than recommending specific next steps.</t>
+
+<t>Unlike <xref target="I-D.winter-energy-efficient-internet"/>, this document does not cover quantitative,
+industry-level energy and emissions estimates (such as ICT's projected share of global
+electricity use), nor does it analyze structural obstacles to energy efficiency, such as
+IETF protocols that assume always-on nodes (complicating the introduction of sleep modes) or
+network over-provisioning for resiliency and strict failover requirements, which works
+against energy savings. Readers interested in those obstacle-level questions should consult
+<xref target="I-D.winter-energy-efficient-internet"/> directly.</t>
 
 <t>Some aspects for those areas of gaps were partially tackled by later work in the IETF,
 but broadly speaking, most of those areas remain open. This document records these
@@ -993,17 +1062,22 @@ gaps for reference only; it does not recommend or direct any future work to addr
 
 <t><list style="symbols">
   <t>Successful integration into existing work: Several cases show
-that energy-awareness was most effective when integrated into
+that energy awareness was most effective when integrated into
 ongoing protocol development (e.g., extensions in transport and
 management protocols) rather than as an isolated stand-alone
-activity.</t>
+activity.  <list style="symbols">
+      <t>For example, Power over Ethernet power negotiation builds on
+existing link-layer signaling (LLDP/CDP) rather than a new,
+energy-specific protocol.</t>
+    </list></t>
   <t>Clear problem framing: Efforts that were framed around a well-
 defined operational or architectural need (for example,
 constrained-device networking in the IETF) tended to achieve
 broader traction than more generic appeals to "green networking."</t>
   <t>Collaboration across communities: Effective work often involved
 coordination between the related research and
-standardization bodies (e.g., IETF, IRTF, IAB, ITU), showing that
+standardization bodies (e.g., IETF, IRTF, IAB, International
+Telecommunication Union (ITU)), showing that
 energy and environmental
 sustainability topics benefit from cross-community dialogue.</t>
   <t>Appreciating multidisciplinarity: It has proven important to
@@ -1012,8 +1086,13 @@ systems, environmental science, or other disciplines) rather than
 making assumptions within the networking community alone.</t>
   <t>Limited continuity: Some prior activities were time-bound or
 lacked continuity. A lesson is that sustained progress often
-requires ongoing integration into mainstream
-workstreams.</t>
+requires ongoing integration into mainstream workstreams.  <list style="symbols">
+      <t>For example, after the EMAN WG concluded in 2015, dedicated
+IETF/IRTF energy-management activity did not resume until the
+Sustainability and the Internet (SUSTAIN) Research Group (RG)
+and the Getting Ready for Energy-Efficient Networking (GREEN)
+WG efforts nearly a decade later.</t>
+    </list></t>
   <t>Constrained and actionable scope: Experience shows that
 activities with a well-defined and bounded scope are more likely
 to deliver actionable results and running code, which is core to
@@ -1053,7 +1132,8 @@ review, historical insight, and evident care in reading successive
 versions of this document.</t>
 
 <t>The authors also thank the other reviewers and commenters who
-contributed feedback across its revisions, including Michael Welzl.</t>
+contributed feedback across its revisions, including Michael Welzl and
+other experts who reviewed this document.</t>
 
 <t>The authors further thank Eliot Lear, Independent Submissions Editor
 (ISE), for his guidance and shepherding of this document through the
@@ -1093,7 +1173,7 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 <t>11: ISE Review: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)</t>
 
-<t>12: ISE Review: Incorporated general ISE input and feedback, including reference and citation corrections, editorial fixes, and grammar corrections throughout the document.</t>
+<t>12: ISE Review: Addressed substantive ISE feedback throughout the document -- restructured the Introduction (added scope/citation-approach and roadmap subsections), reframed and expanded several technology discussions, retitled and split sections, and added missing citations and reflection -- along with citation, acronym, and grammar corrections.</t>
 
 </section>
 
@@ -2439,6 +2519,24 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
   <seriesInfo name="RFC" value="7416"/>
   <seriesInfo name="DOI" value="10.17487/RFC7416"/>
 </reference>
+<reference anchor="RFC9845">
+  <front>
+    <title>Challenges and Opportunities in Management for Green Networking</title>
+    <author fullname="A. Clemm" initials="A." role="editor" surname="Clemm"/>
+    <author fullname="C. Pignataro" initials="C." role="editor" surname="Pignataro"/>
+    <author fullname="C. Westphal" initials="C." surname="Westphal"/>
+    <author fullname="L. Ciavaglia" initials="L." surname="Ciavaglia"/>
+    <author fullname="J. Tantsura" initials="J." surname="Tantsura"/>
+    <author fullname="M-P. Odini" surname="M-P. Odini"/>
+    <date month="October" year="2025"/>
+    <abstract>
+      <t>Reducing humankind's environmental footprint and making technology more environmentally sustainable are among the biggest challenges of our age. Networks play an important part in this challenge. On one hand, they enable applications that help to reduce this footprint. On the other hand, they significantly contribute to this footprint themselves. Therefore, methods to make networking technology itself "greener" and to manage and operate networks in ways that reduce their environmental footprint without impacting their utility need to be explored. This document outlines a corresponding set of opportunities, along with associated research challenges, for networking technology in general and management technology in particular to become greener, i.e., more sustainable, with reduced greenhouse gas emissions and less negative impact on the environment.</t>
+      <t>This document is a product of the Network Management Research Group (NMRG) of the Internet Research Task Force (IRTF). This document reflects the consensus of the research group. It is not a candidate for any level of Internet Standard and is published for informational purposes.</t>
+    </abstract>
+  </front>
+  <seriesInfo name="RFC" value="9845"/>
+  <seriesInfo name="DOI" value="10.17487/RFC9845"/>
+</reference>
 
 <reference anchor="I-D.ajunior-energy-awareness-00">
    <front>
@@ -3675,584 +3773,620 @@ important.  Wireless link qualities can vary significantly over time,
   </back>
 
 <!-- ##markdown-source:
-H4sIAAAAAAAAA829a3PbSJcm+B2/AsGK2ZecIXS/94dtWVK51G3ZWkt+a3p2
-NypAEiRRBgE2AEpmOeq/73nOJTNBUuWaiZiI7XjbJYlgIvPkuV+TJInG1SQv
-Z1fxqp0mF1HU5m2RXcXXZfzpJatf8uw1rqbxXZnVs3VSZ0XaZpP4bjqt6raJ
-X/N2npdxO8/i+7vnn4fx/Wf8m5aT+P76XZSORnX2csWf7eOjffqrruWWjybV
-uEwX9M5JnU7bJBt/zeo2yTPaDy2UZPLqSh9PDo+ipq2zdHEV5+UkW2b0T9lG
-Y9rYrKrX+Ou0ivJlfRW39appjw4OLg+OIvoSrfZbWlQlvWqdNdEyv4riOG6r
-sfwuP9OK7fwqPsWvDR2yzqaN+7xZLzq/j6vFgl6uf4jSVTuvaqya4FP8n5zs
-ucrqImua+I4PZx/WFUCdTfK2qu1vVU138fOqXdXZa5bHz9l4XlZFNcuzJv7y
-dG2PAQRZexUfHR0dxDe0hzot4rtvy5re8pqu7bFx3hJEntKyTeObIq1T90E1
-oVffXMeXpwenB/6vK1qJvvHlyf6ULdK8IFC22b+Om71putqbZNsHfKjm9N9J
-/K5ajdNJmtc/POKnOi1nWXefn7OyFMD6LR6fHhxs7+/nzxv7W8gG9ka2gX+t
-+AV7dEXb231MmzHB63m+GgXXwfu6yZtxFT+tmzZbNITQ5XhvE+Ynp/F1UWRZ
-PKE7+VQv6N8kfvd4SJg2jN+t8gIEFd9u3EG1nOcp0VWbL6si3zjlwdnR6Un8
-8OnL+/uPT39x2uWc0bf3346P45PL8/joOD46i49PehvgIBzmo/3rGMdhIGxD
-4d+y6TR+JtxoVh4xGAgf/3l/e3/9Y6z4nVYgsmr3QK3/OsMf33jXTVoXVRM/
-5rMybdO6+iF+fLyJn1qi6fhLmRPpNwTEH+7HfqO3x+PFkt/1r+W4We1lk1Xn
-Q/ksDbccRWAc9SJt6X1Y6vPPN+eXh/rTxdGR/nR4eOh/PHE/nh1d2I8XZ2f2
-4+XJqf54dOweODo5d3/16x5dnJ7oj8dHZ/be45PjY/vx7Mj99fLkwv14fq4/
-nhydXbgfz+3Zk7MD98CFW/fk8sTednrs9nB66tY9PTu3F59eHJ25H89ssdPL
-AzvF2dHBmfvx/Mj9eOF+PD09sB/PLt2P52fH7kcHkrOLC3vF2aU7/Nnlhe3s
-/ODYVjg/PLBXnB+duh+P3X7P6fT+Rzv8+amD2fnZwbH78cQ9cO5efH7uDnR+
-cXLp0OHA1r04OLa3XRy7PVwcu7u4OHE3T/A/dj+e2okvzo/sLi4uDt1fL/xf
-Ly/tx8uDgwv34+GB/9G2fnl4eOl+dLd5eXh+5n/0K7h7Oz9ymzw/dqC+uPRb
-P3XXfXFwdOoWO7104PMnPvTPXh67nR0cu1McO1w/v3R4dnLptn525nZ26VH5
-8vDYPXB6eux/PPE/Hvof3b2duz1cHB67Y54c0ivAqn4iQb/I4qyuq5q0h/hr
-nS4m1WsZv86zMi6rNl414OjJwUE8z2pmDvfJ7V76+6rMq9o0lPQ1renHpkmA
-G5E+NC7SvMmSZfWa1ckiLdNZBpUhSevx3BYage2UZTKu6iypq3SySJeJgJCX
-SEkYFUVa5vJEWiiH4g/nKe13lNZtnpRVTV+tv3Z2lJQTe/aPOYnEZEZSjORs
-a3+dVk1DTE/WXlQlWHFSLdu8Knc+slyNSH7NNx6Z5Smx0VwP0ZB4XK43HmGV
-jj8eV3RAWqdZjTofTsqmmSRNvbS//k47JdA3dqJlnY+hrerHBDXSe5LR4nWm
-EF41BGD38e8NXWVaJsuUzpvkZUtPpI0+2lSrerz9bN3OsFq+kMfs8+pruqja
-KhmP08UyWeSTqs6T2WJZ0N6+tVnZ0EFJP/7Pxr5Qp3MsF4KjJFnfJJMqeaVb
-ybLJXzy6rKtRkS2SBjIQCPP2s+6TjERxqvvP0rEDYrP6Y/U1T+jWG+xwldeZ
-aK36+UtOMJTbz0EDePm39ZufNqSIe7i8AqVIihdOUac7X+R/pLj5pBnP6V3u
-WbkBfZB0B7pM0AL/OcBIwVO5tDcB4TS9JK8JdZpJyeZCQ6oA6Vhj2tOqDVBl
-mZH21oxXyctZtWySfPlypnhAP57YU8Uc2CKv7AIrIQIgIsxbXJ3bBN3ngvaR
-patvsuQCxJq85tN8F0IykjOw6B1kbFSEPaR8vWQO2kX2kjfyiLN43LP2kCp3
-yRkwgV+LZ+mtZJ8R/7li3vP0ibjwxWXylI0rgssdqVhKi2TniJHXuwfgSW3O
-oWg1rPOSDRTv+nMOE4NwlxSmMgZsM7BEpzJVZZx9G+Pestj2G9NnxDoz8FTa
-A3HLMT8Iq5Ftxs6D9MtLzpozPqLny4wfx4mILU2y+GPWvlb11/gJcBlncZ/O
-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
+H4sIAAAAAAAAA82963LbyLIm+h9PgWDHnEXuIXS/rx9ny5Ls1t6WrbHk9uw5
+50QHSEIk2iDADYCS2Q6/++SXl6oCSbV7JmIizooVbkkEC3XJyuuXmUmSRONq
+kpfTi3jZPiVnUdTmbZFdxJdl/PE5q5/z7CWunuKbMqunq6TOirTNJvHN01NV
+t038krezvIzbWRbf3jy+Hca3n/BvWk7i28s3UToa1dnzBX+2i4926a86lhs+
+mlTjMp3TOyd1+tQm2fhrVrdJntF8aKAkk1dX+niyfxA1bZ2l84s4LyfZIqN/
+yjYa08SmVb3CX5+qKF/UF3FbL5v2YG/vfO8goi/RaL+nRVXSq1ZZEy3yiyiO
+47Yay+/yM43Yzi7iY/za0CLr7Klxnzereef3cTWf08v1D1G6bGdVjVETfIr/
+ycoeq6wusqaJb3hx9mFdYauzSd5Wtf2tquks3i7bZZ29ZHn8mI1nZVVU0zxr
+4s8Pl/YYtiBrL+KDg4O9+IrmUKdFfPNtUdNbXtKVPTbOW9qRh7Rs0/iqSOvU
+fVBN6NVXl/H58d7xnv/rkkaib3x+sD9l8zQvaCvb7F/Hzc5TutyZZJsLvKtm
+9N9J/KZajtNJmtc/XeLHOi2nWXeen7KylI31Uzw83tvbnN/bT2vzm8sEdkY2
+gX+t+AU7dESb071PmzHt1+NsOQqOg+d1lTfjKn5YNW02b4igy/HO+p4fHceX
+RZFl8YTO5GM9p3+T+M39PlHaMH6zzAtcqPh67QyqxSxP6V61+aIq8rVV7p0c
+HB/Fdx8/v7v98PAXq13MmHx7//XwMD46P40PDuODk/jwqLe2HUTDvLR/HWM5
+vAmbu/Bv2dNT/Ei00Sw9YfAmfPjt9vr28udU8QeNQNeq3cFt/dcp/vjKu67S
+uqia+D6flmmb1tVP6ePDVfzQ0p2OP5c5Xf2GNvGn87Hf6O3xeL7gd/1rOW6W
+O9lk2flQPkvDKUcRGEc9T1t6H4b69Pbq9Hxffzo7ONCf9vf3/Y9H7seTgzP7
+8ezkxH48PzrWHw8O3QMHR6fur37cg7PjI/3x8ODE3nt4dHhoP54cuL+eH525
+H09P9cejg5Mz9+OpPXt0suceOHPjHp0f2duOD90cjo/duMcnp/bi47ODE/fj
+iQ12fL5nqzg52DtxP54euB/P3I/Hx3v248m5+/H05ND96Lbk5OzMXnFy7hZ/
+cn5mMzvdO7QRTvf37BWnB8fux0M331Navf/RFn967Pbs9GTv0P145B44dS8+
+PXULOj07OnfksGfjnu0d2tvODt0czg7dWZwduZOn/T90Px7bis9OD+wszs72
+3V/P/F/Pz+3H8729M/fj/p7/0aZ+vr9/7n50p3m+f3rif/QjuHM7PXCTPD10
+W3127qd+7I77bO/g2A12fO62z6943z97fuhmtnfoVnHoaP303NHZ0bmb+smJ
+m9m5J+Xz/UP3wPHxof/xyP+4739053bq5nC2f+iWebTvXnGGawqu9QvJ/HkW
+Z3Vd1aRIxF/rdD6pXsr4ZZaVcVm18bIBc0/29uJZVjOfuE2ud9I/lmVe1aas
+pC9pTT82TQIyifShcZHmTZYsqpesTuZpmU4zaA9JWo9nNtAIHKgsk3FVZ0ld
+pZN5ukhkN3mIlORSUaRlLk+khTIr/nCW0nxHad3mSVnV9NX6a2dGSTmxZ/+c
+kXRMpiTQSOS29tenqmmI/8nY86oEV06qRZtX5dZHFssRibLZ2iPTPCWOmusi
+GpKUi9XaI6zd8cfjihZI4zTLUefDSdk0k6SpF/bXP2imtPWNrWhR52Morvox
+7RqpQMlo/jLVHV42tMHu4z8aOsq0TBYprTfJy5aeSBt9tKmW9Xjz2bqdYrR8
+Lo/Z59XXdF61VTIep/NFMs8nVZ0n0/mioLl9a7OyoYWSqvyfjX2hTmcYLtyO
+ksR+k0yq5IVOJcsmf/Hooq5GRTZPGohDEMzrz7pPMpLKqc4/S8duE5vln8uv
+eUKn3mCGy7zORIHVz59z2kM5/Rx3AC//tnr104Z0cr8vLyApEuiF09npzOf5
+nylOPmnGM3qXe1ZOQB8kNYIOE3eB/xxQpNCpHNqrG+GUviSviXSaScmWQ0Na
+AalbY5rTsg1IZZGRIteMl8nzSbVoknzxfKJ0QD8e2VPFDNQir+xuVkIXgC5h
+3uLo3CToPOc0jyxdfpMh57isyUv+lG8jSCZy3ix6B9kdFVEP6WHPmdvtInvO
+G3nEGT/uWXtI9bzkBJTAr8Wz9FYy1Yj/XDDvefhIDPnsPHnIxhXtyw1pW3oX
+yeQRe693i40nDTqHztWw+kvmULztzzmsDaJd0p3KGHubgSU67akq4+zbGOeW
+xTbfmD4j1pmBp9IciFuO+UEYkGw+dh6kX55zVqLxET1fZvw4VkRsaZLFH7L2
+paq/xg/Yl3EW92mN8dnR6eFANGFvicWBKiqapSy15JmSEfCxnhI7FSLltz/A
+UEzrif0NY+uwRO9kh2Glpmv26MNefIE93r29uYp5oy9IOzgYxrLdsW73MP5Q
+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
+TzhiF6Sk+zJCdTbT4kpBaxC4bDxxRN5clnxD+y6jWUuuG4Lg/65BT8aVtmlK
+OVsnXnZM5045r6j3kTm99z+sMZ7XbsXHB2QqDsxtfLJ/aFkP2nc60pptDlqN
+iyq8r7sLRgUS2+DUkuGmOdbo/KJOMlXFpOoyyiqnunc1dvZv4F4xfBqwhLHW
+y4F451D2fy4N8VIxWNh3z0RKQHcHs5AAXA03VD7a5cQlrmzjXa93KJBeErNw
+P/XvDu4Ga1nRwygouxhWJw26e2gZaZcnxIq9FD9V6vFAVxXQlv8EX2jTckGA
+zLeskIbPtBlIwmg8rubh5kqooU8/vco8L5dwALfGwzC5S26jFaInQlpaoyHi
+WIOogzpmTaXx8e5uiFrEgCNUdyu42sX24xlGYVkyJgFJXoLq7KCPihJmrskR
+CPA/bqvzMOhsqRw13QiyLdJFE6k2AW+747sP+oabEkazNFrDmHzDMl/MOe7T
+OMbo9w7hW+hsFnQiC/3yErmY3BQ+p1Vgn0XQqnJ/4DyPm6JAr/RxfAUkLb2J
+DlGyJhCma8yoFHgeo9hoghzAY4i6jyirqRl17MvQgvz0cBn3P4GXtMnDLJ3n
+dXI5KcDHu2+USjIwQoN1oDa4FhDaCZJCXfsbOpm1lVyFm0DLonXx5mIa1l57
+ngrYQ7sVc4YtZitVqoeWIJBr9DOFa7o1LWOLMWYVmzMrru5KdytuC6hYrUZg
+SUWcNbndkclqywMNRytrVSOgn4UYo+jG6nKN1zKTu8UmUOaHQZPOLdI5okrR
+uVHYpzF+EJh08JymQo0yzjDptmPjCH4kjBThfrKOyErW7lgusmo1D9SJMFBz
+0GodcIX08SxYf8f4VMg4SapEPTdoL+onmDS2UQmNABHjWwCiKAi3humsKGw/
+Ifa1KI+23+POfltLA1XjmUrfGJY5iu5Q9UPb1TovR1Dj4fAcV38gkQgncnQL
+SY5PrDCRy5uHZZtP6IaMqm98jDknVK5YbC+1Ncm4yCXTtIq5piqSv1FbuqW7
+lC1Ir2HR/SDVU1QLXzHvzOdBY1dkGfJaVglXws89zpl7A1aapxMZ5NYe3yhe
+20j5S/6q4dnOzk7h0RHy4+PowFMiwXzHjdY84KRyXpeW65QK+uJUUltciWSt
+12ReO9z5TvTvtgGmN8hVaGdL+PuDyj3Sh1llhAkvs0cXFaRrZuUjXS9YQ1mM
+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
 AA==
 
 -->

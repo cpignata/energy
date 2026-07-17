@@ -153,6 +153,7 @@ informative:
   RFC7731:
   RFC8138:
   RFC7416:
+  RFC9845:
 
 
   # some error in kramdown when not using -00 here:
@@ -262,21 +263,16 @@ This memo provides a compilation of existing work performed by or proposed withi
 The principal goal of this document is to help IETF, IRTF, and IAB
 participants, especially newcomers and future contributors, become
 familiar with the body of work already published on energy-related
-topics. It provides the first consolidated catalog of such efforts,
-serving as an internal reference and orientation guide.
+topics, serving as the first consolidated catalog of such efforts.
 
 In addition, the document raises awareness of the Internet's role in
 energy efficiency and energy-related activities within the IETF, IRTF,
 and IAB more broadly. As a reference rather than a guide, it may help
 readers identify gaps and areas where further work could be pursued,
 without this document itself directing or recommending any such work.
-It also offers background for readers outside the IETF community who
-may be less familiar with how networking technologies contribute to
-energy savings.
-
-The scope of this document
-includes selected work from the IETF, IRTF, and IAB where relevant.
-This document is descriptive in nature and does not propose new work items.
+The scope of this document includes selected work from the IETF, IRTF,
+and IAB where relevant, and it is descriptive in nature, not proposing
+new work items.
 
 This document captures work until December 2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" contextualized renewed community interest and discussion of the topic.
 This memo itself does not recommend or direct future work.
@@ -291,19 +287,61 @@ Its goal is to summarize, not to propose or direct new work.
 It is intended as a compilation of prior work, not a proposal of new activities.
 The main purpose is to provide a consolidated reference for participants, by cataloging and contextualizing what has already been published and done in IETF, IRTF, and IAB.
 
-Considering the target audience, this document is primarily intended as an internal reference for the IETF, IRTF, and IAB communities. By cataloging prior work in a single place, it aims to lower the entry barrier for participants who may not be aware of earlier efforts and to provide future contributors with a historical foundation.
+Considering the target audience, this document is primarily intended as an internal reference and orientation guide for the IETF, IRTF, and IAB communities. By cataloging prior work in a single place, it aims to lower the entry barrier for participants who may not be aware of earlier efforts and to provide future contributors with a historical foundation. It also offers background for readers outside the IETF community who may be less familiar with how networking technologies contribute to energy savings.
 
-There are various aspects how a given work relates to energy that are
-classified into categories.  Such a classification does not attempt to propose
-a formal taxonomy, but is used for the sake of better readability.
-Technologies are listed under a category that is specifically significant,
-for example, by being most narrow.
+In addition to this compilation, the authors also share their own observations on what has worked well and what lessons may be drawn from the past.
+
+Digitization is not a uniform energy saving: as {{higherconsumption}} discusses, some digitized
+workflows consume significantly more energy than their pre-digitization alternatives, or grow so
+much in volume that their total consumption outranks what they replaced. Given how TCP/IP based
+networks, especially the Internet, have excelled through their design principles in reducing
+network traffic cost and enabling ubiquitous access over the past few decades, IETF technologies
+and especially the Internet are the most important enabler of the digital economy, and of the
+energy consumption it produces.
+
+## Scope, Categorization, and Citation Approach
+
+There are various aspects how a given work relates to energy; these are
+grouped into categories for the sake of better readability, not as a formal
+taxonomy. Technologies are listed under a category that is specifically
+significant, for example, by being most narrow.
 
 This memo refers to technologies by their significant early RFCs or Internet-Draft versions, rather than by the latest revision. This differs from the common IETF practice of citing the most current version. The intent is to help readers follow the historical timeline of when a technology was first proposed or introduced. In many cases, especially for successful I* technologies, later RFCs build upon and update that original work.
 
 This document captures work until December 2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" {{?I-D.iab-ws-environmental-impacts-report}} renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.
 
-In addition to this compilation, the authors also share their own observations on what has worked well and what lessons may be drawn from the past.
+## Document Roadmap
+
+The rest of this document is organized as follows:
+
+   * Section 2 introduces the concept of energy saving through
+     digitization and through scaling of the Internet.
+
+   * Section 3 discusses cases where digitization can lead to higher,
+     not lower, energy consumption.
+
+   * Section 4 covers sustainability topics such as
+     renewable-energy-aware scheduling, heat management, and
+     telecollaboration.
+
+   * Section 5 surveys IETF work on energy optimization in specific
+     types of networks, particularly constrained and low-power
+     networks.
+
+   * Section 6 covers energy management networks such as the Smart
+     Grid and synchrophasor networks.
+
+   * Section 7 covers the (limited) management of network equipment
+     energy consumption, including the EMAN working group.
+
+   * Section 8 covers power-awareness in forwarding and routing
+     protocols.
+
+   * Section 9 identifies gaps relative to a prior survey of this
+     space.
+
+   * Section 10 shares the authors' own observations and lessons
+     learned.
 
 # Energy Saving: An Introduction
 
@@ -336,7 +374,7 @@ the whole stack of deployed protocols and operational practices that contributes
 digitization. It is likely also the biggest overall energy saving impact of all possible categories that
 relate IETF work to energy:
 
-The Internet as well as all other IP/MPLS networks are likely the biggest energy saving development
+The Internet as well as all other IP/Multiprotocol Label Switching (MPLS) networks are likely the biggest energy saving development
 of the past few decades if only the energy consumption of equivalent services is compared. On the other hand,
 they are also the cause of the largest new category of energy consumption because of all the new services
 introduced in the past decades with the Internet and the hyper-scaling that the Internet affords them.
@@ -351,12 +389,15 @@ Digitized voice over IP (e.g., "Session Initiation Protocol", SIP {{RFC3261}}) i
 
 ### The Packet Multiplexing Principle
 
-Statistical multiplexing in IP and IPv6 ({{RFC791}}, {{RFC8200}}) increases utilization efficiency, distributing largely fixed equipment power across many flows. This, along with development of further technologies
-to improve scaling, has been a principal driver in declining energy per bit over decades.
+Statistical multiplexing in IP and IPv6 ({{RFC791}}, {{RFC8200}}) was designed for link
+efficiency, not energy, but the two are related: by raising utilization, it spreads largely
+fixed equipment power across more flows, lowering energy per bit. This is not a realistically
+reversible gain, since returning to dedicated circuit-based links is not a viable alternative
+today.
 
 ### Dynamic Power Negotiation {#dynpower}
 
-Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via LLDP/CDP), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes.
+Power over Ethernet (PoE) shows how device-level negotiation can affect energy use. Endpoints such as IP phones signal expected draw (e.g., via the Link Layer Discovery Protocol (LLDP) or the Cisco Discovery Protocol (CDP)), enabling switches to allocate power budgets and reduce waste when devices enter low-power modes.
 
 Problems arise if devices misreport or later exceed their declared needs. A device requesting 30 W but consuming 60 W forces over-provisioning and complicates capacity planning. Accurate and dynamic signaling is therefore key: truthful reporting avoids systematic waste, while real-time updates allow closer matching of supply and demand.
 
@@ -365,19 +406,28 @@ IETF's EMAN framework {{RFC7326}} provides models for monitoring and control in 
 
 ### End-to-End Transport
 
-The TCP end-to-end reliability model {{?RFC9293}} avoids per-hop retransmission and state. This minimized per-packet processing in routers, enabling simpler, more energy-efficient forwarding at scale.
+The TCP end-to-end reliability model {{?RFC9293}} was designed for reliability, not energy, by
+avoiding per-hop retransmission and state. This design choice has a direct energy benefit: it
+minimizes per-packet processing in routers, enabling simpler, more energy-efficient forwarding
+at scale.
 
 ### Global vs Restricted Connectivity: The Internet Routing Architectures
 
-Open interconnection and competitive expansion (e.g., via Border Gateway (Routing) Protocol, BGP {{RFC4271}}) accelerated scale, allowing energy efficiency gains from new hardware generations to spread globally, because it
-enabled competitive market forces to explore markets quickly.
+BGP {{RFC4271}} enabled open interconnection and competitive market expansion, accelerating
+Internet scale. This scale matters for energy: it let energy efficiency gains from newer
+hardware generations spread globally faster than they could have under the regulated,
+per-country monopoly networks that preceded the Internet.
 
 ### Converged Networks
 
-Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric avoids duplicative powered equipment. DiffServ {{RFC2475}} and later DetNet {{RFC8655}} illustrate how lighter-weight QoS models supported convergence without high per-flow energy overhead.
+Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric was
+driven by cost and operational simplicity, not energy, but it avoids duplicative powered
+equipment as a direct consequence. DiffServ {{RFC2475}} and later DetNet {{RFC8655}} illustrate
+how lighter-weight Quality of Service (QoS) models supported this convergence without reintroducing high per-flow
+energy overhead.
 
 
-# Higher or New Energy Consumption
+# Higher or New Energy Consumption {#higherconsumption}
 
 Digitized, network centric workflows may consume more energy than their non-digitized counterpart,
 as may new network centric workflows without easy to compare prior workflows.
@@ -416,12 +466,6 @@ The lower the cost of network traffic, and the more easily accessible everywhere
 connectivity is, the more competitive and/or successful most of these new workflows of the digital
 economy can be.
 
-Given how TCP/IP based networks, especially the Internet have excelled
-through their design principles (and success) in this reduction of network traffic cost
-and ubiquitous access over the past few decades, as outlined above, one can say that
-IETF technologies and especially the Internet are the most important enabler of the digital economy,
-and the energy consumption it produces.
-
 # Some Notes on Sustainability {#sustainability}
 
 Sustainability is the principle to utilize resources in a way that they do not diminish or run out over the long term (e.g., ore depletion required for building hardware).
@@ -429,21 +473,23 @@ Beyond the above covered energy saving, sustainability relates with respect to t
 renewable sources of energy to minimize exhaustion of fossil resources, and the impact of IETF technologies
 on global warming to avoid worsening living conditions on the planet.
 
-While there seems to be no IETF work specifically intending to target sustainability,
-the Internet itself can similarly to how it does for digitization play a key role in building sustainable
-networked IT infrastructures. The following subsections list three exemplary areas where global high performance,
-low-cost Internet networking is a key requirement.
+While there seems to be no IETF work specifically intending to target sustainability, related
+work is emerging in the IRTF, such as {{RFC9845}}, which examines management challenges and
+opportunities for green networking. The Internet itself can similarly to how it does for
+digitization play a key role in building sustainable networked IT infrastructures. The
+following subsections list three exemplary areas where global high performance, low-cost
+Internet networking is a key requirement.
 
 ## Follow-the-Energy Cloud Scheduling
 
 Renewable energy resources (except for water) do commonly have fluctuating energy output. For example,
-solar energy output correlates to night/day and strength of sunlight. Cloud Data Centers (DC) consume a significant
+solar energy output correlates to night/day and strength of sunlight. Cloud DCs consume a significant
 amount of the IT sector's energy. Some workloads may simply be scheduled to consume energy in accordance
 with the amount of available renewable energy at the time, not requiring the network. Significant
 workloads are not elastic in time, such as interactive cloud DC work (cloud based
 applications) or entertainment (gaming, etc.). These workloads may be instantiated or even
 dynamically (over time) migrate to a DC location with sufficient renewable energy and the Internet
-(or large TCP/IP OTT backbone networks) will serve as the fabric to access the remote DC and
+(or large TCP/IP Over-The-Top (OTT) backbone networks) will serve as the fabric to access the remote DC and
 to coordinate the instantiation/migration.
 
 ## Optimize Generated Heat
@@ -481,25 +527,24 @@ With the advent of SIP in the early 2000s, commercial telecollaboration started 
 session and application protocols with multiple IETF working groups contributing to that protocol suite, such as SIPCORE, MMUSIC, and XCON.
 Using these technologies and the Internet, the
 immersive nature of telecollaboration was brought to life-size video, was/is called Telepresence
-{{https://en.wikipedia.org/wiki/Telepresence}} and later to even more immersive forms such as AR/VR telecollaboration.
+{{https://en.wikipedia.org/wiki/Telepresence}} and later to even more immersive forms such as Augmented Reality (AR) / Virtual Reality (VR) telecollaboration.
 
 In 2011, the IETF opened the "Real-Time Communication in Web-browsers" (RTCWEB) WG, that towards the
 end of that decade became the most widely supported cross-platform reference for hundreds of commercial
 and free tele-collaboration solutions, including Cisco Webex, which is also used by the IETF itself, Zoom, and
 the collaboration suite the IETF most recently uses, Meetecho {{https://www.meetecho.com/en/}}.
 
-While the various forms of Telecollaboration are mostly instances of digitization, they
-are discussed under sustainability because of its comparison to in-person travel that is
-not based on simple comparison of energy, but nowadays by comparing their impact on global warming,
-a key factor to sustainability.
+While the various forms of Telecollaboration are mostly instances of digitization, they are
+discussed under sustainability rather than simply energy, because their relevant comparison
+is not to a "without digitization" baseline, but to an alternative that itself has an energy
+and emissions cost: in-person travel. This substitution effect is why the energy properties of
+the underlying transport and session protocols matter beyond the session itself: a more
+efficient or more reliable telecollaboration protocol stack can directly influence whether
+travel is displaced.
 
-Telecollaboration was primarily developed because of the utility for the participants - to avoid travel
-for originally predominantly business communications/collaborations.
-It saw an extreme increase in use during the COVID-19 pandemic {{OECD2020}} {{ITU2020}}.
-This forced millions of people to work from home and utilizing commercial
-telecollaboration tools. It equally caused most in-person events that were not cancelled to
-be moved to a telecollaboration platform over the Internet - most of them likely relying on RTCWEB
-protocols.
+Use of telecollaboration increased sharply during the COVID-19 pandemic {{OECD2020}} {{ITU2020}},
+including for in-person events that were moved to a telecollaboration platform over the
+Internet, most of them likely relying on RTCWEB protocols.
 
 Actual energy consumption related comparison between teleconferencing and in-person travel is complex
 but since the last decades is commonly based on calculating some form of CO2 emission equivalent of
@@ -521,13 +566,17 @@ impact than simply the amount of CO2 used by the airplane if it was exhausted at
 publicly funded organization offering carbon offset services calculates a factor 3 of the CO2 consumption of an
 airplane {{https://www.atmosfair.de/de/fliegen_und_klima/flugverkehr_und_klima/klimawirkung_flugverkehr/}}.
 
-In summary: Telecollaboration has a higher sustainability benefit compared to travel than just
-the comparison of energy consumption because of the higher challenge to use renewable energy
-in transportation than in networking, and this is most extreme in the case of telecollaboration
-that replaces air travel because of the even higher global warming impact of using fossil fuels
-in air travel.
+The protocol-relevant takeaway is that telecollaboration's sustainability benefit compared to
+travel exceeds what a simple energy-consumption comparison would suggest, because transportation
+is harder to decarbonize than networking is. This gap is largest where telecollaboration
+displaces air travel specifically, given the added global warming impact of burning fossil
+fuels at altitude.
 
 # Energy Optimization in Specific Networks
+
+This section surveys IETF work that optimizes energy use in specific types of networks,
+starting with the routing and subnet-management analysis that motivated much of it, and
+continuing through the working groups and technologies built on top of that analysis.
 
 ## Analysis of Routing Protocol (In)Efficiencies
 
@@ -544,7 +593,7 @@ The two documents from 2008-2009 that capture this analysis/
      much related to energy of IPv6 over wireless are captured in
      {{I-D.thubert-6man-ipv6-over-wireless}}, which is ongoing work.
 
-## Low Power and Lossy Networks (LLN) {#LLN}
+## Low-Power and Lossy Networks (LLN) {#LLN}
 
 Low-Power and Lossy Networks (LLNs) are networks in which nodes and/or radio links operate under significant constraints. Node power limitations often arise from the need to maximize lifetime when powered by batteries or energy-harvesting methods, most commonly solar panels, but also ambient sources such as motion (in wearables) or piezoelectric cells that generate energy for mechanically operated devices like switches.
 
@@ -557,15 +606,15 @@ be optimized. This includes packet header compression, fragmentation (to avoid l
 large packets at low bitrates, packet bundling to only consume radio energy at short time
 periods, radio energy tuning to reach only the destination(s), minimization of multicasting
 to eliminate need of radio receivers to consume energy and so on. {{RFC8352}} gives a more detailed
-overview, especially because different L2 technologies such as IEEE 802.15.4 type (low power)
-wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DEC ULE.
+overview, especially because different L2 technologies such as IEEE 802.15.4 type (low-power)
+wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DECT ULE.
 
 In the INT area of the IETF, several LLN specific WGs exist(ed):
 
 ### IPv6 over Low Power WPAN (6LoWPAN)
 
 The "IPv6 over Low power WPAN (Wireless Personal Area Networks)" (6lowpan) WG ran from 2005
-to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low power) wireless networks
+to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low-power) wireless networks
 by transmission procedures ("Transmission of IPv6 Packets over IEEE 802.15.4 Networks", {{RFC4944}}),
 compression of IPv6 (and transport) packet headers ("Compression Format for IPv6 Datagrams over
 IEEE 802.15.4-Based Networks", {{RFC6282}}), and modifications for neighbor discovery (ND)
@@ -638,8 +687,8 @@ to minimize routing related packets through automatic lazy updates. While RPL is
 a mesh network routing protocol, where all nodes are usually expected to be able to
 participate in it, RPL also supports even more lightweight leave nodes {{RFC9010}}.
 
-The 2013 {{I-D.ajunior-energy-awareness-00}} proposes the introducing of energy related parameters
-into RPL to support calculation/selection of most energy efficient paths. The 2017
+The 2013 {{I-D.ajunior-energy-awareness-00}} proposes the introducing of energy-related parameters
+into RPL to support calculation/selection of most energy-efficient paths. The 2017
  "An energy optimization routing scheme for LLNs", {{I-D.wang-roll-energy-optimization-scheme}}
 observed that DODAGs in RPL tend to require more energy in nodes closer to the root and
 proposed specific optimizations to reduce this problem. Neither of these Internet-Drafts proceeded in the IETF.
@@ -693,10 +742,11 @@ range of deployment scenarios.
 
 In the SECurity (SEC) area of the IETF, the "Authentication and Authorization for Constrained Environments" (ace)
 working group has since 2014 produced 4 RFC for security functions in constrained environments,
-for example CoAP based variations of prior HTTPS protocols such as EST-coaps {{RFC9148}} for
-HTTPS based EST {{RFC7030}}. Constrained node support in cryptography especially
+for example CoAP based variations of prior HTTP over TLS (HTTPS) protocols such as EST-coaps
+{{RFC9148}} for HTTPS based Enrollment over Secure Transport (EST) {{RFC7030}}. Constrained node
+support in cryptography especially
 entails support for Elliptic Curve (EC) public keys due to their shorter key sizes and lower compute
-requirements compared to RSA public keys with same cryptographic strength.
+requirements compared to RSA (Rivest-Shamir-Adleman) public keys with same cryptographic strength.
 While the benefits of Elliptic Curve Cryptography (ECC) over RSA already made them the preferred choice, the additional advantage for constrained nodes accelerated their adoption and proliferation, even beyond constrained networks.
 
 ### Satellite Constellations
@@ -721,15 +771,16 @@ of {{RFC7849}} further insists on the importance of saving battery exacerbated
 by keep-alive messages and recommends the support of collaborative means to control
 state in the network rather than relying on heuristics.
 
-## Sample Technical Enablers
+## (IP) Multicast
 
-### (IP) Multicast
+Multicast has both power-saving and power-wasting properties, and its energy impact differs
+significantly between wired and wireless links, so it is covered here across three subsections.
 
-#### Power Saving with Multicast
+### Power Saving through Multicast
 
-IP Multicast, introduced in {{RFC1112}} and now also referred to as Any-Source Multicast (ASM), has seen various supporting protocols standardized in the IETF across multiple working groups. In addition, multicast solutions have also been developed for MPLS and BIER within their respective IETF working groups.
+IP Multicast, introduced in {{RFC1112}} and now also referred to as Any-Source Multicast (ASM), has seen various supporting protocols standardized in the IETF across multiple working groups. In addition, multicast solutions have also been developed for MPLS and for Bit Index Explicit Replication (BIER) within their respective IETF working groups.
 
-These three, network layer multicast technologies can be a power saving technologies when used to
+These three, network layer multicast technologies can be power-saving technologies when used to
 distribute data because they reduce the number of packets that need to be sent across
 the network (through in-network-replication where needed). Because most current link and router technologies
 do not allow to actually save significant amounts of energy on lower than maximum utilization, these benefits are often only theoretical though. Software routers are the ones most likely to expose energy consumption somewhat proportional to their throughput for just the forwarding (CPU) chip.
@@ -744,7 +795,7 @@ replicated unicast traffic, but this is rarely significant, because except for
 fully battery powered mesh network, there are typically non-energy-constrained nodes, such as (commonly) the
 wired access-points in Wi-Fi networks.
 
-In result, today multicasting has typically no significant power saving benefits with available
+In result, today multicasting has typically no significant power-saving benefits with available
 network technologies. Instead, it is used (for data distribution) when the amount of traffic that a unicast solution
 alternative (with so-called ingress replication) is not possible due to the total amount of
 traffic generated. This includes wireless/radio networks, where equally airtime is the limiting
@@ -753,7 +804,7 @@ factor.
 As an additional pointer, {{RFC7731}} defined the Multicast Protocol for Low-Power and Lossy Networks (MPL).
 
 
-#### Power Waste Through Multicast-based Service Coordination {#coordination}
+### Power Waste through Multicast-based Service Coordination {#coordination}
 
 (IP) multicast is often not used to distribute data requested by receivers, but also
 coordination type functions such as service or resource announcement, discovery or selection.
@@ -781,17 +832,17 @@ to better alternatives.
 In 2006, the IETF published "Source Specific Multicast" (SSM) {{RFC4607}}, a variation of IP Multicast
 that does not allow to perform these type of coordination functions but is only meant for
 (and useable for) actual data distribution. SSM was introduced for other reasons than the
-above-described power related issues though, but deprecating the use of ASM is one way to
+above-described power-related issues though, but deprecating the use of ASM is one way to
 avoid/minimize its ill-advised use with these type of coordination functions, when energy
 efficiency is an issue. {{RFC8815}} is an example for deprecating ASM for other reasons
 in Service Provider networks.
 
-#### Multicast Problems in Wireless Networks {#wifi}
+### Power Waste through Wireless Multicast {#wifi}
 
 {{RFC9119}} covers multicast challenges and solutions (proposals) for IP Multicast over
 Wi-Fi. With respect to power consumption, it discusses the following aspects:
 
-(a) Unnecessary wake-up of power constrained Wi-Fi Stations (STA) nodes can be minimized by wireless
+(a) Unnecessary wake-up of power-constrained Wi-Fi Stations (STA) nodes can be minimized by wireless
 Access Points (APs) that buffer multicast packets so they are sent only periodically when
 those nodes wake up.
 
@@ -808,7 +859,7 @@ IP multicast and describes their specific challenges and possible improvements.
 
 {{I-D.desmouceaux-ipv6-mcast-wifi-power-usage}} focuses on IPv6-related concerns of multicast traffic in large wireless networks. This document provides a set of statistics and the induced device power consumption of such flows.
 
-### Sleepy Nodes {#sleepy}
+## Sleepy Nodes {#sleepy}
 
 Sleepy nodes are one of the most common design solutions in support of power saving.
 This includes LLN level constrained nodes, but also nodes with significant battery capacity,
@@ -831,16 +882,16 @@ such as the address(es) of DNS-SD server(s).
 
 "Building Power-Efficient Constrained Application Protocol (CoAP) Devices for Cellular Networks"  {{RFC9178}}
 discusses sleepy devices, especially the use of CoAP PubSub {{I-D.ietf-core-coap-pubsub}} as a
-mechanism to build proxies for sleepy devices. "Sensor Measurement Lists (SenML)", normalized
-proxy infrastructures are best built with published data models, such as "Sensor Measurement Lists" (SenML)
-{{RFC8428}} for sensors, likely the largest number of sleepy devices, especially in LLN.
+mechanism to build proxies for sleepy devices. Normalized proxy infrastructures are best built
+with published data models, such as "Sensor Measurement Lists" (SenML) {{RFC8428}} for sensors,
+likely the largest number of sleepy devices, especially in LLN.
 
 "Reducing Energy Consumption of Router Advertisements", {{RFC7772}} eliminates/reduces the
-energy impact for sleepy nodes of the ubiquitous IPv6 "Neighbor Discovery" (ND) protocol by
+energy impact for sleepy nodes of the ubiquitous IPv6 ND protocol by
 giving recommends for replacing multicast "Router Advertisement" (RA) messages with so-called
 directed unicast versions, therefore not waking up sleepy nodes (with an IP multicast RA message).
 This was already allowed in ND {{RFC4861}}, but not recommended as the default. Note that
-{{RFC7772}} does not provide all the energy related optimizations of ND as developed by
+{{RFC7772}} does not provide all the energy-related optimizations of ND as developed by
 6LoWPAN through {{RFC6775}}, later updated by {{RFC8505}} in 6LO. {{I-D.chakrabarti-nordmark-energy-aware-nd}} proposes generalizations
 for those applications for to all IPv6 links, but was not further pursued by the IETF so far.
 
@@ -879,7 +930,7 @@ was already well specified by the IETF.
 
 Most of the overview in this document is not specific to networks used for Smart Grid applications, but is summarized here for the outreach and education of the community as described above. The aspects most specific to Smart Grids concern the, back in 2011 still somewhat nascent, adaptation of IPv6 network technologies to LLN networks (see {{LLN}}): smart meters, circuit breakers, load measurement devices, car chargers, and similar devices that would most likely be connected via low-power radio networks ideally utilizing IPv6 directly. Support for LLN networks with IPv6 has significantly improved in IETF specifications over the past decade.
 
-## Synchro Phasor Networks
+## Synchrophasor Networks
 
 Power output of multiple power plants/generators into the same power grid needs to be synchronized
 by power levels based on consumption and power phase (50/60Hz depending on
@@ -888,11 +939,11 @@ actually burn out power lines or create permanent damage in power generators. Wh
 go out-of-sync, they have to be emergency switched off, resulting in (rolling-)blackouts,
 worsening the conditions beyond its likely root-cause such as a single overloaded region.
 
-Synchro Phasor Networks are networks whose goal it is to support synchronization of
+Synchrophasor Networks are networks whose goal it is to support synchronization of
 power generators across a power grid, ultimately also permitting to build larger
-and more resilient power grids. "Power Measurement Units" (PMU) are their core
+and more resilient power grids. "Phasor Measurement Units" (PMU) are their core
 sensing elements. Since about 2012, these networks have started to
-move from traditional SCADA towards more TCP/IP based networking and application technologies
+move from traditional Supervisory Control and Data Acquisition (SCADA) towards more TCP/IP based networking and application technologies
 "to improve power system reliability and visibility through wide area measurement and control,
 by fostering the use and capabilities of synchrophasor technology" (https://www.naspi.org/).
 
@@ -907,9 +958,9 @@ The length of transmission wires can be measured from
 data sent across the transmission lines and measuring their propagation latency with the help of
 accurate clock synchronization between sender and receiver(s), using for example network-based
 clock synchronization protocols. The IETF "Network Time Protocol version 4" (NTPv4), {{RFC5905}}
-is one option for this. The IEEE PTP protocol is often preferred though because it specifies
+is one option for this. The IEEE Precision Time Protocol (PTP) is often preferred though because it specifies
 better how measurements can be integrated at the hardware level of Ethernet interfaces, thus
-allowing easier to achieve higher accuracy, such as Maximum Time Interval (MTIE) errors of
+allowing easier to achieve higher accuracy, such as Maximum Time Interval Error (MTIE) of
 less than 1 msec. See for example {{NASPICLOCK}}.
 
 The "North American SynchroPhasor Initiative" (NASPI), https://www.naspi.org is an example
@@ -918,6 +969,10 @@ the USA "Department of Energy" (DoE).
 
 # (Limited) Energy Management for Networks
 
+This section covers IETF work that manages the energy consumption of network equipment
+itself, starting with early, non-adopted metrics proposals before turning to the one
+working group, EMAN, that produced standardized models in this space.
+
 ## Some Metrics
 
 A 2010-2013 Internet-Draft {{I-D.manral-bmwg-power-usage}}, which was not adopted,
@@ -925,14 +980,14 @@ discussed and proposed metrics for power consumption that were intended
 to be used for benchmarking.
 
 The later work in {{EMAN}} referred instead to other metrics for
-measuring power consumption from other SDOs.
+measuring power consumption from other Standards Developing Organizations (SDOs).
 
 A 2011-2012 Internet-Draft {{I-D.jennings-energy-pricing}}, which was not adopted,
 discusses and proposes a data model to communicate time-varying cost of
 energy in support of enabling time-shifting of network attached or
 managed equipment consumption of power.
 
-## EMAN WG {#EMAN}
+## Energy Management (EMAN) {#EMAN}
 
 While the IETF did specify a few MIBs with aspects related to power management, it was only with the formation of the "Energy Management" (EMAN) WG (2010-2015) that a comprehensive set of MIB-based models for managing energy in network equipment was developed. This work also provides standardized support for issues noted earlier in {{dynpower}}, such as negotiation and monitoring of device-level power needs.
 
@@ -971,9 +1026,10 @@ The "Monitoring and Control MIB for Power and Energy" {{RFC7460}} specifies
 a MIB for monitoring for Power State and energy consumption of networked equipment.
 The document discusses the link with other MIBs such as
 the ENTITY-MIB, the ENTITY-SENSOR-MIB {{RFC3433}} for which it is
-amending missing accuracy information to meet IEC power monitoring
+amending missing accuracy information to meet International Electrotechnical Commission (IEC)
+power monitoring
 requirements, the "Power Ethernet MIB" (POWER-ETHERNET-MIB) {{RFC3621}}
-to manage PoE, and the pre-existing IETF MIB for Uninterruptable Power Supplies (UPS) (UPS-MIB)
+to manage PoE, and the pre-existing IETF MIB for Uninterruptible Power Supplies (UPS) (UPS-MIB)
 {{RFC1628}}, allowing for example to build control systems that manage shutdowns
 of devices in case of power failure based on UPS battery capacity and device consumptions/priorities.
 Similarly, the EMAN "Definition of Managed Objects for Battery Monitoring" {{RFC7577}}
@@ -994,8 +1050,8 @@ ENERGY-OBJECT-CONTEXT-MIB and IANA-ENERGY-RELATION-MIB, both of which serve to
 between devices" according to {{RFC7461}}.
 
 To automatically discover and negotiate PoE power consumption
-between switch and client, non-IETF technologies, such as IEEE "Link Layer Discovery Protocol" (LLDP)
- and proprietary MIBs for it, such as LLDP-EXT-MED-MIB can be used.
+between switch and client, non-IETF technologies, such as IEEE LLDP
+and proprietary MIBs for it, such as LLDP-EXT-MED-MIB can be used.
 
 Finally, the "Energy Management (EMAN) Applicability Statement" {{RFC7603}}
 provides an overview of EMAN with a user/operator
@@ -1010,7 +1066,11 @@ be designed to echo the EMAN MIBs but would also allow to control dedicated
 
 # Power-Awareness in Forwarding and Routing Protocols
 
-## Power Aware Networks (PANET) {#PANET}
+This section covers proposals for making forwarding and routing decisions themselves aware
+of, and responsive to, power consumption, from the earliest (non-adopted) PANET work through
+more recent Software-Defined Networking (SDN) based and miscellaneous efforts.
+
+## Power-Aware Networks (PANET) {#PANET}
 
 In 2013-2014, some Internet-Drafts proposed how networks themselves,
 specifically those of Internet Service Providers (ISP) could dynamically
@@ -1018,7 +1078,7 @@ regulate their power consumption based on the required performance, for
 example by switching off or low-powering non-needed components
 (links, nodes, linecards) or changing speeds on links, or reducing clock-rates
 of processing elements, and/or routing traffic to utilize as few components
-as will support the required performance. The authors called this "Power Aware Networks" (PANET),
+as will support the required performance. The authors called this "Power-Aware Networks" (PANET),
  even though no awareness of actual power consumption is required in this approach.
 
 The 2013 "Power-Aware Networks (PANET): Problem Statement" {{I-D.zhang-panet-problem-statement}}
@@ -1032,7 +1092,7 @@ as the idea of saving energy through (periodic) microsleeps such as possible wit
 "Energy Efficient Ethernet" {{https://en.wikipedia.org/wiki/Energy-Efficient_Ethernet}}
 links. The 2013 Internet-Draft "Reducing Power Consumption using BGP with power source data",
 {{I-D.mjsraman-panet-inter-as-power-source}} proposed BGP attributes to allow calculation
-of power efficient (or for example green) paths.
+of power-efficient (or for example green) paths.
 
 One core market driver for this work was the rolling blackouts that especially affected India at the time of these Internet-Drafts, creating a desire to, for example, reduce the total power consumption of a network during such energy emergencies.
 
@@ -1075,7 +1135,7 @@ if a node is in an "idle" state (such nodes may be removed from
 adjacency tables if they don't participate in routing
 advertisements).
 
-## Miscellaneous
+## Additional Related Efforts
 
 The non-adopted, expired 2013 Internet-Draft {{I-D.okamoto-ccamp-midori-gmpls-extension-reqs}}
 discusses power awareness in routing in conjunction with Traffic
@@ -1083,7 +1143,7 @@ Engineering (tunnels), specifically in the context of Generalized MPLS (GMPLS),
 e.g.: various L2 technologies such as switched optical fiber networks. It primarily
 claims the issue that the existing management objects are not sufficient to
 express energy management related aspects, and thus do not allow to build
-energy conscious policies into PCE for such GMPLS networks.
+energy conscious policies into the Path Computation Element (PCE) for such GMPLS networks.
 
 The non-adopted 2013 "Requirements for an Energy-Efficient Network System",
 {{I-D.suzuki-eens-requirements}} proposes a signaling of network capacity towards
@@ -1092,12 +1152,19 @@ appropriate performance control (such as VM migration) at the DC - or vice versa
 (DC load-based traffic engineering in the network to support that DC load).
 
 The non-adopted 2013 "Building power optimal Multicast Trees" {{I-D.mjsraman-rtgwg-pim-power}}
-proposes that (PIM based) IP Multicast routing could perform local routing choices
+proposes that (Protocol Independent Multicast (PIM) based) IP Multicast routing could perform local routing choices
 in the case of "Equal Cost MultiPath" (ECMP) "Reverse Path Forwarding" (RPF)
 alternatives based on the energy that would be consumed in the router, such as when
-one ECMP alternative would use a more power efficient linecard or when one ECMP choice was
+one ECMP alternative would use a more power-efficient linecard or when one ECMP choice was
 on the same linecard as the interfaces to which the packets would need to be routed
 (and therefore avoiding to forward the packet across separate ingress and egress linecards).
+
+These three proposals share a common obstacle: each required detailed, standardized
+visibility into a router's or data center's internal energy consumption (per linecard, per
+VM, or per multicast tree) that was not available at the time, and in most cases still is
+not. That missing visibility is a plausible reason none of the three proceeded, distinct
+from the market-interest and SDN-maturity factors behind the PANET experience described
+earlier in this section.
 
 # Gap Analysis
 
@@ -1105,6 +1172,14 @@ The 2013 "Towards an Energy-Efficient Internet" {{I-D.winter-energy-efficient-in
 summarizes some of the same work items as this document (as written back in 2013) and
 lists additional non-adopted Internet-Drafts.
 It also identified three areas of gaps: "Load-adaptive Resource Management", "Energy-efficient Protocol Design", and "Energy-efficiency Metrics and Standard Benchmarking Methodologies". While these areas remain open, this document records them for reference rather than recommending specific next steps.
+
+Unlike {{I-D.winter-energy-efficient-internet}}, this document does not cover quantitative,
+industry-level energy and emissions estimates (such as ICT's projected share of global
+electricity use), nor does it analyze structural obstacles to energy efficiency, such as
+IETF protocols that assume always-on nodes (complicating the introduction of sleep modes) or
+network over-provisioning for resiliency and strict failover requirements, which works
+against energy savings. Readers interested in those obstacle-level questions should consult
+{{I-D.winter-energy-efficient-internet}} directly.
 
 Some aspects for those areas of gaps were partially tackled by later work in the IETF,
 but broadly speaking, most of those areas remain open. This document records these
@@ -1119,10 +1194,14 @@ gaps for reference only; it does not recommend or direct any future work to addr
    In particular:
 
    * Successful integration into existing work: Several cases show
-     that energy-awareness was most effective when integrated into
+     that energy awareness was most effective when integrated into
      ongoing protocol development (e.g., extensions in transport and
      management protocols) rather than as an isolated stand-alone
      activity.
+
+     * For example, Power over Ethernet power negotiation builds on
+       existing link-layer signaling (LLDP/CDP) rather than a new,
+       energy-specific protocol.
 
    * Clear problem framing: Efforts that were framed around a well-
      defined operational or architectural need (for example,
@@ -1131,7 +1210,8 @@ gaps for reference only; it does not recommend or direct any future work to addr
 
    * Collaboration across communities: Effective work often involved
      coordination between the related research and
-     standardization bodies (e.g., IETF, IRTF, IAB, ITU), showing that
+     standardization bodies (e.g., IETF, IRTF, IAB, International
+     Telecommunication Union (ITU)), showing that
      energy and environmental
      sustainability topics benefit from cross-community dialogue.
 
@@ -1142,8 +1222,13 @@ gaps for reference only; it does not recommend or direct any future work to addr
 
    * Limited continuity: Some prior activities were time-bound or
      lacked continuity. A lesson is that sustained progress often
-     requires ongoing integration into mainstream
-     workstreams.
+     requires ongoing integration into mainstream workstreams.
+
+     * For example, after the EMAN WG concluded in 2015, dedicated
+       IETF/IRTF energy-management activity did not resume until the
+       Sustainability and the Internet (SUSTAIN) Research Group (RG)
+       and the Getting Ready for Energy-Efficient Networking (GREEN)
+       WG efforts nearly a decade later.
 
    * Constrained and actionable scope: Experience shows that
      activities with a well-defined and bounded scope are more likely
@@ -1180,7 +1265,8 @@ review, historical insight, and evident care in reading successive
 versions of this document.
 
 The authors also thank the other reviewers and commenters who
-contributed feedback across its revisions, including Michael Welzl.
+contributed feedback across its revisions, including Michael Welzl and
+other experts who reviewed this document.
 
 The authors further thank Eliot Lear, Independent Submissions Editor
 (ISE), for his guidance and shepherding of this document through the
@@ -1220,4 +1306,4 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 11: ISE Review: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)
 
-12: ISE Review: Incorporated general ISE input and feedback, including reference and citation corrections, editorial fixes, and grammar corrections throughout the document.
+12: ISE Review: Addressed substantive ISE feedback throughout the document -- restructured the Introduction (added scope/citation-approach and roadmap subsections), reframed and expanded several technology discussions, retitled and split sections, and added missing citations and reflection -- along with citation, acronym, and grammar corrections.
