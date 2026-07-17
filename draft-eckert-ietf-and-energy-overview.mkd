@@ -231,7 +231,7 @@ informative:
       -
          org: NASPI Time Synchronization Task Force
     date: March 2017
-    target: https://www.naspi.org/sites/default/files/reference_documents/tstf_electric_power_system_report_pnnl_26331_march_2017_0.pdf
+    target: https://www.naspi.org/documents/tstf-time-synchronization-electric-power-system-march-2017
 
   OECD2020:
     title: "Keeping the Internet up and running in times of crisis"

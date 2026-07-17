@@ -2147,9 +2147,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [NASPICLOCK]
               NASPI Time Synchronization Task Force, "Time
               Synchronization in the Electric Power System", March 2017,
-              <https://www.naspi.org/sites/default/files/
-              reference_documents/
-              tstf_electric_power_system_report_pnnl_26331_march_2017_0.pdf>.
+              <https://www.naspi.org/documents/tstf-time-
+              synchronization-electric-power-system-march-2017>.
 
    [OECD2020] OECD, "Keeping the Internet up and running in times of
               crisis", source OECD Policy Responses to Coronavirus
@@ -2176,6 +2175,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [RFC1628]  Case, J., Ed., "UPS Management Information Base",
               RFC 1628, DOI 10.17487/RFC1628, May 1994,
               <https://www.rfc-editor.org/rfc/rfc1628>.
+
 
 
 
