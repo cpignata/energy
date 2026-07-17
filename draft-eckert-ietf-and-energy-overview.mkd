@@ -68,7 +68,7 @@ informative:
   RFC1142:
   RFC1628:
   RFC1866:
-  RFC2086:
+  RFC1945:
   RFC2328:
   RFC2475:
   RFC2822:
@@ -101,6 +101,7 @@ informative:
   RFC6988:
   RFC7030:
   RFC7102:
+  RFC7252:
   RFC7326:
   RFC7460:
   RFC7461:
@@ -115,8 +116,8 @@ informative:
   RFC8352:
   RFC8368:
   RFC8428:
-  RFC8575:
   RFC8613:
+  RFC8655:
   RFC8724:
   RFC8815:
   RFC8824:
@@ -264,7 +265,7 @@ familiar with the body of work already published on energy-related
 topics. It provides the first consolidated catalog of such efforts,
 serving as an internal reference and orientation guide.
 
-In addition, the document raises awareness of the Internet’s role in
+In addition, the document raises awareness of the Internet's role in
 energy efficiency and energy-related activities within the IETF, IRTF,
 and IAB more broadly. This helps continue identifying gaps and
 investigating solutions where further work may be needed, and also 
@@ -315,10 +316,10 @@ aspects of energy optimization into account.  See {{sustainability}} for more de
 Digitization refers to the shift of processes from analog or partially digital forms into fully digital ones, typically supported by computer networking. For comparable outcomes, the digitized option is often, though not always, more energy efficient.
 Consider, for example, the energy consumption in the evolution of
 messaging starting from postal mail and over telegrams and various other historic forms to
-solutions including e-mail utilizing, for example, the IETF "Simple Mail Transport Protocol" (SMTP, {{RFC822}}
+solutions including e-mail utilizing, for example, the IETF "Internet Message Format" used by SMTP ({{RFC822}}
 obsoleted by {{RFC2822}}, {{RFC5322}}),
-group communications utilizing the IETF "Network News Transport Protocol" (NNTP, {{RFC3977}}) or the nearly limitless set of communication options built on top of the IETF "HyperText Transport Protocol" (HTTP,
-{{RFC2086}} and successors), and IETF "HyperText Markup Language" (HTML, {{RFC1866}} superseded by various later version
+group communications utilizing the IETF "Network News Transfer Protocol" (NNTP, {{RFC3977}}) or the nearly limitless set of communication options built on top of the IETF "Hypertext Transfer Protocol" (HTTP,
+{{RFC1945}} and successors), and IETF "HyperText Markup Language" (HTML, {{RFC1866}} superseded by various later version
 of HTML, see {{RFC2854}}).
 
 Conventionally, digitization had only "incidental", but not "intentional" relationship to
@@ -372,7 +373,7 @@ enabled competitive market forces to explore markets quickly.
 
 ### Converged Networks
 
-Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric avoids duplicative powered equipment. DiffServ {{RFC2475}} and later DetNet {{RFC8575}} illustrate how lighter-weight QoS models supported convergence without high per-flow energy overhead.
+Replacing parallel infrastructures (e.g., voice, video, data) with a single IP fabric avoids duplicative powered equipment. DiffServ {{RFC2475}} and later DetNet {{RFC8655}} illustrate how lighter-weight QoS models supported convergence without high per-flow energy overhead.
 
 
 # Higher or New Energy Consumption
@@ -564,8 +565,11 @@ In the INT area of the IETF, several LLN specific WGs exist(ed):
 
 The "IPv6 over Low power WPAN (Wireless Personal Area Networks)" (6lowpan) WG ran from 2005
 to 2014 and produced 6 RFC that adopt IPv6 to IEEE 802.15.4 type (low power) wireless networks
-by transmission procedures {{RFC4944}}, compression of IPv6 (and transport) packet headers {{RFC6282}},
-modifications for neighbor discovery (ND) {{RFC6775}}, as well as 3 informational RFCs
+by transmission procedures ("Transmission of IPv6 Packets over IEEE 802.15.4 Networks", {{RFC4944}}),
+compression of IPv6 (and transport) packet headers ("Compression Format for IPv6 Datagrams over
+IEEE 802.15.4-Based Networks", {{RFC6282}}), and modifications for neighbor discovery (ND)
+("Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks
+(6LoWPANs)", {{RFC6775}}, also known as 6LOWPAN-ND), as well as 3 informational RFCs
 about the WPAN space and applying IPv6 to it. Among these, the Problem Statement and Requirements {{RFC6606}} gives details about the power and energy approaches and goals.
 
 It is important to understand the 6LOWPAN Overview, Assumptions, Problem Statement, and Goals {{RFC4919}}, including "conserve energy".
@@ -670,11 +674,12 @@ Further, the LWIG WG produced {{RFC7228}}, "Terminology for Constrained-Node Net
 
 In the APPlication (APP) area of the IETF, the "Constrained RESTful Environments" (core) WG
 has produced since 2010 21 RFC, most of them for or related to "The Constrained Application Protocol"
-(CoAP) {{RFC6690}}, which can best be described as a replacement for HTTP for constrained
+(CoAP) {{RFC7252}}, which can best be described as a replacement for HTTP for constrained
 environment, using UDP instead of TCP and DTLS instead of TLS, compact binary message formats
 instead of human readable textual formats, RESTful message exchange semantic instead of a
 broader set of options (in HTTP), but also more functionality such as (multicast)
-discovery and directory services, therefore providing a more comprehensive set of common application
+discovery and directory services via the "Constrained RESTful Environments (CoRE) Link Format"
+{{RFC6690}}, therefore providing a more comprehensive set of common application
 functions with more compact on-the-wire/radio encoding than its unconstrained alternatives.
 "Object Security for Constrained RESTful Environments" (OSCORE), {{RFC8613}} is a further
 product of the CoRE WG providing a more message layer based, more lightweight security
@@ -811,7 +816,7 @@ been a key selling factor. In result, vendors do attempt to optimize power consu
 across all hardware and software components of such nodes, including the interface hardware
 and protocols used across the nodes Wi-Fi and mobile radios.
 
-As noted in {{I-D.bormann-core-roadmap-05}}: CoAP provides basic support for sleepy nodes by allowing (non-sleepy) proxy nodes to cache resource information. {{RFC7641}} extends this by enabling sleepy nodes to update caching intermediaries on their own schedule. Around 2012–2013, there was significant discussion of additional mechanisms for supporting sleepy nodes in CoAP, resulting in a series of Internet-Drafts: {{I-D.vial-core-mirror-server}}, {{I-D.vial-core-mirror-proxy}}, {{I-D.fossati-core-publish-option}}, {{I-D.giacomin-core-sleepy-option}}, {{I-D.castellani-core-alive}}, {{I-D.rahman-core-sleepy-problem-statement}}, {{I-D.rahman-core-sleepy}}, {{I-D.rahman-core-sleepy-nodes-do-we-need}}, and {{I-D.fossati-core-monitor-option}}, all of which are summarized in {{I-D.bormann-core-roadmap-05}}. None of these Internet-Drafts, however, advanced further.
+As noted in {{I-D.bormann-core-roadmap-05}}: CoAP provides basic support for sleepy nodes by allowing (non-sleepy) proxy nodes to cache resource information. {{RFC7641}} extends this by enabling sleepy nodes to update caching intermediaries on their own schedule. Around 2012-2013, there was significant discussion of additional mechanisms for supporting sleepy nodes in CoAP, resulting in a series of Internet-Drafts: {{I-D.vial-core-mirror-server}}, {{I-D.vial-core-mirror-proxy}}, {{I-D.fossati-core-publish-option}}, {{I-D.giacomin-core-sleepy-option}}, {{I-D.castellani-core-alive}}, {{I-D.rahman-core-sleepy-problem-statement}}, {{I-D.rahman-core-sleepy}}, {{I-D.rahman-core-sleepy-nodes-do-we-need}}, and {{I-D.fossati-core-monitor-option}}, all of which are summarized in {{I-D.bormann-core-roadmap-05}}. None of these Internet-Drafts, however, advanced further.
 
 One partial solution to certain sleepy-node energy consumption issues, particularly those caused by the use of multicast {{coordination}}, {{wifi}}, is the Constrained RESTful Environments (CoRE) Resource Directory (CoRE-RD) {{RFC9176}}. It enables sleepy nodes to discover and register resources via unicast, thereby avoiding unnecessary wake-ups when they are not selected by a resource consumer.
 
@@ -835,7 +840,7 @@ giving recommends for replacing multicast "Router Advertisement" (RA) messages w
 directed unicast versions, therefore not waking up sleepy nodes (with an IP multicast RA message).
 This was already allowed in ND {{RFC4861}}, but not recommended as the default. Note that
 {{RFC7772}} does not provide all the energy related optimizations of ND as developed by
-6LoWPAN through {{RFC6775}}, later updated by {{RFC8505}} is 6LO. {{I-D.chakrabarti-nordmark-energy-aware-nd}} proposes generalizations
+6LoWPAN through {{RFC6775}}, later updated by {{RFC8505}} in 6LO. {{I-D.chakrabarti-nordmark-energy-aware-nd}} proposes generalizations
 for those applications for to all IPv6 links, but was not further pursued by the IETF so far.
 
 ## (Lack of) Power Benchmarking Proposals
@@ -1209,6 +1214,8 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 
 09: ISE Review: Tightened and restructured Section 2 by collapsing subsections and clarifying audience focus; include only technologies with direct energy impact
 
-10: ISE Review: Editorial update, refined language and terminology (e.g., “December 2022” vs. “12/2022”), improving consistency and readability across sections.
+10: ISE Review: Editorial update, refined language and terminology (e.g., "December 2022" vs. "12/2022"), improving consistency and readability across sections.
 
 11: ISE Review: Reframed the abstract to highlight and make explicit three audiences (insiders, newcomers, and external readers)
+
+12: ISE Review: Incorporated general ISE input and feedback, including reference and citation corrections, editorial fixes, and grammar corrections throughout the document.
