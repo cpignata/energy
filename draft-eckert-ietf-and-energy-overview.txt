@@ -1802,11 +1802,11 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    three audiences (insiders, newcomers, and external readers)
 
    12: ISE Review: Addressed substantive ISE feedback throughout the
-   document -- restructured the Introduction (added scope/citation-
-   approach and roadmap subsections), reframed and expanded several
-   technology discussions, retitled and split sections, and added
-   missing citations and reflection -- along with citation, acronym, and
-   grammar corrections.
+   document, including restructuring the Introduction (added scope/
+   citation-approach and roadmap subsections), reframing and expanding
+   several technology discussions, retitling and splitting sections, and
+   adding missing citations and reflection, along with citation,
+   acronym, and grammar corrections.
 
 15.  Informative References
 
