@@ -13,6 +13,11 @@ Editors: Toerless Eckert, Carlos Pignataro
 
 - `draft-eckert-ietf-and-energy-overview.mkd` — draft source (kramdown-rfc)
 - `draft-eckert-ietf-and-energy-overview.xml` / `.txt` — generated outputs (`make all`)
-- `Versions/` — snapshots of each submitted revision
-- `Presentations/` — related slide decks
-- `makefile` — build rules (requires `kramdown-rfc2629` and `xml2rfc`)
+- `versions/` — snapshots of each submitted revision
+- `presentations/` — related slide decks
+- `makefile` — build rules (requires `kramdown-rfc2629`, `xml2rfc`, and `iddiff`)
+
+## Building
+
+- `make all` — build `.xml` and `.txt` from the `.mkd` source
+- `make diff` — build the draft, then diff it against the latest revision in `versions/`, producing `draft-eckert-ietf-and-energy-overview-diff.html`
