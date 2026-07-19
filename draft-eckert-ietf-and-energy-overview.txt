@@ -1808,6 +1808,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    adding missing citations and reflection, along with citation,
    acronym, and grammar corrections.
 
+   13: Version bump, no content changes yet.
+
 15.  Informative References
 
    [DVDvsStreaming]
@@ -1837,8 +1839,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               semantic-routing-01, 31 May 2022,
               <https://datatracker.ietf.org/doc/html/draft-boucadair-
               irtf-sdn-and-semantic-routing-01>.
-
-
 
 
 
