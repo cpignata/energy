@@ -5,18 +5,18 @@
 Network Working Group                                     T. Eckert, Ed.
 Internet-Draft                                Futurewei Technologies USA
 Intended status: Informational                         M. Boucadair, Ed.
-Expires: 18 January 2027                                          Orange
+Expires: 20 January 2027                                          Orange
                                                               P. Thubert
                                                      Cisco Systems, Inc.
                                                              J. Tantsura
                                                                   NVIDIA
                                                        C. Pignataro, Ed.
                                                      NC State University
-                                                            17 July 2026
+                                                            19 July 2026
 
 
   An Overview of Energy-related Efforts within the IETF, IRTF, and IAB
-                draft-eckert-ietf-and-energy-overview-12
+                draft-eckert-ietf-and-energy-overview-13
 
 Abstract
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 1]
+Eckert, et al.           Expires 20 January 2027                [Page 1]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -68,7 +68,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 January 2027.
+   This Internet-Draft will expire on 20 January 2027.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 2]
+Eckert, et al.           Expires 20 January 2027                [Page 2]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -165,7 +165,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 3]
+Eckert, et al.           Expires 20 January 2027                [Page 3]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -221,7 +221,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 4]
+Eckert, et al.           Expires 20 January 2027                [Page 4]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -277,7 +277,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 5]
+Eckert, et al.           Expires 20 January 2027                [Page 5]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -333,7 +333,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 6]
+Eckert, et al.           Expires 20 January 2027                [Page 6]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -389,7 +389,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 7]
+Eckert, et al.           Expires 20 January 2027                [Page 7]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -445,7 +445,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 8]
+Eckert, et al.           Expires 20 January 2027                [Page 8]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -501,7 +501,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027                [Page 9]
+Eckert, et al.           Expires 20 January 2027                [Page 9]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -557,7 +557,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 10]
+Eckert, et al.           Expires 20 January 2027               [Page 10]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -613,7 +613,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 11]
+Eckert, et al.           Expires 20 January 2027               [Page 11]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -669,7 +669,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 12]
+Eckert, et al.           Expires 20 January 2027               [Page 12]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -725,7 +725,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 13]
+Eckert, et al.           Expires 20 January 2027               [Page 13]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -781,7 +781,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 14]
+Eckert, et al.           Expires 20 January 2027               [Page 14]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -837,7 +837,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 15]
+Eckert, et al.           Expires 20 January 2027               [Page 15]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -893,7 +893,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 16]
+Eckert, et al.           Expires 20 January 2027               [Page 16]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -949,7 +949,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 17]
+Eckert, et al.           Expires 20 January 2027               [Page 17]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1005,7 +1005,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 18]
+Eckert, et al.           Expires 20 January 2027               [Page 18]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1061,7 +1061,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 19]
+Eckert, et al.           Expires 20 January 2027               [Page 19]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1117,7 +1117,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 20]
+Eckert, et al.           Expires 20 January 2027               [Page 20]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1173,7 +1173,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 21]
+Eckert, et al.           Expires 20 January 2027               [Page 21]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1229,7 +1229,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 22]
+Eckert, et al.           Expires 20 January 2027               [Page 22]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1285,7 +1285,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 23]
+Eckert, et al.           Expires 20 January 2027               [Page 23]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1341,7 +1341,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 24]
+Eckert, et al.           Expires 20 January 2027               [Page 24]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1397,7 +1397,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 25]
+Eckert, et al.           Expires 20 January 2027               [Page 25]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1453,7 +1453,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 26]
+Eckert, et al.           Expires 20 January 2027               [Page 26]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1509,7 +1509,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 27]
+Eckert, et al.           Expires 20 January 2027               [Page 27]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1565,7 +1565,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 28]
+Eckert, et al.           Expires 20 January 2027               [Page 28]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1621,7 +1621,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 29]
+Eckert, et al.           Expires 20 January 2027               [Page 29]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1677,7 +1677,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 30]
+Eckert, et al.           Expires 20 January 2027               [Page 30]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1733,7 +1733,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 31]
+Eckert, et al.           Expires 20 January 2027               [Page 31]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1789,7 +1789,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 32]
+Eckert, et al.           Expires 20 January 2027               [Page 32]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1845,7 +1845,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 33]
+Eckert, et al.           Expires 20 January 2027               [Page 33]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1901,7 +1901,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 34]
+Eckert, et al.           Expires 20 January 2027               [Page 34]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -1957,7 +1957,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 35]
+Eckert, et al.           Expires 20 January 2027               [Page 35]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2013,7 +2013,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 36]
+Eckert, et al.           Expires 20 January 2027               [Page 36]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2069,7 +2069,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 37]
+Eckert, et al.           Expires 20 January 2027               [Page 37]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2125,7 +2125,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 38]
+Eckert, et al.           Expires 20 January 2027               [Page 38]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2181,7 +2181,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 39]
+Eckert, et al.           Expires 20 January 2027               [Page 39]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2237,7 +2237,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 40]
+Eckert, et al.           Expires 20 January 2027               [Page 40]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2293,7 +2293,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 41]
+Eckert, et al.           Expires 20 January 2027               [Page 41]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2349,7 +2349,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 42]
+Eckert, et al.           Expires 20 January 2027               [Page 42]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2405,7 +2405,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 43]
+Eckert, et al.           Expires 20 January 2027               [Page 43]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2461,7 +2461,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 44]
+Eckert, et al.           Expires 20 January 2027               [Page 44]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2517,7 +2517,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 45]
+Eckert, et al.           Expires 20 January 2027               [Page 45]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2573,7 +2573,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 46]
+Eckert, et al.           Expires 20 January 2027               [Page 46]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2629,7 +2629,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 47]
+Eckert, et al.           Expires 20 January 2027               [Page 47]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2685,7 +2685,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 48]
+Eckert, et al.           Expires 20 January 2027               [Page 48]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2741,7 +2741,7 @@ Authors' Addresses
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 49]
+Eckert, et al.           Expires 20 January 2027               [Page 49]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
@@ -2797,4 +2797,4 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
 
-Eckert, et al.           Expires 18 January 2027               [Page 50]
+Eckert, et al.           Expires 20 January 2027               [Page 50]
