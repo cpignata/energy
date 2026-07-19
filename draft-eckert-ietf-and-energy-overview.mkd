@@ -476,9 +476,12 @@ on global warming to avoid worsening living conditions on the planet.
 While there seems to be no IETF work specifically intending to target sustainability, related
 work is emerging in the IRTF, such as {{RFC9845}}, which examines management challenges and
 opportunities for green networking. The Internet itself can similarly to how it does for
-digitization play a key role in building sustainable networked IT infrastructures. The
-following subsections list three exemplary areas where global high performance, low-cost
-Internet networking is a key requirement.
+digitization play a key role in building sustainable networked IT infrastructures: it is IETF
+technologies for global interdomain routing (BGP, {{RFC4271}}), scalable addressing (including
+IPv6, {{RFC8200}}), and reliable, congestion-controlled transport that together made low-cost,
+high-performance global connectivity ubiquitous. The following subsections list three exemplary
+areas where that IETF-enabled global reach, rather than any single sustainability-specific
+protocol, is what makes the described sustainability benefit possible.
 
 ## Follow-the-Energy Cloud Scheduling
 
@@ -498,16 +501,18 @@ The majority of energy in cloud DCs is normally also wasted as exhaust heat, req
 for cooling. The warmer the location, the more energy needs to be spent for cooling. For this
 reason, DCs in cooler climates, such as {{https://greenmountain.no/power-and-cooling/}}, can help
 to reduce the overall DC energy consumption significantly (independent of the energy being
-consumed in the DC to be renewable itself). The Internet again plays the role of providing access
-to those types of DCs whose location is not optimized for consumption but for sustainable generation
-of compute and storage.
+consumed in the DC to be renewable itself). As introduced above, it is that same IETF-enabled
+global reach that makes this possible: without cost-efficient wide-area connectivity, DC
+placement would be constrained to sites near their compute consumers, foreclosing the
+low-cooling-cost locations described here.
 
 ## Heat Recovery
 
 Exhaust heat, especially from compute in DCs, can be recovered when it is coupled to heating systems
 ranging in size all the way from individual family homes through larger buildings (hotels, for example) all the
 way to district heating systems. A provider of such a type of compute-generated heat as a service
-can sell the compute capacity as long as there is cost efficient network connectivity.  "Cloud & Heat"
+can sell the compute capacity only because that same IETF-enabled global connectivity makes it
+cost-efficient to decouple where heat is generated from where it is consumed.  "Cloud & Heat"
 is an example company offering such infrastructures and services
 {{https://www.cloudandheat.com/wp-content/uploads/2020/02/2020_CloudHeat-Whitepaper-Cost-saving-Potential.pdf}}.
 
