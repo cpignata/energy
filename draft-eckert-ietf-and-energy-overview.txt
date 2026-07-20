@@ -227,9 +227,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
    Some material describes broader Internet-enabled context, such as
-   economic or infrastructure factors, rather than IETF, IRTF, or IAB
-   work directly.  Such material grounds why a given IETF, IRTF, or IAB
-   technology matters for energy.
+   economic or infrastructure factors.  Such material grounds why a
+   given IETF, IRTF, or IAB technology matters for energy.
 
 1.2.  Document Roadmap
 
@@ -270,6 +269,7 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    memo such an energy saving simply refers to energy savings in some
    unit of electricity, such as kWh and does not take other aspects of
    energy optimization into account.  See Section 4 for more details.
+
 
 
 
@@ -1818,7 +1818,11 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    adding missing citations and reflection, along with citation,
    acronym, and grammar corrections.
 
-   13: Version bump, no content changes yet.
+   13: Addressed post-submission reviewer feedback: strengthened the
+   IETF-technology linkage in Section 4 (sustainability), clarified
+   document scope regarding Internet-enabled context versus IETF/IRTF/
+   IAB work directly, replaced non-inclusive terminology in the
+   Changelog hosting note, and updated stale reference URLs.
 
 15.  Informative References
 
@@ -1838,10 +1842,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [I-D.bormann-core-roadmap-05]
               Bormann, C., "CoRE Roadmap and Implementation Guide", Work
               in Progress, Internet-Draft, draft-bormann-core-roadmap-
-              05, 21 October 2013,
-              <https://datatracker.ietf.org/doc/html/draft-bormann-core-
-              roadmap-05>.
-
 
 
 
@@ -1849,6 +1849,10 @@ Eckert, et al.           Expires 21 January 2027               [Page 33]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+              05, 21 October 2013,
+              <https://datatracker.ietf.org/doc/html/draft-bormann-core-
+              roadmap-05>.
 
    [I-D.boucadair-irtf-sdn-and-semantic-routing]
               Boucadair, M., Trossen, D., and A. Farrel, "Considerations
@@ -1893,10 +1897,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               fossati-core-monitor-option-00, 9 July 2012,
               <https://datatracker.ietf.org/doc/html/draft-fossati-core-
               monitor-option-00>.
-
-
-
-
 
 
 
