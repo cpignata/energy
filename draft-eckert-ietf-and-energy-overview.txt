@@ -1818,11 +1818,9 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    adding missing citations and reflection, along with citation,
    acronym, and grammar corrections.
 
-   13: Addressed post-submission reviewer feedback: strengthened the
-   IETF-technology linkage in Section 4 (sustainability), clarified
-   document scope regarding Internet-enabled context versus IETF/IRTF/
-   IAB work directly, replaced non-inclusive terminology in the
-   Changelog hosting note, and updated stale reference URLs.
+   13: Addressed post-submission reviewer feedback on IETF-technology
+   linkage and document scope; fixed stale reference URLs and non-
+   inclusive terminology.
 
 15.  Informative References
 
@@ -1839,9 +1837,11 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               October 2012, <https://datatracker.ietf.org/doc/html/
               draft-ajunior-energy-awareness-00>.
 
-   [I-D.bormann-core-roadmap-05]
-              Bormann, C., "CoRE Roadmap and Implementation Guide", Work
-              in Progress, Internet-Draft, draft-bormann-core-roadmap-
+
+
+
+
+
 
 
 
@@ -1850,6 +1850,9 @@ Eckert, et al.           Expires 21 January 2027               [Page 33]
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
+   [I-D.bormann-core-roadmap-05]
+              Bormann, C., "CoRE Roadmap and Implementation Guide", Work
+              in Progress, Internet-Draft, draft-bormann-core-roadmap-
               05, 21 October 2013,
               <https://datatracker.ietf.org/doc/html/draft-bormann-core-
               roadmap-05>.
@@ -1891,12 +1894,9 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               <https://datatracker.ietf.org/doc/html/draft-desmouceaux-
               ipv6-mcast-wifi-power-usage-01>.
 
-   [I-D.fossati-core-monitor-option]
-              Fossati, T., Giacomin, P., and S. Loreto, "Monitor Option
-              for CoAP", Work in Progress, Internet-Draft, draft-
-              fossati-core-monitor-option-00, 9 July 2012,
-              <https://datatracker.ietf.org/doc/html/draft-fossati-core-
-              monitor-option-00>.
+
+
+
 
 
 
@@ -1905,6 +1905,13 @@ Eckert, et al.           Expires 21 January 2027               [Page 34]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   [I-D.fossati-core-monitor-option]
+              Fossati, T., Giacomin, P., and S. Loreto, "Monitor Option
+              for CoAP", Work in Progress, Internet-Draft, draft-
+              fossati-core-monitor-option-00, 9 July 2012,
+              <https://datatracker.ietf.org/doc/html/draft-fossati-core-
+              monitor-option-00>.
 
    [I-D.fossati-core-publish-option]
               Fossati, T., Giacomin, P., and S. Loreto, "Publish Option
@@ -1947,13 +1954,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    [I-D.ietf-roll-protocols-survey]
               Tavakoli, A. and S. Dawson-Haggerty, "Overview of Existing
               Routing Protocols for Low Power and Lossy Networks", Work
-              in Progress, Internet-Draft, draft-ietf-roll-protocols-
-              survey-07, 24 April 2009,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-roll-
-              protocols-survey-07>.
-
-
-
 
 
 
@@ -1961,6 +1961,11 @@ Eckert, et al.           Expires 21 January 2027               [Page 35]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+              in Progress, Internet-Draft, draft-ietf-roll-protocols-
+              survey-07, 24 April 2009,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-roll-
+              protocols-survey-07>.
 
    [I-D.jennings-energy-pricing]
               Jennings, C. F. and B. Nordman, "Communication of Energy
@@ -2006,11 +2011,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               02, 27 March 2012, <https://datatracker.ietf.org/doc/html/
               draft-mjsraman-rtgwg-pim-power-02>.
 
-   [I-D.okamoto-ccamp-midori-gmpls-extension-reqs]
-              Okamoto, S., "Requirements of GMPLS Extensions for Energy
-              Efficient Traffic Engineering", Work in Progress,
-              Internet-Draft, draft-okamoto-ccamp-midori-gmpls-
-
 
 
 Eckert, et al.           Expires 21 January 2027               [Page 36]
@@ -2018,6 +2018,10 @@ Eckert, et al.           Expires 21 January 2027               [Page 36]
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
 
+   [I-D.okamoto-ccamp-midori-gmpls-extension-reqs]
+              Okamoto, S., "Requirements of GMPLS Extensions for Energy
+              Efficient Traffic Engineering", Work in Progress,
+              Internet-Draft, draft-okamoto-ccamp-midori-gmpls-
               extension-reqs-02, 14 March 2013,
               <https://datatracker.ietf.org/doc/html/draft-okamoto-
               ccamp-midori-gmpls-extension-reqs-02>.
@@ -2058,12 +2062,8 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               <https://datatracker.ietf.org/doc/html/draft-retana-rtgwg-
               eacp-07>.
 
-   [I-D.suzuki-eens-requirements]
-              Suzuki, T. and T. Tarui, "Requirements for an Energy-
-              Efficient Network System", Work in Progress, Internet-
-              Draft, draft-suzuki-eens-requirements-00, 15 October 2012,
-              <https://datatracker.ietf.org/doc/html/draft-suzuki-eens-
-              requirements-00>.
+
+
 
 
 
@@ -2073,6 +2073,13 @@ Eckert, et al.           Expires 21 January 2027               [Page 37]
 
 Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
 
+
+   [I-D.suzuki-eens-requirements]
+              Suzuki, T. and T. Tarui, "Requirements for an Energy-
+              Efficient Network System", Work in Progress, Internet-
+              Draft, draft-suzuki-eens-requirements-00, 15 October 2012,
+              <https://datatracker.ietf.org/doc/html/draft-suzuki-eens-
+              requirements-00>.
 
    [I-D.thubert-6man-ipv6-over-wireless]
               Thubert, P. and M. Richardson, "Architecture and Framework
@@ -2115,13 +2122,6 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
               zhang-greennet-01, 10 January 2013,
               <https://datatracker.ietf.org/doc/html/draft-zhang-
               greennet-01>.
-
-
-
-
-
-
-
 
 
 

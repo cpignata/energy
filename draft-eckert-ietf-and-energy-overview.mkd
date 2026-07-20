@@ -1323,4 +1323,4 @@ proposed changes or join the team of authors and edit yourself.
 
 12: ISE Review: Addressed substantive ISE feedback throughout the document, including restructuring the Introduction (added scope/citation-approach and roadmap subsections), reframing and expanding several technology discussions, retitling and splitting sections, and adding missing citations and reflection, along with citation, acronym, and grammar corrections.
 
-13: Addressed post-submission reviewer feedback: strengthened the IETF-technology linkage in Section 4 (sustainability), clarified document scope regarding Internet-enabled context versus IETF/IRTF/IAB work directly, replaced non-inclusive terminology in the Changelog hosting note, and updated stale reference URLs.
+13: Addressed post-submission reviewer feedback on IETF-technology linkage and document scope; fixed stale reference URLs and non-inclusive terminology.
