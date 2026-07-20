@@ -1833,9 +1833,9 @@ Internet-Draft        IETF/IRTF/IAB Energy Overview            July 2026
    adding missing citations and reflection, along with citation,
    acronym, and grammar corrections.
 
-   13: Addressed post-submission reviewer feedback on IETF-technology
-   linkage and document scope; fixed stale reference URLs and non-
-   inclusive terminology.
+   13: Addressed post-submission reviewer feedback: retitled to include
+   impact, extended the abstract, and clarified document scope; fixed
+   stale reference URLs and non-inclusive terminology.
 
 15.  Informative References
 
