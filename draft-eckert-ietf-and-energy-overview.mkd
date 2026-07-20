@@ -310,6 +310,10 @@ This memo refers to technologies by their significant early RFCs or Internet-Dra
 
 This document captures work until December 2022, when the "IAB workshop on Environmental Impact of Internet Applications and Systems" {{?I-D.iab-ws-environmental-impacts-report}} renewed community discussion of the topic. The workshop emphasized that existing and emerging work could benefit from increased visibility and understanding, but this memo itself does not recommend or direct future work.
 
+Some material describes broader Internet-enabled context, such as economic or infrastructure
+factors, rather than IETF, IRTF, or IAB work directly. Such material is included only to explain
+why a given IETF, IRTF, or IAB technology matters for energy, not as a subject in its own right.
+
 ## Document Roadmap
 
 The rest of this document is organized as follows:
